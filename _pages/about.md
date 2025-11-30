@@ -6,101 +6,45 @@ subtitle: Research Assistant at <a href="https://xulabs.github.io/">Xu Lab, CMU<
 
 profile:
   align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image: vnlvi_profile.jpg
+  image_circular: true # crops the image to make it circular
   more_info: >
     <p>vulanvi22@gmail.com</p>
     <p>Ho Chi Minh City, Vietnam</p>
 
+news: true
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
   enabled: true # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
-
-latest_posts:
-  enabled: false
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  limit: 4 # limit to 4-5 most recent items
 ---
 
-<a href="/assets/pdf/ViVu_CV_Fall26.pdf" target="_blank" class="btn btn-primary btn-sm" style="margin-bottom: 1rem;">
-  <i class="fa-solid fa-file-pdf"></i> Download Full CV
-</a>
-
-I am a senior undergraduate student in Computer Engineering at [Ho Chi Minh City University of Technology](https://hcmut.edu.vn/en/) (HCMUT), currently ranked **#1 in my department** with a GPA of 9.27/10.0. I am applying for PhD programs in **Medical AI** and **Computer Vision** for Fall 2026.
-
-Currently, I work as a Research Assistant at [Xu Lab](https://xulabs.github.io/) (Carnegie Mellon University), advised by [Prof. Min Xu](https://xulabs.github.io/min-xu/), and at the [Machine and Hybrid Intelligence Lab](https://www.mhilab.org/) (Northwestern University), advised by [Prof. Ulas Bagci](https://www.mhilab.org/ulas-bagci). My recent work explores Mixture-of-Experts architectures for semi-supervised histopathology segmentation and stain-structure disentanglement for robust pathology analysis.
-
----
-
-## Research Vision
-
-My research aims to bridge the gap between advanced computer vision and clinical reality. Specifically, I focus on three interconnected pillars:
-
-<div class="row mt-3">
-    <div class="col-sm-4">
-        <div class="card h-100">
-            <div class="card-body">
-                <h5 class="card-title"><strong>Foundation-Model-Driven Design</strong></h5>
-                <p class="card-text">Leveraging large-scale pre-trained models (e.g., SAM) through principled adaptation strategies rather than naive fine-tuning.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-4">
-        <div class="card h-100">
-            <div class="card-body">
-                <h5 class="card-title"><strong>Mathematically Grounded Modeling</strong></h5>
-                <p class="card-text">Building theoretically motivated architectures—including Mixture-of-Experts, disentangled representations, and diffusion models.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-4">
-        <div class="card h-100">
-            <div class="card-body">
-                <h5 class="card-title"><strong>Learning with Imperfect Annotations</strong></h5>
-                <p class="card-text">Developing robust AI systems that operate effectively with limited, noisy, or domain-shifted medical data.</p>
-            </div>
-        </div>
-    </div>
+<div style="margin-bottom: 1.5rem;">
+  <a href="/assets/pdf/VuNguyenLanVi_CV.pdf" target="_blank" class="btn btn-primary btn-sm" style="margin-right: 0.5rem;">
+    <i class="fa-solid fa-file-pdf"></i> Download Full CV
+  </a>
+  <a href="/projects/" class="btn btn-outline-primary btn-sm">
+    View Research Projects
+  </a>
 </div>
 
-<p style="margin-top: 1rem;">
-My goal is to build <strong>robust, generalizable AI systems</strong> for medical imaging that can translate from controlled research environments to the heterogeneous conditions of real-world clinical practice.
-</p>
+I am an aspiring Ph.D. researcher in Medical AI and Computer Vision, currently serving as a Research Assistant at **Carnegie Mellon University (Xu Lab)** and **Northwestern University (MHI Lab)**.
 
----
+I hold a B.E. in Computer Engineering from **Ho Chi Minh City University of Technology**, where I graduated as the **#1 ranked student** in the department with a **GPA of 9.27/10.0**. I am fortunate to be advised by Prof. Min Xu, Dr. Xingjian Li, and Prof. Ulas Bagci. My recent achievements include being the **Winner of the Fetal Ultrasound Grand Challenge** at ISBI 2025.
 
-## Honors & Awards
 
-- **2025** — 🏆 **Winner**, Fetal Ultrasound Grand Challenge at ISBI (Texas, USA)
-- **2025** — 🎓 **NSTC Scholarship** for International Research Internship (Taiwan Ministry of Science and Technology)
-- **2021–2025** — 🌟 **Momentum Scholarship**, awarded to Top 10 University Students nationwide
-- **2021–2025** — 📚 **4× Academic Incentive Scholarships**, Top 1.6% of students each semester
-- **2021–2025** — 🎯 **2× OISP Scholarships** for High-Quality Program excellence
-- **2024** — 📜 **Outstanding Academic Performance Certification**
-- **2024** — 🏅 **Outstanding All-around Student** title
-- **Pre-University** — 🥇 **1st Prize**, City-level Excellent Physics Student Competition
 
----
+## Research Focus
 
-## Teaching & Community Leadership
+My research philosophy centers on **mathematically grounded modeling** and **foundation-model-driven designs**. I am particularly interested in tackling **learning with imperfect annotations** (semi/unsupervised learning) to bridge the gap between advanced vision models and clinical reality.
 
-**Teaching Assistant & Research Associate** — *AIVIETNAM*
+The three interconnected pillars of my research are:
 
-- Provided academic support and mentorship to **600+ students** in the flagship "All-in-One 2024" course, covering fundamentals of AI/ML
-- Developed supplementary materials and conducted review sessions to enhance student learning outcomes
+* **Foundation-Model-Driven Designs** — Leveraging large-scale pre-trained models (e.g., SAM) through principled adaptation strategies rather than naive fine-tuning.
 
-**Co-Lead** — *AIMA (AI-in-Medicine Applications)*
+* **Mathematically Grounded Modeling** — Building theoretically motivated architectures, including Mixture-of-Experts, disentangled representations, and diffusion models.
 
-- Managing and coordinating **4 research teams** working on cutting-edge Medical AI projects
-- Fostering collaboration between undergraduate researchers and industry mentors
-
-**Seminar Host & Presenter**
-
-- Organized and delivered technical seminars on emerging topics:
-  - Semi-supervised learning for medical imaging
-  - Denoising diffusion probabilistic models
-  - 3D Gaussian splatting for novel view synthesis
+* **Learning with Imperfect Annotations** — Developing robust AI systems that operate effectively with limited, noisy, or domain-shifted medical data.

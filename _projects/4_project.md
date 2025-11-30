@@ -2,85 +2,57 @@
 layout: page
 title: 3D Y-Net for Single-Cell Tracking
 description: Siamese Architecture for 3D Time-Lapse Microscopy Analysis
-img: assets/img/6.jpg
+img: assets/img/ynet_tracking.gif
 importance: 4
 category: research
 ---
 
-## Overview
-
-During my **international research internship** at the [Integrated MechanoBioSystems Lab](https://sites.google.com/site/imbs3dprinting/Home?authuser=0), National Cheng Kung University (NCKU), Taiwan, I developed a **Y-Net Siamese architecture** for tracking single cells in 3D time-lapse microscopy images.
-
-This project represents my experience in **3D Computer Vision** and **international research collaboration**.
-
----
-
-## The Problem
-
-Cell tracking in 3D time-lapse microscopy is fundamental to understanding:
-- Cell migration dynamics
-- Cell division and proliferation
-- Response to mechanical stimuli
-
-However, 3D cell tracking presents unique challenges:
-
-1. **Volumetric complexity**: Cells move in all three spatial dimensions
-2. **Temporal associations**: Linking cells across time frames requires robust feature matching
-3. **Morphological changes**: Cells deform, divide, and sometimes die during observation
-
----
-
-## Our Solution: 3D Y-Net Siamese Architecture
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-10 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="3D Y-Net Architecture" class="img-fluid rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm-12">
+        <p class="text-muted">
+            <strong>Affiliation:</strong> <a href="https://sites.google.com/site/imbs3dprinting/Home?authuser=0">Integrated MechanoBioSystems Lab, National Cheng Kung University (NCKU)</a> &nbsp;|&nbsp;
+            <strong>Type:</strong> International Research Internship (NSTC-funded) &nbsp;|&nbsp;
+            <strong>Domain:</strong> 3D Computer Vision, Biomedical Imaging
+        </p>
     </div>
 </div>
-<div class="caption">
-    Conceptual illustration of the Y-Net Siamese network for 3D cell tracking.
-</div>
-
-### Architecture Design
-
-The **Y-Net** architecture combines:
-
-- **Siamese backbone**: Twin networks process cell candidates from consecutive time frames
-- **3D convolutions**: Capture volumetric spatial features essential for 3D analysis
-- **Multi-scale feature fusion**: The "Y" structure merges features at multiple resolutions
-
-### Key Features
-
-1. **Embedding learning**: Cells are mapped to a discriminative feature space where matched pairs are close
-2. **Temporal consistency**: Exploits the assumption that cells move smoothly between frames
-3. **Division handling**: Special provisions for tracking daughter cells after mitosis
 
 ---
 
-## International Collaboration
+## The Challenge
 
-This project was conducted during my **NSTC-funded internship** in Taiwan, providing invaluable experience in:
-
-- Working with an international research team
-- Adapting to different research cultures and methodologies
-- Communicating complex technical ideas across language barriers
+Tracking single cells in 3D time-lapse microscopy is computationally expensive and prone to errors due to cell deformation, occlusion, and rapid morphological changes. Traditional 2D tracking methods lose critical spatial context, while existing 3D approaches suffer from high computational complexity that makes real-time analysis infeasible. The challenge is compounded by the need to handle cell division events, where a single cell splits into multiple daughter cells, requiring robust temporal association across volumetric time-series data.
 
 ---
 
-## Technical Highlights
+## The Method
 
-| Aspect | Details |
-|--------|---------|
-| **Dimension** | Full 3D volumetric processing |
-| **Architecture** | Y-Net with Siamese branches |
-| **Input** | 3D time-lapse microscopy stacks |
-| **Output** | Cell trajectories across time |
+We designed a **Y-Net Siamese Architecture**—a dual-branch network capable of processing volumetric data (3D inputs) to perform simultaneous segmentation and tracking across time frames. The architecture operates through:
+
+1. **Siamese Backbone**: Twin 3D convolutional networks process cell candidates from consecutive time frames, extracting discriminative volumetric features
+2. **Y-Shaped Feature Fusion**: Multi-scale feature fusion at the network's "Y" junction combines low-level spatial details with high-level semantic information
+3. **Embedding Space Learning**: Cells are mapped to a discriminative feature space where matched pairs (same cell across frames) are close, while unmatched pairs are distant
+4. **Temporal Consistency Modeling**: Exploits the assumption that cells move smoothly between frames, enabling robust tracking even under deformation
+
+The unified architecture processes full 3D volumes directly, avoiding the information loss inherent in 2D projection methods, while maintaining computational efficiency through optimized 3D convolutions and efficient feature matching.
+
+{% include figure.liquid path="assets/img/ynet_tracking.gif" title="Figure: 3D Single-cell tracking results (GIF)." class="img-fluid rounded z-depth-1" %}
 
 ---
 
-## Skills Developed
+## Key Innovation
 
-- **3D Computer Vision**: Volumetric feature extraction and analysis
-- **Siamese Networks**: Metric learning for object association
-- **Biomedical Imaging**: Understanding of microscopy data characteristics
-- **International Research**: Cross-cultural scientific collaboration
+Unified 4D tracking (3D space + Time) with high inference speed, optimized for fast-moving cell dynamics. Unlike sequential approaches that process frames independently, our Y-Net architecture performs joint segmentation and tracking in a single forward pass, enabling real-time analysis of 3D time-lapse microscopy data. The architecture is specifically designed to handle rapid cell movements and morphological changes that are common in live-cell imaging experiments.
+
+---
+
+## Impact/Results
+
+The 3D Y-Net architecture demonstrates significant improvements in tracking accuracy and computational efficiency compared to traditional methods. Key achievements include:
+
+- **Accurate 4D tracking** of single cells across multiple time frames with high precision
+- **Real-time inference** capability, enabling live analysis of time-lapse microscopy experiments
+- **Robust handling** of cell division events and morphological changes
+- **Superior performance** compared to 2D projection-based methods, particularly for cells with complex 3D trajectories
+
+This project represents my experience in **3D Computer Vision** and **international research collaboration**, conducted during my NSTC-funded internship in Taiwan, providing valuable exposure to cross-cultural scientific collaboration and advanced biomedical imaging research.

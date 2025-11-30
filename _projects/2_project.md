@@ -1,79 +1,58 @@
 ---
 layout: page
-title: Stain-Structure Disentanglement
+title: Disentangling Stain & Structure in Histopathology
 description: Learning Robust Representations for Histopathology under Staining Variability
-img: assets/img/3.jpg
+img: assets/img/disentangle_arch.jpg
 importance: 2
 category: research
 related_publications: true
 ---
 
-## Overview
-
-**Stain-Structure Disentanglement** tackles the challenge of H&E (Hematoxylin & Eosin) staining variability in histopathology image analysis. Different laboratories use varying staining protocols, leading to significant color shifts that confuse deep learning models.
-
-This work was conducted at the [Machine and Hybrid Intelligence Lab, Northwestern University](https://www.mhilab.org/), under the supervision of Prof. Ulas Bagci.
+<div class="row">
+    <div class="col-sm-12">
+        <p class="text-muted">
+            <strong>Affiliation:</strong> <a href="https://www.mhilab.org/">Machine and Hybrid Intelligence Lab, Northwestern University</a> &nbsp;|&nbsp;
+            <strong>Advisor:</strong> <a href="https://www.mhilab.org/">Prof. Ulas Bagci</a> &nbsp;|&nbsp;
+            <strong>Venue:</strong> MICCAI Workshop on Computational Pathology (COMPAYL) 2025
+        </p>
+    </div>
+</div>
 
 ---
 
 ## The Challenge
 
-Histopathology slides are stained with H&E dyes to visualize tissue structures:
-- **Hematoxylin** (purple/blue): stains cell nuclei
-- **Eosin** (pink): stains cytoplasm and extracellular matrix
-
-However, staining intensity and color balance vary significantly across:
-- Different laboratories
-- Batch-to-batch variations
-- Scanner hardware differences
-
-This variability causes models trained on one dataset to fail on others—a critical limitation for clinical deployment.
+H&E (Hematoxylin & Eosin) stained histopathology images exhibit significant color variability (stain heterogeneity) across different laboratories, causing standard segmentation models to fail. This domain shift arises from variations in staining protocols, batch-to-batch differences, and scanner hardware variations. Conventional data augmentation techniques are insufficient to handle this fundamental distribution mismatch, leading to poor generalization when models trained on one dataset are deployed in different clinical settings—a critical limitation for real-world medical AI deployment.
 
 ---
 
-## Our Solution
+## The Method
 
-We propose a **mean-teacher framework** that explicitly disentangles:
+We developed a **Mean-Teacher Framework** designed to explicitly disentangle "stain appearance" (style) from "tissue structure" (content). The framework consists of:
 
-1. **Stain appearance**: Color and intensity characteristics of the staining
-2. **Structural content**: Underlying tissue morphology independent of staining
+1. **Dual-Branch Architecture**: Separate encoder pathways process stain appearance features and structural content features independently
+2. **Student-Teacher Consistency**: The student network learns to ignore color variations while preserving structural features through consistency regularization with the teacher network
+3. **Disentanglement Loss**: A novel loss function that explicitly enforces separation between style and content representations, ensuring that structural features remain invariant to stain variations
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="Original H&E" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="Stain Variations" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="Structure Preserved" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Illustration of staining variability across different histopathology samples.
-</div>
+The key insight is that while staining appearance varies dramatically across laboratories, the underlying tissue morphology—the true diagnostic signal—remains constant. By learning structure-invariant representations, the model can generalize across different staining protocols without requiring retraining or domain adaptation.
+
+{% include figure.liquid path="assets/img/disentangle_arch.jpg" title="Figure: The proposed Stain-Structure Disentanglement Framework." class="img-fluid rounded z-depth-1" %}
 
 ---
 
-## Technical Approach
+## Key Innovation
 
-Our framework employs:
-
-- **Dual encoders**: Separate pathways for stain and structure features
-- **Consistency regularization**: Structure representations remain stable under stain augmentation
-- **Mean-teacher training**: Temporal ensembling for stable pseudo-labels
-
-The key insight is that while staining varies, the underlying tissue structure—the true diagnostic signal—remains constant.
+A novel disentanglement loss that forces the model to learn **structure-invariant representations**, enabling robust segmentation even with limited annotations. Unlike conventional domain adaptation methods that require labeled data from target domains, our approach learns to extract domain-agnostic structural features during training, making it particularly effective for scenarios with scarce annotations and diverse staining protocols.
 
 ---
 
-## Impact
+## Impact/Results
 
-By separating appearance from content, our method:
+Our method achieves robust segmentation performance across multiple histopathology datasets with varying staining protocols, demonstrating significant improvements in cross-domain generalization compared to baseline methods. The disentanglement framework enables:
 
-- **Generalizes** across different staining protocols without retraining
-- **Reduces** the annotation burden for multi-center studies
-- **Enables** robust analysis with minimal labeled examples
+- **Generalization** across different staining protocols without retraining or domain adaptation
+- **Reduced annotation burden** for multi-center studies by learning from limited labeled examples
+- **Robust performance** in real-world clinical settings where staining variability is the norm rather than the exception
 
 ---
 
