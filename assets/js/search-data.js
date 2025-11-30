@@ -433,34 +433,34 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-joined-xu-lab-at-cmu-and-mhi-lab-at-northwestern-as-a-research-assistant-working-on-medical-image-analysis",
+            },},{id: "news-winner-of-the-fetal-ultrasound-grand-challenge-at-isbi-texas-usa",
+          title: '🏆 Winner of the Fetal Ultrasound Grand Challenge at ISBI (Texas, USA).',
+          description: "",
+          section: "News",},{id: "news-started-research-at-northwestern-university-under-prof-ulas-bagci",
+          title: '🎓 Started research at Northwestern University under Prof. Ulas Bagci.',
+          description: "",
+          section: "News",},{id: "news-joined-xu-lab-at-cmu-and-mhi-lab-at-northwestern-as-a-research-assistant-working-on-medical-image-analysis",
           title: '🔬 Joined Xu Lab at CMU and MHI Lab at Northwestern as a...',
           description: "",
-          section: "News",},{id: "news-awarded-the-nstc-scholarship-from-taiwan-ministry-of-science-and-technology-for-research-excellence",
-          title: '🎓 Awarded the NSTC Scholarship from Taiwan Ministry of Science and Technology for...',
+          section: "News",},{id: "news-joined-carnegie-mellon-university-xu-lab-as-a-research-assistant",
+          title: '🔬 Joined Carnegie Mellon University (Xu Lab) as a Research Assistant.',
           description: "",
-          section: "News",},{id: "news-paper-accepted-at-cvprw-2025-hdc-hierarchical-distillation-for-multi-level-noisy-consistency-in-semi-supervised-histopathology-segmentation",
-          title: '📄 Paper accepted at CVPRW 2025: “HDC: Hierarchical Distillation for Multi-level Noisy Consistency...',
-          description: "",
-          section: "News",},{id: "news-paper-accepted-at-bmvc-2025-semi-moe-mixture-of-experts-meets-semi-supervised-histopathology-segmentation",
-          title: '📄 Paper accepted at BMVC 2025: “Semi-MoE: Mixture-of-Experts meets Semi-Supervised Histopathology Segmentation”',
-          description: "",
-          section: "News",},{id: "news-winner-of-the-fetal-ultrasound-grand-challenge-at-isbi-2025-our-sam-based-approach-achieved-first-place-among-international-competitors",
-          title: '🏆 Winner of the Fetal Ultrasound Grand Challenge at ISBI 2025! Our SAM-based...',
+          section: "News",},{id: "news-paper-on-semi-supervised-histopathology-accepted-to-bmvc-2025",
+          title: '📄 Paper on Semi-Supervised Histopathology accepted to BMVC 2025.',
           description: "",
           section: "News",},{id: "projects-semi-moe",
           title: 'Semi-MoE',
-          description: "Mixture of Experts for Semi-Supervised Histopathology Segmentation",
+          description: "Mixture-of-Experts for Histopathology",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-stain-structure-disentanglement",
-          title: 'Stain-Structure Disentanglement',
+            },},{id: "projects-disentangling-stain-amp-structure-in-histopathology",
+          title: 'Disentangling Stain &amp;amp; Structure in Histopathology',
           description: "Learning Robust Representations for Histopathology under Staining Variability",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
             },},{id: "projects-semisam",
           title: 'SemiSAM',
-          description: "Foundation Model-Driven Co-Training for Medical Image Segmentation",
+          description: "Foundation Models meet Medical AI",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
             },},{id: "projects-3d-y-net-for-single-cell-tracking",
@@ -470,7 +470,7 @@ ninja.data = [{
               window.location.href = "/projects/4_project/";
             },},{id: "projects-dragpc",
           title: 'DragPC',
-          description: "Interactive 3D Point Cloud Editing via Denoising Diffusion Models",
+          description: "Interactive 3D Editing",
           section: "Projects",handler: () => {
               window.location.href = "/projects/5_project/";
             },},{
@@ -506,7 +506,7 @@ ninja.data = [{
         title: 'CV',
         section: 'Socials',
         handler: () => {
-          window.open("/assets/pdf/ViVu_CV_Fall26.pdf", "_blank");
+          window.open("/assets/pdf/VuNguyenLanVi_CV.pdf", "_blank");
         },
       },{
         id: 'social-rss',
