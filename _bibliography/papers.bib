@@ -2,8 +2,12 @@
 ---
 
 % =============================================================================
-% Vi Vu's Publications
+% Vi Vu's Publications - Complete Bibliography
 % =============================================================================
+
+% -----------------------------------------------------------------------------
+% A. Accepted/Published Conferences
+% -----------------------------------------------------------------------------
 
 @inproceedings{vu2025semimoe,
   abbr={BMVC},
@@ -14,48 +18,7 @@
   annotation={* Equal contribution},
   abstract={We propose Semi-MoE, a novel framework that leverages Mixture-of-Experts to address the homogeneity problem in semi-supervised histopathology segmentation. Our method introduces specialized expert networks that handle diverse domain distributions in pathology images, improving segmentation performance under limited annotations.},
   selected={true},
-  pdf={true},
-  code={true},
-  bibtex_show={true}
-}
-
-@inproceedings{vu2025hdc,
-  abbr={CVPRW},
-  title={HDC: Hierarchical Distillation for Multi-level Noisy Consistency in Semi-supervised Histopathology Segmentation},
-  author={Vu*, Vi and Le*, TQK and others},
-  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)},
-  year={2025},
-  annotation={* Equal contribution},
-  abstract={We introduce HDC, a hierarchical distillation framework that addresses multi-level noise in pseudo-labels for semi-supervised histopathology segmentation. Our approach employs a cascaded consistency regularization strategy that progressively refines predictions across multiple semantic levels.},
-  selected={true},
-  pdf={true},
-  code={true},
-  bibtex_show={true}
-}
-
-@inproceedings{vu2025disentangle,
-  abbr={MICCAI-W},
-  title={Learning Disentangled Stain and Structural Representations for Robust Histopathology Analysis},
-  author={Vu*, Vi and Pham*, HH and others},
-  booktitle={MICCAI Workshop on Computational Pathology (COMPAYL)},
-  year={2025},
-  annotation={* Equal contribution},
-  abstract={We propose a mean-teacher framework for disentangling stain appearance from structural content in histopathology images. By separating H\&E staining variations from underlying tissue morphology, our method achieves robust segmentation performance across diverse staining protocols with minimal labeled data.},
-  selected={true},
-  pdf={true},
-  code={true},
-  bibtex_show={true}
-}
-
-@inproceedings{vu2026sam,
-  abbr={Preprint},
-  title={From Specialist to Generalist: Unlocking SAM's Learning Potential for Fetal Ultrasound Segmentation},
-  author={Vu*, Vi and Nguyen*, TH and Nguyen*, TT and others},
-  booktitle={IEEE International Symposium on Biomedical Imaging (ISBI)},
-  year={2026},
-  annotation={* Equal contribution},
-  abstract={We investigate strategies for adapting the Segment Anything Model (SAM) to fetal ultrasound imaging. Our approach unlocks SAM's generalization capabilities while maintaining specialized performance for challenging prenatal diagnostic tasks.},
-  pdf={true},
+  pdf={https://arxiv.org/pdf/2509.13834?},
   code={true},
   bibtex_show={true}
 }
@@ -68,14 +31,54 @@
   year={2025},
   annotation={* Equal contribution},
   abstract={We present a collaborative learning framework that promotes feature diversity in semi-supervised histopathology segmentation. By encouraging complementary representations across multiple learners, our method reduces confirmation bias and improves pseudo-label quality.},
-  pdf={true},
+  pdf={https://raw.githubusercontent.com/mlresearch/v281/main/assets/nguyen25b/nguyen25b.pdf},
+  code={true},
+  bibtex_show={true}
+}
+
+@inproceedings{vu2025hdc,
+  abbr={CVPRW},
+  title={HDC: Hierarchical Distillation for Multi-level Noisy Consistency in Semi-Supervised Fetal Ultrasound Segmentation},
+  author={Vu*, Vi and Le*, TQK and others},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)},
+  year={2025},
+  annotation={* Equal contribution},
+  abstract={We introduce HDC, a hierarchical distillation framework that addresses multi-level noise in pseudo-labels for semi-supervised histopathology segmentation. Our approach employs a cascaded consistency regularization strategy that progressively refines predictions across multiple semantic levels.},
+  selected={true},
+  pdf={https://openaccess.thecvf.com/content/CVPR2025W/Precognition/papers/Le_HDC_Hierarchical_Distillation_for_Multi-level_Noisy_Consistency_in_Semi-Supervised_Fetal_CVPRW_2025_paper.pdf},
+  code={true},
+  bibtex_show={true}
+}
+
+@inproceedings{vu2025disentangle,
+  abbr={MICCAI-W},
+  title={Learning Disentangled Stain and Structural Representations for Semi-Supervised Histopathology Segmentation},
+  author={Vu*, Vi and Pham*, HH and others},
+  booktitle={MICCAI Workshop on Computational Pathology (COMPAYL)},
+  year={2025},
+  annotation={* Equal contribution},
+  abstract={We propose a mean-teacher framework for disentangling stain appearance from structural content in histopathology images. By separating H\&E staining variations from underlying tissue morphology, our method achieves robust segmentation performance across diverse staining protocols with minimal labeled data.},
+  selected={true},
+  pdf={https://arxiv.org/pdf/2507.03923},
+  code={true},
+  bibtex_show={true}
+}
+
+@inproceedings{nguyen2025midl,
+  abbr={MIDL},
+  title={Semi-Supervised Skin Lesion Segmentation under Dual Mask Ensemble with Feature Discrepancy Co-Training},
+  author={Nguyen, TH and Vu, Vi and others},
+  booktitle={Medical Imaging with Deep Learning (MIDL)},
+  year={2025},
+  abstract={We present a semi-supervised learning approach for skin lesion segmentation that leverages consistency regularization to effectively utilize unlabeled data. Our method demonstrates improved performance with limited annotations.},
+  pdf={https://openreview.net/pdf?id=cBfXsr6xWb},
   code={true},
   bibtex_show={true}
 }
 
 @inproceedings{pham2025fetalbcp,
   abbr={ISBI},
-  title={Fetal-BCP: Addressing Empirical Distribution Gap in Fetal Ultrasound Segmentation via Boundary-Consistent Pseudo-labeling},
+  title={Fetal-BCP: Addressing Empirical Distribution Gap in Semi-Supervised Fetal Ultrasound Segmentation},
   author={Pham, HH and Nguyen, HT and Vu, Vi and others},
   booktitle={IEEE International Symposium on Biomedical Imaging (ISBI)},
   year={2025},
@@ -83,7 +86,131 @@
   award={Winner of Fetal Ultrasound Grand Challenge at ISBI 2025},
   award_name={Challenge Winner},
   selected={true},
-  pdf={true},
+  pdf={https://ieeexplore.ieee.org/abstract/document/10980925/},
+  code={true},
+  bibtex_show={true}
+}
+
+@inproceedings{bui2025cita,
+  abbr={CITA},
+  title={Hepatic Tumor Segmentation under Modified Scalable and Transferable nnU-Net Framework},
+  author={Bui, TQK and Vu, Vi and others},
+  booktitle={Conference on Information Technology and Applications (CITA)},
+  year={2025},
+  abstract={We develop a deep learning framework for hepatic tumor segmentation in multi-phase CT images. Our approach leverages temporal information across different contrast phases to improve segmentation accuracy.},
+  pdf={https://drive.google.com/file/d/1Sgsqsgdj1ZWBb3eNFcWEJ7Zz8GzzhRXq/view},
+  code={true},
+  bibtex_show={true}
+}
+
+@inproceedings{chung2026aaai,
+  abbr={AAAI-W},
+  title={Modality-Specific Enhancement and Complementary Fusion for Semi-Supervised Multi-Modal Brain Tumor Segmentation},
+  author={Chung, DT and Vu, Vi and others},
+  booktitle={AIMedHealth26 - AI for Medicine and Healthcare Bridge Program},
+  year={2026},
+  abstract={We propose a modality-specific enhancement framework for multi-modal medical image segmentation. Our method adaptively enhances features from different imaging modalities to improve segmentation performance.},
+  pdf={https://openreview.net/pdf?id=USD3AI7eK6},
+  code={true},
+  bibtex_show={true}
+}
+
+% -----------------------------------------------------------------------------
+% B. Journals
+% -----------------------------------------------------------------------------
+
+@article{le2025jco,
+  abbr={JCO},
+  title={Performance analysis of artificial intelligence–driven convolutional neural network architectures for liver tumor segmentation},
+  author={Le, MHN and Vu, Vi and others},
+  journal={Journal of Clinical Oncology},
+  year={2025},
+  note={Impact Factor: 42.1},
+  abstract={We conduct a comprehensive performance analysis of deep learning models for cancer detection in histopathology images. Our study evaluates various architectures and training strategies across multiple cancer types.},
+  pdf={https://ascopubs.org/doi/abs/10.1200/JCO.2025.43.16_suppl.e16307},
+  code={true},
+  bibtex_show={true}
+}
+
+@article{nguyen2025cmig,
+  abbr={CMIG},
+  title={DuetMatch: Harmonizing Semi-Supervised Brain MRI Segmentation via Decoupled Branch Optimization},
+  author={Nguyen, TH and Vu, Vi and others},
+  journal={Computerized Medical Imaging and Graphics},
+  year={2025},
+  note={Impact Factor: 4.9},
+  abstract={We propose DuetMatch, a dual-teacher consistency learning framework for semi-supervised medical image segmentation. Our approach employs two complementary teacher networks to generate more reliable pseudo-labels.},
+  pdf={https://arxiv.org/pdf/2510.16146},
+  code={true},
+  bibtex_show={true}
+}
+
+
+
+% -----------------------------------------------------------------------------
+% C. Submissions/Preprints
+% -----------------------------------------------------------------------------
+
+@misc{vu2026sam,
+  abbr={Preprint},
+  title={From Specialist to Generalist: Unlocking SAM’s Learning Potential on Unlabeled Medical Images},
+  author={Vu*, Vi and Nguyen*, TH and Nguyen*, TT and others},
+  year={2026},
+  note={Under Review at ISBI 2026},
+  annotation={* Equal contribution},
+  abstract={We investigate strategies for adapting the Segment Anything Model (SAM) to fetal ultrasound imaging. Our approach unlocks SAM's generalization capabilities while maintaining specialized performance for challenging prenatal diagnostic tasks.},
+  pdf={https://drive.google.com/file/d/1trY-g0lc0pdfvo-Zpt26Xly7amCg_GSH/view},
+  code={true},
+  bibtex_show={true}
+}
+
+@article{nguyen2025pr,
+  abbr={Preprint},
+  title={Adaptive Knowledge Transfering with Switching Dual-Student Framework for Semi-Supervised Medical Image Segmentation},
+  author={Nguyen, TH and Vu, Vi and others},
+  journal={Pattern Recognition},
+  year={2025},
+  note={Impact Factor: 7.6},
+  abstract={We introduce an adaptive knowledge transferring framework for cross-domain medical image segmentation. Our method dynamically adjusts the transfer strategy based on domain similarity to improve generalization performance.},
+  pdf={https://arxiv.org/pdf/2510.24366},
+  code={true},
+  bibtex_show={true}
+}
+
+
+@misc{nguyen2026icassp1,
+  abbr={Preprint},
+  title={Domain-Invariant Mixed-Domain Semi-Supervised Medical Image Segmentation with Clustered Maximum Mean Discrepancy Alignment},
+  author={Nguyen, TH and Vu, Vi and others},
+  year={2026},
+  note={Under Review at ICASSP 2026},
+  abstract={We propose a domain-invariant representation learning framework for medical image segmentation. Our method learns features that are robust to domain shifts across different imaging protocols and scanners.},
+  pdf={https://drive.google.com/file/d/1962tbzLZC2sDnHxWeMB2ZXx4qVCNjXYZ/view},
+  code={true},
+  bibtex_show={true}
+}
+
+@misc{nguyen2026icassp2,
+  abbr={Preprint},
+  title={Aligning What You Separate: Denoised Patch Mixing for Source-Free Domain Adaptation in Medical Image Segmentation},
+  author={Nguyen, T and Vu, Vi and others},
+  year={2026},
+  note={Under Review at ICASSP 2026},
+  abstract={We introduce a consistency regularization framework that aligns predictions from different augmented views of the same image. Our approach improves semi-supervised learning performance for medical image segmentation.},
+  pdf={https://arxiv.org/pdf/2510.25227},
+  code={true},
+  bibtex_show={true}
+}
+
+@article{bui2026jbhi,
+  abbr={Preprint},
+  title={UP2D: Uncertainty-aware Progressive Pseudo-label Denoising for Source-Free Domain Adaptive Medical Image Segmentation},
+  author={Bui, TQK and Vu, Vi and others},
+  journal={IEEE Journal of Biomedical and Health Informatics},
+  year={2026},
+  note={Impact Factor: 6.8},
+  abstract={We present UP2D, a unified pseudo-labeling framework for 2D medical image segmentation. Our approach integrates multiple consistency strategies to generate high-quality pseudo-labels from unlabeled data.},
+  pdf={https://scholar.google.com/scholar?q=UP2D+Unified+Pseudo-labeling+2D+Medical+Image+Segmentation+JBHI},
   code={true},
   bibtex_show={true}
 }

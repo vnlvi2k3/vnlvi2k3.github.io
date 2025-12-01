@@ -3,7 +3,7 @@ layout: page
 title: projects
 permalink: /projects/
 description: Selected research projects in Medical AI, Computer Vision, and Generative Models.
-nav: true
+nav: false
 nav_order: 3
 display_categories: [research]
 horizontal: false
