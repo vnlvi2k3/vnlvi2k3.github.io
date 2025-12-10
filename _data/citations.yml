@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2025-12-03'
+  last_updated: '2025-12-10'
 papers:
   w0LE-04AAAAJ:2osOgNQ5qMEC:
     citations: 8
@@ -10,8 +10,8 @@ papers:
     title: 'HDC: Hierarchical Distillation for Multi-level Noisy Consistency in Semi-Supervised Fetal Ultrasound Segmentation'
     year: '2025'
   w0LE-04AAAAJ:IjCSPb-OGe4C:
-    citations: 1
-    title: Learning Disentangled Stain and Structural Representations for Semi-Supervised Histopathology Segmentation
+    citations: 2
+    title: Learning disentangled stain and structural representations for semi-supervised histopathology segmentation
     year: '2025'
   w0LE-04AAAAJ:Tyk-4Ss8FVUC:
     citations: 0
@@ -46,6 +46,6 @@ papers:
     title: Semi-supervised skin lesion segmentation under dual mask ensemble with feature discrepancy co-training
     year: Unknown Year
   w0LE-04AAAAJ:zYLM7Y9cAGgC:
-    citations: 1
+    citations: 2
     title: 'Semi-MoE: Mixture-of-Experts meets Semi-Supervised Histopathology Segmentation'
     year: '2025'
