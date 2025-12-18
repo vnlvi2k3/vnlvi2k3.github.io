@@ -9,110 +9,157 @@
 % A. Accepted/Published Conferences
 % -----------------------------------------------------------------------------
 
-@inproceedings{vu2025semimoe,
+@inproceedings{vu2025semi,
   abbr={BMVC},
   title={Semi-MoE: Mixture-of-Experts meets Semi-Supervised Histopathology Segmentation},
-  author={Vu*, Vi and Nguyen*, TH and others},
+  author={Vu*, Vi and Nguyen*, TH and Nguyen, HT and Kihara, D and Wang, T and Li, X and Xu, M},
   booktitle={British Machine Vision Conference (BMVC)},
   year={2025},
   annotation={* Equal contribution},
-  abstract={We propose Semi-MoE, a novel framework that leverages Mixture-of-Experts to address the homogeneity problem in semi-supervised histopathology segmentation. Our method introduces specialized expert networks that handle diverse domain distributions in pathology images, improving segmentation performance under limited annotations.},
+  abstract={Semi-supervised learning has been employed to alleviate the need for extensive labeled data for histopathology image segmentation, but existing methods struggle with
+noisy pseudo-labels due to ambiguous gland boundaries and morphological misclassification. This paper introduces Semi-MOE, to the best of our knowledge, the first multitask Mixture-of-Experts framework for semi-supervised histopathology image segmentation. Our approach leverages three specialized expert networks: A main segmentation expert, a signed distance field regression expert, and a boundary prediction expert,
+each dedicated to capturing distinct morphological features. Subsequently, the MultiGating Pseudo-labeling module dynamically aggregates expert features, enabling a robust fuse-and-refine pseudo-labeling mechanism. Furthermore, to eliminate manual tuning while dynamically balancing multiple learning objectives, we propose an Adaptive
+Multi-Objective Loss. Extensive experiments on GlaS and CRAG benchmarks show that
+our method outperforms state-of-the-art approaches in low-label settings, highlighting
+the potential of MoE-based architectures in advancing semi-supervised segmentation.},
   selected={true},
   pdf={https://arxiv.org/pdf/2509.13834?},
-  code={true},
-  bibtex_show={true}
+  code={https://github.com/vnlvi2k3/Semi-MoE},
 }
 
 @inproceedings{vu2025aaai,
   abbr={AAAI-W},
   title={Semi-Supervised Histopathology Image Segmentation with Feature Diversified Collaborative Learning},
-  author={Vu*, Vi and Nguyen*, TH and others},
+  author={Vu*, Vi and Nguyen*, TH and Nguyen, HT and Dinh, QV and Li, X and Xu, M},
   booktitle={AAAI Bridge Program on AI for Medicine},
   year={2025},
   annotation={* Equal contribution},
-  abstract={We present a collaborative learning framework that promotes feature diversity in semi-supervised histopathology segmentation. By encouraging complementary representations across multiple learners, our method reduces confirmation bias and improves pseudo-label quality.},
+  abstract={Histopathology image segmentation plays a critical role in
+advancing disease diagnosis, prognosis, and treatment plan-
+ning. However, it presents significant challenges due to the
+complexity of tissue structures, staining variability, and low
+contrast between tissue classes. Semi-supervised learning,
+employed to mitigate annotation scarcity, introduces addi-
+tional difficulties, such as managing noisy pseudo-labels
+while ensuring robust performance with limited supervi-
+sion. Traditional collaborative training methods, commonly
+used in medical image segmentation, often face issues like
+model coupling—where models become overly dependent on
+each other, propagating similar errors—or confirmation bias,
+where networks reinforce initial mistakes by relying on inac-
+curate pseudo-labels. Existing frameworks designed to tackle
+these challenges often suffer from complex pipelines and re-
+quire extensive pre-training but fail to address the noise char-
+acteristics inherent in such datasets. To balance the efficiency
+of traditional co-training methods with dual networks while
+enhancing segmentation accuracy on noisy histopathological
+data, we propose Feature Diversified Collaborative Learning
+(FDCL). Our work aims to design an effective feature diver-
+sification loss that encourages the feature representations of
+sub-networks to be distinct, ensuring they capture different
+information to exchange with each other, thereby avoiding
+suboptimal solutions or, even worse, falling into the coupling
+problem. We benchmark our method on two well-known
+histopathology datasets and achieve state-of-the-art results on
+the GlaS dataset with only 10% of the labeled data.},
   pdf={https://raw.githubusercontent.com/mlresearch/v281/main/assets/nguyen25b/nguyen25b.pdf},
-  code={true},
-  bibtex_show={true}
+  code={https://github.com/vnlvi2k3/FDCL},
 }
 
 @inproceedings{vu2025hdc,
   abbr={CVPRW},
   title={HDC: Hierarchical Distillation for Multi-level Noisy Consistency in Semi-Supervised Fetal Ultrasound Segmentation},
-  author={Vu*, Vi and Le*, TQK and others},
+  author={Vu*, Vi and Le*, TQK and Pham, HH and Huynh, XL and Nguyen, TH and Le, MHN and Nguyen, Q and Nguyen, HD},
   booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)},
   year={2025},
   annotation={* Equal contribution},
-  abstract={We introduce HDC, a hierarchical distillation framework that addresses multi-level noise in pseudo-labels for semi-supervised histopathology segmentation. Our approach employs a cascaded consistency regularization strategy that progressively refines predictions across multiple semantic levels.},
+  abstract={Transvaginal ultrasound is a critical imaging modality for evaluating cervical anatomy and detecting physiological changes. However, accurate segmentation of cervical structures remains challenging due to low contrast,
+shadow artifacts, and indistinct boundaries. While convolutional neural networks (CNNs) have demonstrated efficacy in medical image segmentation, their reliance on
+large-scale annotated datasets presents a significant limitation in clinical ultrasound imaging. Semi-supervised
+learning (SSL) offers a potential solution by utilizing unlabeled data, yet existing teacher-student frameworks often
+encounter confirmation bias and high computational costs.
+In this paper, a novel semi-supervised segmentation framework, called HDC, is proposed incorporating adaptive consistency learning with a single-teacher architecture. The
+framework introduces a hierarchical distillation mechanism
+with two objectives: Correlation Guidance Loss for aligning feature representations and Mutual Information Loss
+for stabilizing noisy student learning. The proposed approach reduces model complexity while enhancing generalization. Experiments on fetal ultrasound datasets, FUGC
+and PSFH, demonstrate competitive performance with reduced computational overhead compared to multi-teacher
+models.},
   selected={true},
   pdf={https://openaccess.thecvf.com/content/CVPR2025W/Precognition/papers/Le_HDC_Hierarchical_Distillation_for_Multi-level_Noisy_Consistency_in_Semi-Supervised_Fetal_CVPRW_2025_paper.pdf},
-  code={true},
-  bibtex_show={true}
 }
 
 @inproceedings{vu2025disentangle,
   abbr={MICCAI-W},
   title={Learning Disentangled Stain and Structural Representations for Semi-Supervised Histopathology Segmentation},
-  author={Vu*, Vi and Pham*, HH and others},
+  author={Vu*, Vi and Pham*, HH and Nguyen, TH and Bagci, U and Xu, M and Le, TN and Pham, HH},
   booktitle={MICCAI Workshop on Computational Pathology (COMPAYL)},
   year={2025},
   annotation={* Equal contribution},
-  abstract={We propose a mean-teacher framework for disentangling stain appearance from structural content in histopathology images. By separating H\&E staining variations from underlying tissue morphology, our method achieves robust segmentation performance across diverse staining protocols with minimal labeled data.},
+  abstract={Accurate gland segmentation in histopathology images is essential for cancer diagnosis and
+prognosis. However, significant variability in Hematoxylin and Eosin (H&E) staining and
+tissue morphology, combined with limited annotated data, poses major challenges for automated segmentation. To address this, we propose Color-Structure Dual-Student (CSDS),
+a novel semi-supervised segmentation framework designed to learn disentangled representations of stain appearance and tissue structure. CSDS comprises two specialized student
+networks: one trained on stain-augmented inputs to model chromatic variation, and the
+other on structure-augmented inputs to capture morphological cues. A shared teacher network, updated via Exponential Moving Average (EMA), supervises both students through
+pseudo-labels. To further improve label reliability, we introduce stain-aware and structureaware uncertainty estimation modules that adaptively modulate the contribution of each
+student during training. Experiments on the GlaS and CRAG datasets show that CSDS
+achieves state-of-the-art performance in low-label settings, with Dice score improvements of
+up to 1.2% on GlaS and 0.7% on CRAG at 5% labeled data, and 0.7% and 1.4% at 10%.},
   selected={true},
   pdf={https://arxiv.org/pdf/2507.03923},
-  code={true},
-  bibtex_show={true}
+  code={https://github.com/hieuphamha19/CSDS},
 }
 
 @inproceedings{nguyen2025midl,
   abbr={MIDL},
   title={Semi-Supervised Skin Lesion Segmentation under Dual Mask Ensemble with Feature Discrepancy Co-Training},
-  author={Nguyen, TH and Vu, Vi and others},
+  author={Nguyen, TH and Nguyen, T and Nguyen, XB and Vu, Vi and Dinh, VQ and MERIAUDEAU, F},
   booktitle={Medical Imaging with Deep Learning (MIDL)},
   year={2025},
-  abstract={We present a semi-supervised learning approach for skin lesion segmentation that leverages consistency regularization to effectively utilize unlabeled data. Our method demonstrates improved performance with limited annotations.},
+  abstract={Skin Lesion Segmentation with supportive Deep Learning has become essential in skin
+lesion analysis and skin cancer diagnosis. However, in the practical scenario of clinical implementation, there is a limitation in human-annotated labels for training data, which leads
+to poor performance in supervised training models. In this paper, we propose Dual Mask
+Ensemble (DME) based on a dual-branch co-training network, which aims to enforce two
+models to exploit information from different views. Specifically, we introduce a novel feature
+discrepancy loss trained with a cross-pseudo supervision strategy, which enhances model
+representation by encouraging the sub-networks to learn from distinct features, thereby
+mitigating feature collapse. Additionally, Dual Mask Ensemble training enables the submodels to extract more meaningful information from unlabeled data by combining mask
+predictions. Experimental results demonstrate the effectiveness of our approach, achieving
+state-of-the-art performance across several metrics (Dice and Jaccard) on the ISIC2018 and
+HAM10000 datasets.},
   pdf={https://openreview.net/pdf?id=cBfXsr6xWb},
-  code={true},
-  bibtex_show={true}
+  code={https://github.com/antares0811/DME-FD},
 }
 
 @inproceedings{pham2025fetalbcp,
   abbr={ISBI},
   title={Fetal-BCP: Addressing Empirical Distribution Gap in Semi-Supervised Fetal Ultrasound Segmentation},
-  author={Pham, HH and Nguyen, HT and Vu, Vi and others},
+  author={Pham, HH and Nguyen, HT and Vu, Vi and Dinh, QV and Nguyen, TH and Li, X and Xu, M},
   booktitle={IEEE International Symposium on Biomedical Imaging (ISBI)},
   year={2025},
-  abstract={We propose Fetal-BCP, a boundary-consistent pseudo-labeling framework for fetal ultrasound segmentation that addresses the empirical distribution gap between labeled and unlabeled data. Our method leverages boundary-aware consistency regularization to improve segmentation accuracy in challenging prenatal imaging scenarios.},
+  abstract={Fetal ultrasound imaging is critical for examining cervical architecture, but segmentation remains difficult due to hard-to-learn features under a lack of labeled data scenarios. In this paper, we present a unique semi-supervised system for cervical segmentation that efficiently uses both labeled and unlabeled images. Inspired by Bidirectional Copy-Paste (BCP), our proposed method, named Fetal-BCP, uses a Mean Teacher framework and thorough data augmentation approaches to reduce the distribution mismatch between labeled and unlabeled data. Our approach significantly lessens the human annotation effort by balancing trustworthy supervision with inferred annotations through consistency regularization and pseudo-labeling. Our results maintained the top rank on the leaderboard of the Fetal Ultrasound Grand Challenge of ISBI 2025 Challenge, surpassing many state-of-the-art methods on both Dice and HD metrics.},
   award={Winner of Fetal Ultrasound Grand Challenge at ISBI 2025},
   award_name={Challenge Winner},
   selected={true},
   pdf={https://ieeexplore.ieee.org/abstract/document/10980925/},
-  code={true},
-  bibtex_show={true}
 }
 
 @inproceedings{bui2025cita,
   abbr={CITA},
   title={Hepatic Tumor Segmentation under Modified Scalable and Transferable nnU-Net Framework},
-  author={Bui, TQK and Vu, Vi and others},
+  author={Bui, TQK and Dinh, M. and Vu, Vi and Nguyen, Q. and Dinh, Q. and Le, M. and Le, Q.},
   booktitle={Conference on Information Technology and Applications (CITA)},
   year={2025},
-  abstract={We develop a deep learning framework for hepatic tumor segmentation in multi-phase CT images. Our approach leverages temporal information across different contrast phases to improve segmentation accuracy.},
-  pdf={https://drive.google.com/file/d/1Sgsqsgdj1ZWBb3eNFcWEJ7Zz8GzzhRXq/view},
-  code={true},
-  bibtex_show={true}
+  abstract={Advances in medical image segmentation have raised debate about the practical performance of the latest architectures and CNN-based approaches. While recent studies suggest that CNNs remain competitive, their performance in specific medical imaging tasks requires further validation. To address this, this study evaluates the performance of U-Net variants and STU-Net - a powerful scalable and transferable architecture, for hepatic tumor segmentation tasks. Our results on ATLAS dataset revealed that while traditional U-Net variants establish strong baseline performance, STU-Net achieved superior capabilities across various evaluation metrics, notably dice scores of 95.76 ± 0.99% and 68.30 ± 2.13% for liver and tumor segmentation respectively. These results validate its efficiency for such a challenging medical segmentation task.},
 }
 
 @inproceedings{chung2026aaai,
   abbr={AAAI-W},
   title={Modality-Specific Enhancement and Complementary Fusion for Semi-Supervised Multi-Modal Brain Tumor Segmentation},
-  author={Chung, DT and Vu, Vi and others},
+  author={Chung, DT and Lam, BT and Nguyen, TH and Nguyen, T and Vu, Vi and Cao, HL and Huynh, PK and Xu, M},
   booktitle={AIMedHealth26 - AI for Medicine and Healthcare Bridge Program},
   year={2026},
-  abstract={We propose a modality-specific enhancement framework for multi-modal medical image segmentation. Our method adaptively enhances features from different imaging modalities to improve segmentation performance.},
-  pdf={https://openreview.net/pdf?id=USD3AI7eK6},
-  code={true},
-  bibtex_show={true}
+  abstract={Semi-supervised learning (SSL) has become a promising direction for medical image segmentation, enabling models to learn from limited labeled data alongside abundant unlabeled samples. However, existing SSL approaches for multi-modal medical imaging often struggle to exploit the complementary information between modalities due to semantic discrepancies and misalignment across MRI sequences. To address this, we propose a novel semi-supervised multi-modal framework that explicitly enhances modality-specific representations and facilitates adaptive cross-modal information fusion. Specifically, we introduce a Modality-specific Enhancing Module (MEM) to strengthen semantic cues unique to each modality via channel-wise attention, and a learnable Complementary Information Fusion (CIF) module to adaptively exchange complementary knowledge between modalities. The overall framework is optimized using a hybrid objective combining supervised segmentation loss and crossmodal consistency regularization on unlabeled data. Extensive experiments on the BraTS 2019 (HGG subset) demonstrate that our method consistently outperforms strong semisupervised and multi-modal baselines under 1%, 5%, and 10% labeled data settings, achieving significant improvements in both Dice and Sensitivity scores. Ablation studies further confirm the complementary effects of our proposed MEM and CIF in bridging cross-modality discrepancies and improving segmentation robustness under scarce supervision.},
 }
 
 % -----------------------------------------------------------------------------
@@ -122,27 +169,34 @@
 @article{le2025jco,
   abbr={JCO},
   title={Performance analysis of artificial intelligence–driven convolutional neural network architectures for liver tumor segmentation},
-  author={Le, MHN and Vu, Vi and others},
+  author={Le, MHN and Nguyen, TH and Dinh, MT and Bui, TQK and Vu, Vi and Kha, HQ and Nguyen, PK and Le, NHH and Nguyen, TM and Huynh, HH and Le, K},
   journal={Journal of Clinical Oncology},
   year={2025},
   note={Impact Factor: 42.1},
-  abstract={We conduct a comprehensive performance analysis of deep learning models for cancer detection in histopathology images. Our study evaluates various architectures and training strategies across multiple cancer types.},
+  abstract={Background: Advances in medical image segmentation have raised debate about the practical performance of the latest architectures and CNN-based approaches. Recent studies have demonstrated that CNN-based architectures maintain competitive performance compared to newer architectural paradigms despite limited task-specific validation. Methods: This study utilizes the ATLAS dataset from the MICCAI 2023 ATLAS Challenge, including a total of 90 pairs of MRI images and labels with varieties of machines, sequences, and contrast phases. This dataset was divided into a public set of 60 patients and a private set of 30 patients collected between 2012-2023. Due to the variety of images, stratified k-fold cross-validation is applied. STU-Net family is leveraged for evaluation and comparison with U-Net variants as baselines. All models are trained using the nnU-Net framework with default combined loss Dice and Cross Entropy. For a fair comparison, all metrics from the ATLAS Challenge are calculated twice to evaluate our models, once for a whole liver and once for tumor segmentation. Results: Our results on the ATLAS dataset revealed that while traditional U-Net variants establish strong baseline performance, STU-Net achieves superior capabilities across various evaluation metrics, notably dice scores of 95.76 ± 0.99% and 68.30 ± 2.13% for liver and tumor segmentation, respectively. These results validate its effectiveness for complex medical segmentation tasks. Conclusions: These results affirm the effectiveness of CNN-based models, particularly STUNet, in complex hepatic tumor segmentation tasks. STUNet’s advanced feature extraction and scalability make it a promising solution for automated liver tumor segmentation in clinical practice. Future work will focus on enhancing interpretability and clinical integration.},
   pdf={https://ascopubs.org/doi/abs/10.1200/JCO.2025.43.16_suppl.e16307},
-  code={true},
-  bibtex_show={true}
 }
 
 @article{nguyen2025cmig,
   abbr={CMIG},
   title={DuetMatch: Harmonizing Semi-Supervised Brain MRI Segmentation via Decoupled Branch Optimization},
-  author={Nguyen, TH and Vu, Vi and others},
+  author={Nguyen, TH and Nguyen, HT and Vu, Vi and Lam, BT and Huynh, P and Wang, T and Li, X and Bagci, U and Xu, M},
   journal={Computerized Medical Imaging and Graphics},
   year={2025},
   note={Impact Factor: 4.9},
-  abstract={We propose DuetMatch, a dual-teacher consistency learning framework for semi-supervised medical image segmentation. Our approach employs two complementary teacher networks to generate more reliable pseudo-labels.},
+  abstract={The limited availability of annotated data in medical imaging makes semi-supervised learning increasingly
+appealing for its ability to learn from imperfect supervision. Recently, teacher-student frameworks have gained
+popularity for their training benefits and robust performance. However, jointly optimizing the entire network
+can hinder convergence and stability, especially in challenging scenarios. To address this for medical image
+segmentation, we propose DuetMatch, a novel dual-branch semi-supervised framework with asynchronous
+optimization, where each branch optimizes either the encoder or decoder while keeping the other frozen.
+To improve consistency under noisy conditions, we introduce Decoupled Dropout Perturbation, enforcing
+regularization across branches. We also design Pairwise CutMix Cross-Guidance to enhance model diversity
+by exchanging pseudo-labels through augmented input pairs. To mitigate confirmation bias from noisy pseudolabels, we propose Consistency Matching, refining labels using stable predictions from frozen teacher models.
+Extensive experiments on benchmark brain MRI segmentation datasets, including ISLES2022 and BraTS,
+show that DuetMatch consistently outperforms state-of-the-art methods, demonstrating its effectiveness and
+robustness across diverse semi-supervised segmentation scenarios.},
   pdf={https://arxiv.org/pdf/2510.16146},
-  code={true},
-  bibtex_show={true}
 }
 
 
@@ -153,64 +207,70 @@
 
 @misc{vu2026sam,
   abbr={Preprint},
-  title={From Specialist to Generalist: Unlocking SAM’s Learning Potential on Unlabeled Medical Images},
-  author={Vu*, Vi and Nguyen*, TH and Nguyen*, TT and others},
+  title={From Specialist to Generalist: Unlocking SAM's Learning Potential on Unlabeled Medical Images},
+  author={Vu*, Vi and Nguyen*, HT and Nguyen*, TT and Lam, TB and Nguyen, TH and Wang, T and Li, X and Xu, M},
   year={2026},
   note={Under Review at ISBI 2026},
   annotation={* Equal contribution},
-  abstract={We investigate strategies for adapting the Segment Anything Model (SAM) to fetal ultrasound imaging. Our approach unlocks SAM's generalization capabilities while maintaining specialized performance for challenging prenatal diagnostic tasks.},
-  pdf={https://drive.google.com/file/d/1trY-g0lc0pdfvo-Zpt26Xly7amCg_GSH/view},
-  code={true},
-  bibtex_show={true}
+  abstract={Foundation models like the Segment Anything Model (SAM) show strong generalization, yet adapting them to medical images remains difficult due to domain shift, scarce labels, and the inability of Parameter-Efficient Fine-Tuning (PEFT) to exploit unlabeled data. We observe that conventional models such as U-Net excel in semi-supervised medical learning, but their ability to assist a PEFT SAM has been largely overlooked. We introduce SC-SAM, a specialist-generalist framework in which U-Net generates both point-based prompts and pseudo-labels to guide SAM’s adaptation to the medical domain, while SAM serves as a powerful generalist supervisor to regularize U-Net. This reciprocal guidance forms a bidirectional co-training loop which allows both models to fully exploit the unlabeled data. Across prostate MRI and polyp segmentation benchmarks, SC-SAM achieves state-of-the-art results, outperforming other existing semi-supervised SAM variants and even medical foundation models like MedSAM, highlighting the value of specialist–generalist cooperation for label-efficient medical image segmentation.},
 }
 
 @article{nguyen2025pr,
   abbr={Preprint},
   title={Adaptive Knowledge Transfering with Switching Dual-Student Framework for Semi-Supervised Medical Image Segmentation},
-  author={Nguyen, TH and Vu, Vi and others},
+  author={Nguyen, TH and Nguyen, HT and Vu, Vi and Lam, BT and Nguyen, BX and Xing, J and Wang, T and Li, X and Xu, M},
   journal={Pattern Recognition},
   year={2025},
   note={Impact Factor: 7.6},
-  abstract={We introduce an adaptive knowledge transferring framework for cross-domain medical image segmentation. Our method dynamically adjusts the transfer strategy based on domain similarity to improve generalization performance.},
+  abstract={Teacher-student frameworks have emerged as a leading approach in semi-supervised
+medical image segmentation, demonstrating strong performance across various tasks.
+However, the learning effects are still limited by the strong correlation and unreliable
+knowledge transfer process between teacher and student networks. To overcome this
+limitation, we introduce a novel switching Dual-Student architecture that strategically
+selects the most reliable student at each iteration to enhance dual-student collaboration
+and prevent error reinforcement. We also introduce a strategy of Loss-Aware Exponential Moving Average to dynamically ensure that the teacher absorbs meaningful
+information from students, improving the quality of pseudo-labels. Our plug-and-play
+framework is extensively evaluated on 3D medical image segmentation datasets, where
+it outperforms state-of-the-art semi-supervised methods, demonstrating its effectiveness in improving segmentation accuracy under limited supervision.},
   pdf={https://arxiv.org/pdf/2510.24366},
-  code={true},
-  bibtex_show={true}
 }
 
 
 @misc{nguyen2026icassp1,
   abbr={Preprint},
   title={Domain-Invariant Mixed-Domain Semi-Supervised Medical Image Segmentation with Clustered Maximum Mean Discrepancy Alignment},
-  author={Nguyen, TH and Vu, Vi and others},
+  author={Nguyen, TH and Lam, BT and Nguyen, Thien and Bui, TQK and Vu, Vi and Huynh, KP and Bagci, U and Xu, M},
   year={2026},
   note={Under Review at ICASSP 2026},
-  abstract={We propose a domain-invariant representation learning framework for medical image segmentation. Our method learns features that are robust to domain shifts across different imaging protocols and scanners.},
-  pdf={https://drive.google.com/file/d/1962tbzLZC2sDnHxWeMB2ZXx4qVCNjXYZ/view},
-  code={true},
-  bibtex_show={true}
+  abstract={Deep learning has shown remarkable progress in medical image semantic segmentation, yet its success heavily depends on large-scale expert annotations and consistent data distributions. In practice, annotations are scarce and images are collected from multiple scanners or centers, leading to mixed-domain settings with unknown domain labels and severe domain gaps. Existing semi-supervised or domain adaptation approaches typically assume either a single domain shift or access to explicit domain indices, which rarely hold in real-world deployment. In this paper, we propose a domain-invariant mixed-domain semi-supervised segmentation framework that jointly enhances data diversity and mitigates domain bias. A Copy-Paste Mechanism (CPM) augments the training set by transferring informative regions across domains, while a Cluster Maximum Mean Discrepancy (CMMD) block clusters unlabeled features and aligns them with labeled anchors via an MMD objective, encouraging domain-invariant representations. Integrated within a teacher–student framework, our method achieves robust and precise segmentation even with very few labeled examples and multiple unknown domain discrepancies. Experiments on Fundus and M&Ms benchmarks demonstrate that our approach consistently surpasses semi-supervised and domain adaptation methods, establishing a potential solution for mixed-domain semi-supervised medical image segmentation.},
 }
 
 @misc{nguyen2026icassp2,
   abbr={Preprint},
   title={Aligning What You Separate: Denoised Patch Mixing for Source-Free Domain Adaptation in Medical Image Segmentation},
-  author={Nguyen, T and Vu, Vi and others},
+  author={Nguyen, T and Nguyen, TH and Bui, TQK and Lam, BT and Vu, Vi and Huynh, KP and Bagci, U and Xu, M},
   year={2026},
   note={Under Review at ICASSP 2026},
-  abstract={We introduce a consistency regularization framework that aligns predictions from different augmented views of the same image. Our approach improves semi-supervised learning performance for medical image segmentation.},
+  abstract={Source-Free Domain Adaptation (SFDA) is emerging as a
+compelling solution for medical image segmentation under
+privacy constraints, yet current approaches often ignore sample difficulty and struggle with noisy supervision under domain shift. We present a new SFDA framework that leverages Hard Sample Selection and Denoised Patch Mixing
+(DPM) to progressively align target distributions. First, unlabeled images are partitioned into reliable and unreliable subsets through entropy-similarity analysis, allowing adaptation
+to start from easy samples and gradually incorporate harder
+ones. Next, pseudo-labels are refined via Monte Carlo-based
+denoising masks, which suppress unreliable pixels and stabilize training. Finally, intra- and inter-domain objectives mix
+patches between subsets, transferring reliable semantics while
+mitigating noise. Experiments on benchmark datasets show
+consistent gains over prior SFDA and UDA methods, delivering more accurate boundary delineation and achieving stateof-the-art Dice and ASSD scores. Our study highlights the
+importance of progressive adaptation and denoised supervision for robust segmentation under domain shift.},
   pdf={https://arxiv.org/pdf/2510.25227},
-  code={true},
-  bibtex_show={true}
 }
 
 @article{bui2026jbhi,
   abbr={Preprint},
   title={UP2D: Uncertainty-aware Progressive Pseudo-label Denoising for Source-Free Domain Adaptive Medical Image Segmentation},
-  author={Bui, TQK and Vu, Vi and others},
+  author={Bui, TQK and Nguyen, T. and Ho, D. and Lam, B. and Vu, Vi and Nguyen, T. and Huynh, P. and Bagci, U.},
   journal={IEEE Journal of Biomedical and Health Informatics},
   year={2026},
   note={Impact Factor: 6.8},
-  abstract={We present UP2D, a unified pseudo-labeling framework for 2D medical image segmentation. Our approach integrates multiple consistency strategies to generate high-quality pseudo-labels from unlabeled data.},
-  pdf={https://scholar.google.com/scholar?q=UP2D+Unified+Pseudo-labeling+2D+Medical+Image+Segmentation+JBHI},
-  code={true},
-  bibtex_show={true}
+  abstract={Medical image segmentation models face severe performance drops under domain shifts, especially when data sharing constraints prevent access to source images. We present a novel Uncertainty-aware Progressive Pseudo-label Denoising (UP2D) framework for source-free domain adaptation (SFDA), designed to mitigate noisy pseudo-labels and class imbalance during adaptation. UP2D integrates three key components: (i) a Refined Prototype Filtering module that suppresses uninformative regions and constructs reliable class prototypes to denoise pseudo-labels, (ii) an Uncertainty-Guided EMA (UG-EMA) strategy that selectively updates the teacher model based on spatially weighted boundary uncertainty, and (iii) a quantile-based entropy minimization scheme that focuses learning on ambiguous regions while avoiding overconfidence on easy pixels. This single-stage student–teacher framework progressively improves pseudo-label quality and reduces confirmation bias. Extensive experiments on three challenging retinal fundus benchmarks demonstrate that UP2D achieves state-of-the-art performance across both standard and open-domain settings, outperforming prior UDA and SFDA approaches while maintaining superior boundary precision.},
 }

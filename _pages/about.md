@@ -31,15 +31,13 @@ announcements:
   </a>
 </div>
 
-I am an aspiring Ph.D. researcher in **Medical AI** and **Computer Vision**, currently serving as a Research Assistant at **Carnegie Mellon University (Xu Lab)** and **Northwestern University (MHI Lab)**, where I work at the intersection of mathematically grounded modeling and clinically meaningful applications.
-
-I hold a B.E. in Computer Engineering from **Ho Chi Minh City University of Technology**, where I graduated as the **valedictorian** in the department with a **GPA of 9.27/10.0**. I am fortunate to be advised by Prof. Min Xu, Dr. Xingjian Li, and Prof. Ulas Bagci, whose mentorship has shaped my interest in rigorous, impact-driven research.
+I am an aspiring Ph.D. researcher in **Medical AI** and **Computer Vision**. I am currently a Research Intern at **Carnegie Mellon University (Xu Lab)** and **Northwestern University (Machine and Hybrid Intelligence Lab)**. where I work at the intersection of mathematically grounded modeling and clinically meaningful applications. I hold a B.E. in Computer Engineering from **Ho Chi Minh City University of Technology**, where I graduated as the **valedictorian** in the department with a **GPA of 9.27/10.0**. I am fortunate to be advised by Prof. Min Xu, Dr. Xingjian Li, and Prof. Ulas Bagci, whose mentorship has shaped my research interests and academic direction.
 
 ---
 
 ## Research Focus
 
-My research philosophy centers on **mathematically grounded modeling** and **foundation-model-driven designs**. I am particularly interested in tackling **learning with imperfect annotations** (semi/unsupervised learning) to bridge the gap between advanced vision models and clinical reality.
+My research interests lie in developing **AI-powered medical solutions**, with a focus on mathematically grounded modeling and foundation-model-driven designs. I have extensive experience in **learning with imperfect biomedical data**, particularly in semi/unsupervised learning, transfer learning, and deep multimodal learning under domain discrepancy and low-quality labeling scenarios.
 
 <!-- The three interconnected pillars of my research are:
 
@@ -49,15 +47,14 @@ My research philosophy centers on **mathematically grounded modeling** and **fou
 
 ---
 
-## Academic Lineage & Mentors
+## Supervisors
 
-I have been fortunate to receive guidance and collaborate with leading experts in **Computer Vision** and **Medical AI**:
+I have been fortunate to receive guidance from leading experts in **Medical AI**:
 
 * **[Prof. Min Xu](https://scholar.google.com/citations?hl=en&user=Y3Cqt0cAAAAJ&view_op=list_works&sortby=pubdate)** (Carnegie Mellon University) — *Advisor at Xu Lab*
 * **[Dr. Xingjian Li](https://scholar.google.com/citations?user=f9V0NZkAAAAJ&hl=en)** (Carnegie Mellon University)
-* **[Prof. Tianyang Wang](https://scholar.google.com/citations?user=QbTV0r0AAAAJ&hl=en)** (Carnegie Mellon University / University of Alabama at Birmingham)
+* **[Prof. Tianyang Wang](https://scholar.google.com/citations?user=QbTV0r0AAAAJ&hl=en)** (University of Alabama at Birmingham)
 * **[Prof. Ulas Bagci](hhttps://scholar.google.com/citations?user=9LUdPM4AAAAJ&hl=en)** (Northwestern University) — *Advisor at MHI Lab*
-* **[Prof. Anh Nguyen](https://scholar.google.com/citations?user=gEbaF0sAAAAJ&hl=en)** (University of Liverpool / FPT AI Center)
 * **[Dr. Ting-Yuan Tu](https://scholar.google.com/citations?user=_HLH5D4AAAAJ&hl=zh-TW)** (National Cheng Kung University)
 * **[Dr. Quang Vinh Dinh](https://dblp.org/pid/142/0382.html)** (AIVIETNAM)
 
@@ -67,13 +64,9 @@ I have been fortunate to receive guidance and collaborate with leading experts i
 
 **Teaching Assistant — AIVIETNAM**
 * Provided academic support for **600+ students** in the flagship *All-in-One 2024* course, covering fundamentals of AI/ML.
-* Hosted online seminars on semi-supervised learning and knowledge distillation.
 
 **Co-Lead — AIMA Lab (AI-in-Medicine Applications)**
-* Managing and coordinating **4 research teams** working on cutting-edge Medical AI projects.
-
-**Seminar Host — FPT Software AI Center**
-* Hosted weekly technical sessions on diffusion models, 3D Gaussian splatting, and large vision models.
+* Leading **4 research teams** working on cutting-edge Medical AI projects.
 
 ---
 

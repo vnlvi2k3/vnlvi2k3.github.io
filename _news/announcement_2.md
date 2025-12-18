@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-🔬 Joined **Carnegie Mellon University (Xu Lab)** as a Research Assistant.
+🔬 Joined **Carnegie Mellon University (Xu Lab)** as a Research Intern.
