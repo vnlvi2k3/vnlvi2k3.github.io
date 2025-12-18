@@ -454,7 +454,7 @@ ninja.data = [{
         title: 'CV',
         section: 'Socials',
         handler: () => {
-          window.open("/assets/pdf/VuNguyenLanVi_CV.pdf", "_blank");
+          window.open("/assets/pdf/ViVu_PhD_CV.pdf", "_blank");
         },
       },{
         id: 'social-rss',
