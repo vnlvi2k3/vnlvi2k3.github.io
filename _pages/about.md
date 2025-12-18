@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Research Assistant at <a href="https://xulabs.github.io/">Xu Lab, CMU</a> & <a href="https://www.mhilab.org/">MHI Lab, Northwestern</a>
+subtitle: Research Intern at <a href="https://xulabs.github.io/">Xu Lab, CMU</a> & Research Assistant at <a href="https://bagcilab.com/">MHI Lab, Northwestern</a>
 
 profile:
   align: right
@@ -23,7 +23,7 @@ announcements:
 ---
 
 <div style="margin-bottom: 2rem;">
-  <a href="/assets/pdf/VuNguyenLanVi_CV.pdf" target="_blank" class="btn btn-primary btn-sm" style="margin-right: 0.5rem;">
+  <a href="/assets/pdf/ViVu_PhD_CV.pdf" target="_blank" class="btn btn-primary btn-sm" style="margin-right: 0.5rem;">
     <i class="fa-solid fa-file-pdf"></i> Download Full CV
   </a>
   <a href="https://github.com/vnlvi2k3" target="_blank" class="btn btn-outline-primary btn-sm">
