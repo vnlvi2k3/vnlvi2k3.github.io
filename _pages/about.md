@@ -26,6 +26,9 @@ announcements:
   <a href="/assets/pdf/ViVu_PhD_CV.pdf" target="_blank" class="btn btn-primary btn-sm" style="margin-right: 0.5rem;">
     <i class="fa-solid fa-file-pdf"></i> Download Full CV
   </a>
+  <a href="https://scholar.google.com/citations?user=_2luKBQAAAAJ" target="_blank" class="btn btn-outline-primary btn-sm" style="margin-right: 0.5rem;">
+    <i class="ai ai-google-scholar"></i> Google Scholar
+  </a>
   <a href="https://github.com/vnlvi2k3" target="_blank" class="btn btn-outline-primary btn-sm">
     <i class="fa-brands fa-github"></i> GitHub & Code
   </a>
