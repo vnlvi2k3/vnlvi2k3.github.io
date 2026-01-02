@@ -1,55 +1,51 @@
 metadata:
-  last_updated: '2025-12-17'
+  last_updated: '2026-01-02'
 papers:
-  w0LE-04AAAAJ:2osOgNQ5qMEC:
+  _2luKBQAAAAJ:2osOgNQ5qMEC:
+    citations: 0
+    title: 'HDC: Hierarchical Distillation for Multi-level Noisy Consistency in Semi-Supervised Fetal Ultrasound Segmentation'
+    year: '2025'
+  _2luKBQAAAAJ:9yKSN-GCB0IC:
     citations: 9
     title: Semi-Supervised Histopathology Image Segmentation with Feature Diversified Collaborative Learning
     year: '2025'
-  w0LE-04AAAAJ:9yKSN-GCB0IC:
-    citations: 0
-    title: 'HDC: Hierarchical Distillation for Multi-level Noisy Consistency in Semi-Supervised Fetal Ultrasound Segmentation'
-    year: '2025'
-  w0LE-04AAAAJ:IjCSPb-OGe4C:
-    citations: 2
-    title: Learning disentangled stain and structural representations for semi-supervised histopathology segmentation
-    year: '2025'
-  w0LE-04AAAAJ:Tyk-4Ss8FVUC:
-    citations: 1
-    title: 'DuetMatch: Harmonizing semi-supervised brain MRI segmentation via decoupled branch optimization'
-    year: '2025'
-  w0LE-04AAAAJ:UeHWp8X0CEIC:
-    citations: 0
-    title: "Performance analysis of artificial intelligence\u2013driven convolutional neural network architectures for liver tumor segmentation."
-    year: '2025'
-  w0LE-04AAAAJ:WF5omc3nYNoC:
-    citations: 0
-    title: Modality-Specific Enhancement and Complementary Fusion for Semi-Supervised Multi-Modal Brain Tumor Segmentation
-    year: '2025'
-  w0LE-04AAAAJ:Y0pCki6q_DkC:
-    citations: 1
-    title: Adaptive Knowledge Transferring with Switching Dual-Student Framework for Semi-Supervised Medical Image Segmentation
-    year: '2025'
-  w0LE-04AAAAJ:YsMSGLbcyi4C:
-    citations: 0
-    title: 'Aligning What You Separate: Denoised Patch Mixing for Source-Free Domain Adaptation in Medical Image Segmentation'
-    year: '2025'
-  w0LE-04AAAAJ:d1gkVwhDpl0C:
-    citations: 0
-    title: 'HDC: Hierarchical Distillation for Multi-level Noisy Consistency in Semi-Supervised Fetal Ultrasound Segmentation'
-    year: '2025'
-  w0LE-04AAAAJ:eQOLeE2rZwMC:
-    citations: 0
-    title: 'UP2D: Uncertainty-aware Progressive Pseudo-label Denoising for Source-Free Domain Adaptive Medical Image Segmentation'
-    year: '2025'
-  w0LE-04AAAAJ:qjMakFHDy7sC:
+  _2luKBQAAAAJ:IjCSPb-OGe4C:
     citations: 6
     title: 'Fetal-BCP: Addressing Empirical Distribution Gap in Semi-Supervised Fetal Ultrasound Segmentation'
     year: '2025'
-  w0LE-04AAAAJ:u5HHmVD_uO8C:
+  _2luKBQAAAAJ:Tyk-4Ss8FVUC:
+    citations: 0
+    title: "Performance analysis of artificial intelligence\u2013driven convolutional neural network architectures for liver tumor segmentation."
+    year: '2025'
+  _2luKBQAAAAJ:UeHWp8X0CEIC:
     citations: 11
     title: Semi-supervised skin lesion segmentation under dual mask ensemble with feature discrepancy co-training
     year: Unknown Year
-  w0LE-04AAAAJ:zYLM7Y9cAGgC:
+  _2luKBQAAAAJ:W7OEmFMy1HYC:
+    citations: 0
+    title: 'UP2D: Uncertainty-aware Progressive Pseudo-label Denoising for Source-Free Domain Adaptive Medical Image Segmentation'
+    year: '2025'
+  _2luKBQAAAAJ:Y0pCki6q_DkC:
+    citations: 0
+    title: 'Aligning What You Separate: Denoised Patch Mixing for Source-Free Domain Adaptation in Medical Image Segmentation'
+    year: '2025'
+  _2luKBQAAAAJ:d1gkVwhDpl0C:
     citations: 3
     title: 'Semi-MoE: Mixture-of-Experts meets Semi-Supervised Histopathology Segmentation'
+    year: '2025'
+  _2luKBQAAAAJ:qjMakFHDy7sC:
+    citations: 2
+    title: Learning disentangled stain and structural representations for semi-supervised histopathology segmentation
+    year: '2025'
+  _2luKBQAAAAJ:u-x6o8ySG0sC:
+    citations: 1
+    title: 'DuetMatch: Harmonizing semi-supervised brain MRI segmentation via decoupled branch optimization'
+    year: '2025'
+  _2luKBQAAAAJ:u5HHmVD_uO8C:
+    citations: 1
+    title: Adaptive Knowledge Transferring with Switching Dual-Student Framework for Semi-Supervised Medical Image Segmentation
+    year: '2025'
+  _2luKBQAAAAJ:zYLM7Y9cAGgC:
+    citations: 0
+    title: Modality-Specific Enhancement and Complementary Fusion for Semi-Supervised Multi-Modal Brain Tumor Segmentation
     year: '2025'
