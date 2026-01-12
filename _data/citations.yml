@@ -1,8 +1,8 @@
 metadata:
-  last_updated: '2026-01-02'
+  last_updated: '2026-01-12'
 papers:
   _2luKBQAAAAJ:2osOgNQ5qMEC:
-    citations: 0
+    citations: 3
     title: 'HDC: Hierarchical Distillation for Multi-level Noisy Consistency in Semi-Supervised Fetal Ultrasound Segmentation'
     year: '2025'
   _2luKBQAAAAJ:9yKSN-GCB0IC:
@@ -18,7 +18,7 @@ papers:
     title: "Performance analysis of artificial intelligence\u2013driven convolutional neural network architectures for liver tumor segmentation."
     year: '2025'
   _2luKBQAAAAJ:UeHWp8X0CEIC:
-    citations: 11
+    citations: 14
     title: Semi-supervised skin lesion segmentation under dual mask ensemble with feature discrepancy co-training
     year: Unknown Year
   _2luKBQAAAAJ:W7OEmFMy1HYC:
@@ -29,10 +29,18 @@ papers:
     citations: 0
     title: 'Aligning What You Separate: Denoised Patch Mixing for Source-Free Domain Adaptation in Medical Image Segmentation'
     year: '2025'
+  _2luKBQAAAAJ:YsMSGLbcyi4C:
+    citations: 0
+    title: Hepatic Tumor Segmentation Under Modified Scalable and Transferable nnU-Net Framework
+    year: '2025'
   _2luKBQAAAAJ:d1gkVwhDpl0C:
     citations: 3
     title: 'Semi-MoE: Mixture-of-Experts meets Semi-Supervised Histopathology Segmentation'
     year: '2025'
+  _2luKBQAAAAJ:eQOLeE2rZwMC:
+    citations: 0
+    title: 'UP2D: Uncertainty-aware progressive pseudo-label denoising for source-free domain adaptive medical image segmentation'
+    year: '2026'
   _2luKBQAAAAJ:qjMakFHDy7sC:
     citations: 2
     title: Learning disentangled stain and structural representations for semi-supervised histopathology segmentation
