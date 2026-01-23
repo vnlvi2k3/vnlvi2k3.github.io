@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-01-12'
+  last_updated: '2026-01-23'
 papers:
   _2luKBQAAAAJ:2osOgNQ5qMEC:
     citations: 3
@@ -25,6 +25,10 @@ papers:
     citations: 0
     title: 'UP2D: Uncertainty-aware Progressive Pseudo-label Denoising for Source-Free Domain Adaptive Medical Image Segmentation'
     year: '2025'
+  _2luKBQAAAAJ:WF5omc3nYNoC:
+    citations: 0
+    title: Hepatic Tumor Segmentation Under Modified Scalable and Transferable nnU-Net Framework
+    year: '2026'
   _2luKBQAAAAJ:Y0pCki6q_DkC:
     citations: 0
     title: 'Aligning What You Separate: Denoised Patch Mixing for Source-Free Domain Adaptation in Medical Image Segmentation'
@@ -52,7 +56,7 @@ papers:
   _2luKBQAAAAJ:u5HHmVD_uO8C:
     citations: 1
     title: Adaptive Knowledge Transferring with Switching Dual-Student Framework for Semi-Supervised Medical Image Segmentation
-    year: '2025'
+    year: '2026'
   _2luKBQAAAAJ:zYLM7Y9cAGgC:
     citations: 0
     title: Modality-Specific Enhancement and Complementary Fusion for Semi-Supervised Multi-Modal Brain Tumor Segmentation
