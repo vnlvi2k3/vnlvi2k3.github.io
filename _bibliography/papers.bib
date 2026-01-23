@@ -6,7 +6,7 @@
 % =============================================================================
 
 % -----------------------------------------------------------------------------
-% A. Accepted/Published Conferences
+% Conferences
 % -----------------------------------------------------------------------------
 
 @inproceedings{vu2025semi,
@@ -162,8 +162,47 @@ HAM10000 datasets.},
   abstract={Semi-supervised learning (SSL) has become a promising direction for medical image segmentation, enabling models to learn from limited labeled data alongside abundant unlabeled samples. However, existing SSL approaches for multi-modal medical imaging often struggle to exploit the complementary information between modalities due to semantic discrepancies and misalignment across MRI sequences. To address this, we propose a novel semi-supervised multi-modal framework that explicitly enhances modality-specific representations and facilitates adaptive cross-modal information fusion. Specifically, we introduce a Modality-specific Enhancing Module (MEM) to strengthen semantic cues unique to each modality via channel-wise attention, and a learnable Complementary Information Fusion (CIF) module to adaptively exchange complementary knowledge between modalities. The overall framework is optimized using a hybrid objective combining supervised segmentation loss and crossmodal consistency regularization on unlabeled data. Extensive experiments on the BraTS 2019 (HGG subset) demonstrate that our method consistently outperforms strong semisupervised and multi-modal baselines under 1%, 5%, and 10% labeled data settings, achieving significant improvements in both Dice and Sensitivity scores. Ablation studies further confirm the complementary effects of our proposed MEM and CIF in bridging cross-modality discrepancies and improving segmentation robustness under scarce supervision.},
 }
 
+@inproceedings{vu2026sam,
+  abbr={ISBI},
+  title={From Specialist to Generalist: Unlocking SAM's Learning Potential on Unlabeled Medical Images},
+  author={Vu*, Vi and Nguyen*, HT and Nguyen*, TT and Lam, TB and Nguyen, TH and Wang, T and Li, X and Xu, M},
+  booktitle={IEEE International Symposium on Biomedical Imaging (ISBI)},
+  year={2026},
+  annotation={* Equal contribution},
+  abstract={Foundation models like the Segment Anything Model (SAM) show strong generalization, yet adapting them to medical images remains difficult due to domain shift, scarce labels, and the inability of Parameter-Efficient Fine-Tuning (PEFT) to exploit unlabeled data. We observe that conventional models such as U-Net excel in semi-supervised medical learning, but their ability to assist a PEFT SAM has been largely overlooked. We introduce SC-SAM, a specialist-generalist framework in which U-Net generates both point-based prompts and pseudo-labels to guide SAM's adaptation to the medical domain, while SAM serves as a powerful generalist supervisor to regularize U-Net. This reciprocal guidance forms a bidirectional co-training loop which allows both models to fully exploit the unlabeled data. Across prostate MRI and polyp segmentation benchmarks, SC-SAM achieves state-of-the-art results, outperforming other existing semi-supervised SAM variants and even medical foundation models like MedSAM, highlighting the value of specialist–generalist cooperation for label-efficient medical image segmentation.},
+}
+
+@inproceedings{nguyen2026icassp1,
+  abbr={ICASSP},
+  title={Domain-Invariant Mixed-Domain Semi-Supervised Medical Image Segmentation with Clustered Maximum Mean Discrepancy Alignment},
+  author={Nguyen, TH and Lam, BT and Nguyen, Thien and Bui, TQK and Vu, Vi and Huynh, KP and Bagci, U and Xu, M},
+  booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  year={2026},
+  abstract={Deep learning has shown remarkable progress in medical image semantic segmentation, yet its success heavily depends on large-scale expert annotations and consistent data distributions. In practice, annotations are scarce and images are collected from multiple scanners or centers, leading to mixed-domain settings with unknown domain labels and severe domain gaps. Existing semi-supervised or domain adaptation approaches typically assume either a single domain shift or access to explicit domain indices, which rarely hold in real-world deployment. In this paper, we propose a domain-invariant mixed-domain semi-supervised segmentation framework that jointly enhances data diversity and mitigates domain bias. A Copy-Paste Mechanism (CPM) augments the training set by transferring informative regions across domains, while a Cluster Maximum Mean Discrepancy (CMMD) block clusters unlabeled features and aligns them with labeled anchors via an MMD objective, encouraging domain-invariant representations. Integrated within a teacher–student framework, our method achieves robust and precise segmentation even with very few labeled examples and multiple unknown domain discrepancies. Experiments on Fundus and M&Ms benchmarks demonstrate that our approach consistently surpasses semi-supervised and domain adaptation methods, establishing a potential solution for mixed-domain semi-supervised medical image segmentation.},
+}
+
+@inproceedings{nguyen2026icassp2,
+  abbr={ICASSP},
+  title={Aligning What You Separate: Denoised Patch Mixing for Source-Free Domain Adaptation in Medical Image Segmentation},
+  author={Nguyen, T and Nguyen, TH and Bui, TQK and Lam, BT and Vu, Vi and Huynh, KP and Bagci, U and Xu, M},
+  booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  year={2026},
+  abstract={Source-Free Domain Adaptation (SFDA) is emerging as a
+compelling solution for medical image segmentation under
+privacy constraints, yet current approaches often ignore sample difficulty and struggle with noisy supervision under domain shift. We present a new SFDA framework that leverages Hard Sample Selection and Denoised Patch Mixing
+(DPM) to progressively align target distributions. First, unlabeled images are partitioned into reliable and unreliable subsets through entropy-similarity analysis, allowing adaptation
+to start from easy samples and gradually incorporate harder
+ones. Next, pseudo-labels are refined via Monte Carlo-based
+denoising masks, which suppress unreliable pixels and stabilize training. Finally, intra- and inter-domain objectives mix
+patches between subsets, transferring reliable semantics while
+mitigating noise. Experiments on benchmark datasets show
+consistent gains over prior SFDA and UDA methods, delivering more accurate boundary delineation and achieving stateof-the-art Dice and ASSD scores. Our study highlights the
+importance of progressive adaptation and denoised supervision for robust segmentation under domain shift.},
+  pdf={https://arxiv.org/pdf/2510.25227},
+}
+
 % -----------------------------------------------------------------------------
-% B. Journals
+% Journals
 % -----------------------------------------------------------------------------
 
 @article{le2025jco,
@@ -173,7 +212,7 @@ HAM10000 datasets.},
   journal={Journal of Clinical Oncology},
   year={2025},
   note={Impact Factor: 42.1},
-  abstract={Background: Advances in medical image segmentation have raised debate about the practical performance of the latest architectures and CNN-based approaches. Recent studies have demonstrated that CNN-based architectures maintain competitive performance compared to newer architectural paradigms despite limited task-specific validation. Methods: This study utilizes the ATLAS dataset from the MICCAI 2023 ATLAS Challenge, including a total of 90 pairs of MRI images and labels with varieties of machines, sequences, and contrast phases. This dataset was divided into a public set of 60 patients and a private set of 30 patients collected between 2012-2023. Due to the variety of images, stratified k-fold cross-validation is applied. STU-Net family is leveraged for evaluation and comparison with U-Net variants as baselines. All models are trained using the nnU-Net framework with default combined loss Dice and Cross Entropy. For a fair comparison, all metrics from the ATLAS Challenge are calculated twice to evaluate our models, once for a whole liver and once for tumor segmentation. Results: Our results on the ATLAS dataset revealed that while traditional U-Net variants establish strong baseline performance, STU-Net achieves superior capabilities across various evaluation metrics, notably dice scores of 95.76 ± 0.99% and 68.30 ± 2.13% for liver and tumor segmentation, respectively. These results validate its effectiveness for complex medical segmentation tasks. Conclusions: These results affirm the effectiveness of CNN-based models, particularly STUNet, in complex hepatic tumor segmentation tasks. STUNet’s advanced feature extraction and scalability make it a promising solution for automated liver tumor segmentation in clinical practice. Future work will focus on enhancing interpretability and clinical integration.},
+  abstract={Background: Advances in medical image segmentation have raised debate about the practical performance of the latest architectures and CNN-based approaches. Recent studies have demonstrated that CNN-based architectures maintain competitive performance compared to newer architectural paradigms despite limited task-specific validation. Methods: This study utilizes the ATLAS dataset from the MICCAI 2023 ATLAS Challenge, including a total of 90 pairs of MRI images and labels with varieties of machines, sequences, and contrast phases. This dataset was divided into a public set of 60 patients and a private set of 30 patients collected between 2012-2023. Due to the variety of images, stratified k-fold cross-validation is applied. STU-Net family is leveraged for evaluation and comparison with U-Net variants as baselines. All models are trained using the nnU-Net framework with default combined loss Dice and Cross Entropy. For a fair comparison, all metrics from the ATLAS Challenge are calculated twice to evaluate our models, once for a whole liver and once for tumor segmentation. Results: Our results on the ATLAS dataset revealed that while traditional U-Net variants establish strong baseline performance, STU-Net achieves superior capabilities across various evaluation metrics, notably dice scores of 95.76 ± 0.99% and 68.30 ± 2.13% for liver and tumor segmentation, respectively. These results validate its effectiveness for complex medical segmentation tasks. Conclusions: These results affirm the effectiveness of CNN-based models, particularly STUNet, in complex hepatic tumor segmentation tasks. STUNet's advanced feature extraction and scalability make it a promising solution for automated liver tumor segmentation in clinical practice. Future work will focus on enhancing interpretability and clinical integration.},
   pdf={https://ascopubs.org/doi/abs/10.1200/JCO.2025.43.16_suppl.e16307},
 }
 
@@ -199,24 +238,8 @@ robustness across diverse semi-supervised segmentation scenarios.},
   pdf={https://arxiv.org/pdf/2510.16146},
 }
 
-
-
-% -----------------------------------------------------------------------------
-% C. Submissions/Preprints
-% -----------------------------------------------------------------------------
-
-@misc{vu2026sam,
-  abbr={Preprint},
-  title={From Specialist to Generalist: Unlocking SAM's Learning Potential on Unlabeled Medical Images},
-  author={Vu*, Vi and Nguyen*, HT and Nguyen*, TT and Lam, TB and Nguyen, TH and Wang, T and Li, X and Xu, M},
-  year={2026},
-  note={Under Review at ISBI 2026},
-  annotation={* Equal contribution},
-  abstract={Foundation models like the Segment Anything Model (SAM) show strong generalization, yet adapting them to medical images remains difficult due to domain shift, scarce labels, and the inability of Parameter-Efficient Fine-Tuning (PEFT) to exploit unlabeled data. We observe that conventional models such as U-Net excel in semi-supervised medical learning, but their ability to assist a PEFT SAM has been largely overlooked. We introduce SC-SAM, a specialist-generalist framework in which U-Net generates both point-based prompts and pseudo-labels to guide SAM’s adaptation to the medical domain, while SAM serves as a powerful generalist supervisor to regularize U-Net. This reciprocal guidance forms a bidirectional co-training loop which allows both models to fully exploit the unlabeled data. Across prostate MRI and polyp segmentation benchmarks, SC-SAM achieves state-of-the-art results, outperforming other existing semi-supervised SAM variants and even medical foundation models like MedSAM, highlighting the value of specialist–generalist cooperation for label-efficient medical image segmentation.},
-}
-
 @article{nguyen2025pr,
-  abbr={Preprint},
+  abbr={PR},
   title={Adaptive Knowledge Transfering with Switching Dual-Student Framework for Semi-Supervised Medical Image Segmentation},
   author={Nguyen, TH and Nguyen, HT and Vu, Vi and Lam, BT and Nguyen, BX and Xing, J and Wang, T and Li, X and Xu, M},
   journal={Pattern Recognition},
@@ -235,38 +258,8 @@ it outperforms state-of-the-art semi-supervised methods, demonstrating its effec
   pdf={https://arxiv.org/pdf/2510.24366},
 }
 
-
-@misc{nguyen2026icassp1,
-  abbr={Preprint},
-  title={Domain-Invariant Mixed-Domain Semi-Supervised Medical Image Segmentation with Clustered Maximum Mean Discrepancy Alignment},
-  author={Nguyen, TH and Lam, BT and Nguyen, Thien and Bui, TQK and Vu, Vi and Huynh, KP and Bagci, U and Xu, M},
-  year={2026},
-  note={Under Review at ICASSP 2026},
-  abstract={Deep learning has shown remarkable progress in medical image semantic segmentation, yet its success heavily depends on large-scale expert annotations and consistent data distributions. In practice, annotations are scarce and images are collected from multiple scanners or centers, leading to mixed-domain settings with unknown domain labels and severe domain gaps. Existing semi-supervised or domain adaptation approaches typically assume either a single domain shift or access to explicit domain indices, which rarely hold in real-world deployment. In this paper, we propose a domain-invariant mixed-domain semi-supervised segmentation framework that jointly enhances data diversity and mitigates domain bias. A Copy-Paste Mechanism (CPM) augments the training set by transferring informative regions across domains, while a Cluster Maximum Mean Discrepancy (CMMD) block clusters unlabeled features and aligns them with labeled anchors via an MMD objective, encouraging domain-invariant representations. Integrated within a teacher–student framework, our method achieves robust and precise segmentation even with very few labeled examples and multiple unknown domain discrepancies. Experiments on Fundus and M&Ms benchmarks demonstrate that our approach consistently surpasses semi-supervised and domain adaptation methods, establishing a potential solution for mixed-domain semi-supervised medical image segmentation.},
-}
-
-@misc{nguyen2026icassp2,
-  abbr={Preprint},
-  title={Aligning What You Separate: Denoised Patch Mixing for Source-Free Domain Adaptation in Medical Image Segmentation},
-  author={Nguyen, T and Nguyen, TH and Bui, TQK and Lam, BT and Vu, Vi and Huynh, KP and Bagci, U and Xu, M},
-  year={2026},
-  note={Under Review at ICASSP 2026},
-  abstract={Source-Free Domain Adaptation (SFDA) is emerging as a
-compelling solution for medical image segmentation under
-privacy constraints, yet current approaches often ignore sample difficulty and struggle with noisy supervision under domain shift. We present a new SFDA framework that leverages Hard Sample Selection and Denoised Patch Mixing
-(DPM) to progressively align target distributions. First, unlabeled images are partitioned into reliable and unreliable subsets through entropy-similarity analysis, allowing adaptation
-to start from easy samples and gradually incorporate harder
-ones. Next, pseudo-labels are refined via Monte Carlo-based
-denoising masks, which suppress unreliable pixels and stabilize training. Finally, intra- and inter-domain objectives mix
-patches between subsets, transferring reliable semantics while
-mitigating noise. Experiments on benchmark datasets show
-consistent gains over prior SFDA and UDA methods, delivering more accurate boundary delineation and achieving stateof-the-art Dice and ASSD scores. Our study highlights the
-importance of progressive adaptation and denoised supervision for robust segmentation under domain shift.},
-  pdf={https://arxiv.org/pdf/2510.25227},
-}
-
 @article{bui2026jbhi,
-  abbr={Preprint},
+  abbr={JBHI},
   title={UP2D: Uncertainty-aware Progressive Pseudo-label Denoising for Source-Free Domain Adaptive Medical Image Segmentation},
   author={Bui, TQK and Nguyen, T. and Ho, D. and Lam, B. and Vu, Vi and Nguyen, T. and Huynh, P. and Bagci, U.},
   journal={IEEE Journal of Biomedical and Health Informatics},
