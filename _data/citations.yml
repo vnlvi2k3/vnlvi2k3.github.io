@@ -1,16 +1,16 @@
 metadata:
-  last_updated: '2026-01-23'
+  last_updated: '2026-02-02'
 papers:
   _2luKBQAAAAJ:2osOgNQ5qMEC:
     citations: 3
     title: 'HDC: Hierarchical Distillation for Multi-level Noisy Consistency in Semi-Supervised Fetal Ultrasound Segmentation'
     year: '2025'
   _2luKBQAAAAJ:9yKSN-GCB0IC:
-    citations: 9
+    citations: 10
     title: Semi-Supervised Histopathology Image Segmentation with Feature Diversified Collaborative Learning
     year: '2025'
   _2luKBQAAAAJ:IjCSPb-OGe4C:
-    citations: 6
+    citations: 7
     title: 'Fetal-BCP: Addressing Empirical Distribution Gap in Semi-Supervised Fetal Ultrasound Segmentation'
     year: '2025'
   _2luKBQAAAAJ:Tyk-4Ss8FVUC:
@@ -37,6 +37,10 @@ papers:
     citations: 0
     title: Hepatic Tumor Segmentation Under Modified Scalable and Transferable nnU-Net Framework
     year: '2025'
+  _2luKBQAAAAJ:_FxGoFyzp5QC:
+    citations: 0
+    title: 'From Specialist to Generalist: Unlocking SAM''s Learning Potential on Unlabeled Medical Images'
+    year: '2026'
   _2luKBQAAAAJ:d1gkVwhDpl0C:
     citations: 3
     title: 'Semi-MoE: Mixture-of-Experts meets Semi-Supervised Histopathology Segmentation'
@@ -56,6 +60,10 @@ papers:
   _2luKBQAAAAJ:u5HHmVD_uO8C:
     citations: 1
     title: Adaptive Knowledge Transferring with Switching Dual-Student Framework for Semi-Supervised Medical Image Segmentation
+    year: '2026'
+  _2luKBQAAAAJ:ufrVoPGSRksC:
+    citations: 0
+    title: Domain-invariant Mixed-domain Semi-supervised Medical Image Segmentation with Clustered Maximum Mean Discrepancy Alignment
     year: '2026'
   _2luKBQAAAAJ:zYLM7Y9cAGgC:
     citations: 0
