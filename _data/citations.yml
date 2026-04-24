@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-02-25'
+  last_updated: '2026-04-24'
 papers:
   _2luKBQAAAAJ:2osOgNQ5qMEC:
     citations: 3
@@ -38,7 +38,7 @@ papers:
     title: Hepatic Tumor Segmentation Under Modified Scalable and Transferable nnU-Net Framework
     year: '2025'
   _2luKBQAAAAJ:_FxGoFyzp5QC:
-    citations: 0
+    citations: 1
     title: 'From Specialist to Generalist: Unlocking SAM''s Learning Potential on Unlabeled Medical Images'
     year: '2026'
   _2luKBQAAAAJ:d1gkVwhDpl0C:
@@ -46,11 +46,11 @@ papers:
     title: 'Semi-MoE: Mixture-of-experts meets semi-supervised histopathology segmentation'
     year: '2025'
   _2luKBQAAAAJ:eQOLeE2rZwMC:
-    citations: 0
+    citations: 1
     title: 'UP2D: Uncertainty-aware progressive pseudo-label denoising for source-free domain adaptive medical image segmentation'
     year: '2026'
   _2luKBQAAAAJ:qjMakFHDy7sC:
-    citations: 2
+    citations: 3
     title: Learning disentangled stain and structural representations for semi-supervised histopathology segmentation
     year: '2025'
   _2luKBQAAAAJ:u-x6o8ySG0sC:
@@ -58,7 +58,7 @@ papers:
     title: 'DuetMatch: Harmonizing semi-supervised brain MRI segmentation via decoupled branch optimization'
     year: '2025'
   _2luKBQAAAAJ:u5HHmVD_uO8C:
-    citations: 1
+    citations: 2
     title: Adaptive Knowledge Transferring with Switching Dual-Student Framework for Semi-Supervised Medical Image Segmentation
     year: '2026'
   _2luKBQAAAAJ:ufrVoPGSRksC:
