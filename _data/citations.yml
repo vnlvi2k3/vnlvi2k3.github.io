@@ -1,18 +1,22 @@
 metadata:
-  last_updated: '2026-04-29'
+  last_updated: '2026-05-15'
 papers:
   _2luKBQAAAAJ:2osOgNQ5qMEC:
-    citations: 3
+    citations: 4
     title: 'Hdc: hierarchical distillation for multi-level noisy consistency in semi-supervised fetal ultrasound segmentation'
     year: '2025'
   _2luKBQAAAAJ:9yKSN-GCB0IC:
-    citations: 10
+    citations: 11
     title: Semi-supervised histopathology image segmentation with feature diversified collaborative learning
     year: '2025'
   _2luKBQAAAAJ:IjCSPb-OGe4C:
     citations: 8
     title: 'Fetal-bcp: Addressing empirical distribution gap in semi-supervised fetal ultrasound segmentation'
     year: '2025'
+  _2luKBQAAAAJ:LkGwnXOMwfcC:
+    citations: 0
+    title: Domain-invariant mixed-domain semi-supervised medical image segmentation with clustered maximum mean discrepancy alignment
+    year: '2026'
   _2luKBQAAAAJ:Tyk-4Ss8FVUC:
     citations: 0
     title: "Performance analysis of artificial intelligence\u2013driven convolutional neural network architectures for liver tumor segmentation."
