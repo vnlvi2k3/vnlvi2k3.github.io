@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-05-20'
+  last_updated: '2026-05-25'
 papers:
   _2luKBQAAAAJ:2osOgNQ5qMEC:
     citations: 4
@@ -50,7 +50,7 @@ papers:
     title: 'Semi-MoE: Mixture-of-experts meets semi-supervised histopathology segmentation'
     year: '2025'
   _2luKBQAAAAJ:eQOLeE2rZwMC:
-    citations: 2
+    citations: 3
     title: 'UP2D: Uncertainty-aware progressive pseudo-label denoising for source-free domain adaptive medical image segmentation'
     year: '2026'
   _2luKBQAAAAJ:qjMakFHDy7sC:
@@ -62,7 +62,7 @@ papers:
     title: 'Beyond Visible Boundaries: Benchmarking Foundation Models for Overlapping Cell Segmentation in Microscopic Imaging'
     year: Unknown Year
   _2luKBQAAAAJ:u-x6o8ySG0sC:
-    citations: 3
+    citations: 4
     title: 'DuetMatch: Harmonizing semi-supervised brain MRI segmentation via decoupled branch optimization'
     year: '2025'
   _2luKBQAAAAJ:u5HHmVD_uO8C:
@@ -70,7 +70,7 @@ papers:
     title: Adaptive Knowledge Transferring with Switching Dual-Student Framework for Semi-Supervised Medical Image Segmentation
     year: '2026'
   _2luKBQAAAAJ:ufrVoPGSRksC:
-    citations: 0
+    citations: 1
     title: Domain-invariant Mixed-domain Semi-supervised Medical Image Segmentation with Clustered Maximum Mean Discrepancy Alignment
     year: '2026'
   _2luKBQAAAAJ:zYLM7Y9cAGgC:
