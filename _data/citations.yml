@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-05-25'
+  last_updated: '2026-06-17'
 papers:
   _2luKBQAAAAJ:2osOgNQ5qMEC:
     citations: 4
@@ -10,7 +10,7 @@ papers:
     title: Semi-supervised histopathology image segmentation with feature diversified collaborative learning
     year: '2025'
   _2luKBQAAAAJ:IjCSPb-OGe4C:
-    citations: 8
+    citations: 9
     title: 'Fetal-bcp: Addressing empirical distribution gap in semi-supervised fetal ultrasound segmentation'
     year: '2025'
   _2luKBQAAAAJ:LkGwnXOMwfcC:
