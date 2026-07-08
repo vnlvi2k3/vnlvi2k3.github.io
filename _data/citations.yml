@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-06-17'
+  last_updated: '2026-07-08'
 papers:
   _2luKBQAAAAJ:2osOgNQ5qMEC:
     citations: 4
@@ -66,7 +66,7 @@ papers:
     title: 'DuetMatch: Harmonizing semi-supervised brain MRI segmentation via decoupled branch optimization'
     year: '2025'
   _2luKBQAAAAJ:u5HHmVD_uO8C:
-    citations: 4
+    citations: 5
     title: Adaptive Knowledge Transferring with Switching Dual-Student Framework for Semi-Supervised Medical Image Segmentation
     year: '2026'
   _2luKBQAAAAJ:ufrVoPGSRksC:
