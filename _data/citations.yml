@@ -1,13 +1,13 @@
 metadata:
-  last_updated: '2026-07-24'
+  last_updated: '2026-08-21'
 papers:
   _2luKBQAAAAJ:2osOgNQ5qMEC:
     citations: 5
     title: 'Hdc: hierarchical distillation for multi-level noisy consistency in semi-supervised fetal ultrasound segmentation'
     year: '2025'
   _2luKBQAAAAJ:9yKSN-GCB0IC:
-    citations: 11
-    title: Semi-supervised histopathology image segmentation with feature diversified collaborative learning
+    citations: 10
+    title: Semi-Supervised Histopathology Image Segmentation with Feature Diversified Collaborative Learning.
     year: '2025'
   _2luKBQAAAAJ:IjCSPb-OGe4C:
     citations: 9
@@ -43,18 +43,18 @@ papers:
     year: '2025'
   _2luKBQAAAAJ:_FxGoFyzp5QC:
     citations: 1
-    title: 'From Specialist to Generalist: Unlocking SAM''s Learning Potential on Unlabeled Medical Images'
+    title: 'From Specialist to Generalist: Unlocking Sam''s Learning Potential on Unlabeled Medical Images'
     year: '2026'
   _2luKBQAAAAJ:d1gkVwhDpl0C:
     citations: 5
     title: 'Semi-MoE: Mixture-of-experts meets semi-supervised histopathology segmentation'
     year: '2025'
   _2luKBQAAAAJ:eQOLeE2rZwMC:
-    citations: 3
-    title: 'UP2D: Uncertainty-aware progressive pseudo-label denoising for source-free domain adaptive medical image segmentation'
+    citations: 4
+    title: 'Up2d: Uncertainty-aware progressive pseudo-label denoising for source-free domain adaptive medical image segmentation'
     year: '2026'
   _2luKBQAAAAJ:qjMakFHDy7sC:
-    citations: 3
+    citations: 4
     title: Learning disentangled stain and structural representations for semi-supervised histopathology segmentation
     year: '2025'
   _2luKBQAAAAJ:roLk4NBRz8UC:
@@ -62,18 +62,18 @@ papers:
     title: 'Beyond Visible Boundaries: Benchmarking Foundation Models for Overlapping Cell Segmentation in Microscopic Imaging'
     year: Unknown Year
   _2luKBQAAAAJ:u-x6o8ySG0sC:
-    citations: 5
+    citations: 6
     title: 'DuetMatch: Harmonizing semi-supervised brain MRI segmentation via decoupled branch optimization'
     year: '2025'
   _2luKBQAAAAJ:u5HHmVD_uO8C:
-    citations: 6
-    title: Adaptive Knowledge Transferring with Switching Dual-Student Framework for Semi-Supervised Medical Image Segmentation
+    citations: 7
+    title: Adaptive knowledge transferring with switching dual-student framework for semi-supervised medical image segmentation
     year: '2026'
   _2luKBQAAAAJ:ufrVoPGSRksC:
     citations: 1
-    title: Domain-invariant Mixed-domain Semi-supervised Medical Image Segmentation with Clustered Maximum Mean Discrepancy Alignment
+    title: Domain-Invariant Mixed-Domain Semi-Supervised Medical Image Segmentation with Clustered Maximum Mean Discrepancy Alignment
     year: '2026'
   _2luKBQAAAAJ:zYLM7Y9cAGgC:
-    citations: 0
+    citations: 1
     title: Modality-Specific Enhancement and Complementary Fusion for Semi-Supervised Multi-Modal Brain Tumor Segmentation
     year: '2025'
