@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-08-21'
+  last_updated: '2026-08-26'
 papers:
   _2luKBQAAAAJ:2osOgNQ5qMEC:
     citations: 5
@@ -22,7 +22,7 @@ papers:
     title: "Performance analysis of artificial intelligence\u2013driven convolutional neural network architectures for liver tumor segmentation."
     year: '2025'
   _2luKBQAAAAJ:UeHWp8X0CEIC:
-    citations: 15
+    citations: 16
     title: Semi-supervised skin lesion segmentation under dual mask ensemble with feature discrepancy co-training
     year: '2025'
   _2luKBQAAAAJ:W7OEmFMy1HYC:
@@ -74,6 +74,6 @@ papers:
     title: Domain-Invariant Mixed-Domain Semi-Supervised Medical Image Segmentation with Clustered Maximum Mean Discrepancy Alignment
     year: '2026'
   _2luKBQAAAAJ:zYLM7Y9cAGgC:
-    citations: 1
+    citations: 2
     title: Modality-Specific Enhancement and Complementary Fusion for Semi-Supervised Multi-Modal Brain Tumor Segmentation
     year: '2025'
