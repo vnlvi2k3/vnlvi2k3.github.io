@@ -254,7 +254,10 @@ p { margin: 0 0 12px; }
 .item p:not(.item-role) { grid-column: 2; margin: 6px 0 0; font-size: 16px; }
 
 /* ---- AIMA ---- */
-.aima-intro { font-size: 17px; max-width: 720px; margin-bottom: 22px; }
+.aima-intro { font-size: 17px; max-width: 760px; margin-bottom: 22px; }
+.aima-name { color: var(--ink); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--ink) 30%, transparent); text-underline-offset: 3px; }
+.aima-name:hover { text-decoration-color: currentColor; }
+.aima-more { white-space: nowrap; font-size: 15px; }
 .team { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
 .member {
   display: flex; flex-direction: column; align-items: center; text-align: center; gap: 2px;
