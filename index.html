@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=brainai51">
+  <link rel="stylesheet" href="style.css?v=brainai52">
   <script>
     // A fresh visit or a reload starts in brain mode (light) and plays the intro (see main.js).
     // Coming back with Back/Forward keeps the mode the visitor had and skips the intro.
@@ -391,9 +391,25 @@
       <header class="sec-head"><h2><span class="path" aria-hidden="true">~/</span>aima</h2></header>
       <div class="content">
         <p class="aima-intro"><a class="aima-name" href="https://huy-northwestern.vercel.app/aima"><strong>AIMA · AI in Medical Applications</strong></a> research group: a community of Vietnamese researchers doing translational AI for health since 2024, working in small groups mentored by Ph.D. students, postdocs and professors in the US, with a network of 30+ institutions. <a class="aima-more" href="https://huy-northwestern.vercel.app/aima">Learn more ↗</a></p>
+        <figure class="group" id="aima-group">
+          <img src="assets/aima/group.jpg" alt="AIMA co-leads: Thanh-Huy Nguyen, Ba-Thinh Lam, Thien Nguyen and Vi Vu" loading="lazy">
+          <div class="spot" data-m="harvey" tabindex="0" style="left:18.0%;top:29.0%;width:17%;height:30%" aria-label="Thanh-Huy Nguyen">
+            <span class="tip"><a href="https://huy-northwestern.vercel.app/"><b>Thanh-Huy Nguyen</b></a><span class="t-role">Founder · Ph.D. Student</span><span class="t-aff">Northwestern University</span></span>
+          </div>
+          <div class="spot" data-m="thinh" tabindex="0" style="left:33.0%;top:9.0%;width:15%;height:25%" aria-label="Ba-Thinh Lam">
+            <span class="tip"><a href="https://sasukepn1999.github.io/"><b>Ba-Thinh Lam</b></a><span class="t-role">Co-Lead · Ph.D. Student</span><span class="t-aff">UNC Charlotte</span></span>
+          </div>
+          <div class="spot" data-m="thien" tabindex="0" style="left:58.5%;top:8.0%;width:14%;height:24%" aria-label="Thien Nguyen">
+            <span class="tip"><a href="https://scholar.google.com/citations?hl=en&amp;user=-gdFSLUAAAAJ"><b>Thien Nguyen</b></a><span class="t-role">Co-Lead · Research Assistant</span><span class="t-aff">Carnegie Mellon University · MBZUAI</span></span>
+          </div>
+          <div class="spot" data-m="vivu" tabindex="0" style="left:53.5%;top:37.5%;width:14%;height:27%" aria-label="Vi Vu">
+            <span class="tip"><a href="https://scholar.google.com/citations?user=_2luKBQAAAAJ&amp;hl=en"><b>Vi Vu</b></a><span class="t-role">Co-Lead · Ph.D. Student</span><span class="t-aff">Duke University</span></span>
+          </div>
+          <figcaption class="mono">hover over a face to meet the team</figcaption>
+        </figure>
         <ul class="team">
           <li>
-            <a class="member" href="https://huy-northwestern.vercel.app/">
+            <a class="member" data-m="harvey" href="https://huy-northwestern.vercel.app/">
               <img src="assets/aima/harvey-tall.jpg" alt="Thanh-Huy Nguyen" loading="lazy">
               <span class="m-text"><span class="m-name">Thanh-Huy Nguyen</span>
               <span class="m-role">Founder · Ph.D. Student</span>
@@ -401,7 +417,7 @@
             </a>
           </li>
           <li>
-            <a class="member" href="https://scholar.google.com/citations?user=_2luKBQAAAAJ&amp;hl=en">
+            <a class="member" data-m="vivu" href="https://scholar.google.com/citations?user=_2luKBQAAAAJ&amp;hl=en">
               <img src="assets/aima/vivu-tall.jpg" alt="Vi Vu" loading="lazy">
               <span class="m-text"><span class="m-name">Vi Vu</span>
               <span class="m-role">Co-Lead · Ph.D. Student</span>
@@ -409,7 +425,7 @@
             </a>
           </li>
           <li>
-            <a class="member" href="https://sasukepn1999.github.io/">
+            <a class="member" data-m="thinh" href="https://sasukepn1999.github.io/">
               <img src="assets/aima/thinh-tall.jpg" alt="Ba-Thinh Lam" loading="lazy">
               <span class="m-text"><span class="m-name">Ba-Thinh Lam</span>
               <span class="m-role">Co-Lead · Ph.D. Student</span>
@@ -417,7 +433,7 @@
             </a>
           </li>
           <li>
-            <a class="member" href="https://scholar.google.com/citations?hl=en&amp;user=-gdFSLUAAAAJ">
+            <a class="member" data-m="thien" href="https://scholar.google.com/citations?hl=en&amp;user=-gdFSLUAAAAJ">
               <img src="assets/aima/thien-tall.jpg" alt="Thien Nguyen" loading="lazy">
               <span class="m-text"><span class="m-name">Thien Nguyen</span>
               <span class="m-role">Co-Lead · Research Assistant</span>
@@ -460,6 +476,6 @@
       setTimeout(function () { root.classList.remove("theme-anim"); }, 1100);
     });
   </script>
-  <script src="main.js?v=9" defer></script>
+  <script src="main.js?v=10" defer></script>
 </body>
 </html>
