@@ -136,6 +136,12 @@ main { max-width: var(--width); margin: 0 auto; padding: 0 16px; }
 p { margin: 0 0 14px; }
 .lede { font-size: 22px; line-height: 1.5; }
 
+.sublabel {
+  margin: 26px 0 8px;
+  font-size: 15px; font-weight: 500;
+  font-variant: small-caps; letter-spacing: .14em;
+  color: var(--gold);
+}
 .question {
   margin: 0 0 22px;
   font-size: 26px; line-height: 1.4;
