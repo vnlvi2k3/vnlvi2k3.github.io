@@ -165,6 +165,10 @@ main { max-width: var(--width); margin: 0 auto; padding: 0 20px; }
 .sec-head { display: flex; align-items: center; gap: 8px; margin-bottom: 22px; }
 .sec-head h2 { margin: 0; font: 500 28px/1.1 "IBM Plex Mono", ui-monospace, monospace; letter-spacing: -.02em; }
 .spike { width: 46px; height: 28px; flex: none; overflow: visible; }
+.sec-head h2 .path { font-weight: 500; margin-right: 1px; transition: text-shadow .25s ease, color .6s ease; }
+.tone-brain .path { color: var(--brain); }
+.tone-ai .path { color: var(--ai); }
+.sec-head:hover .path { text-shadow: 0 0 10px currentColor, 0 0 2px currentColor; }
 .spike path { fill: none; stroke-width: 2.2; stroke-linejoin: round; stroke-linecap: round; }
 .tone-brain .spike path { stroke: var(--brain); }
 .tone-ai .spike path { stroke: var(--ai); }
