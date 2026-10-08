@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="meet" x1="26" y1="0" x2="38" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ef8a70"/><stop offset="1" stop-color="#8e9cff"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="32" cy="17" r="11" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".55"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="#16171c"/>
+  <!-- brain V -->
+  <path d="M8.5 17 L19.25 47 L30 17" fill="none" stroke="#ef8a70" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- AI V -->
+  <path d="M34 17 L44.75 47 L55.5 17" fill="none" stroke="#8e9cff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- network nodes on the AI side -->
+  <circle cx="44.75" cy="47" r="4.2" fill="#16171c" stroke="#8e9cff" stroke-width="2.6"/>
+  <circle cx="55.5" cy="17" r="4.2" fill="#16171c" stroke="#8e9cff" stroke-width="2.6"/>
+  <!-- convergence point -->
+  <circle cx="32" cy="17" r="11" fill="url(#glow)"/>
+  <circle cx="32" cy="17" r="5" fill="url(#meet)" stroke="#16171c" stroke-width="1.6"/>
+</svg>
