@@ -106,6 +106,17 @@ img { display: block; max-width: 100%; }
   background: linear-gradient(180deg, rgba(8, 8, 18, 0) 40%, rgba(8, 8, 18, .7) 100%);
   pointer-events: none;
 }
+.cover-seal {
+  position: absolute; z-index: 2; top: 18px; right: 18px;
+  width: 72px; height: 72px; border-radius: 50%;
+  padding: 3px;
+  background: rgba(255, 255, 255, .82);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .25);
+  transition: transform .25s ease;
+}
+.cover-seal:hover { transform: scale(1.06); text-decoration: none; }
+.cover-seal img { width: 100%; height: 100%; display: block; }
+.org-seal { display: inline-block; width: 26px; height: 26px; vertical-align: -5px; margin-right: 10px; }
 .cover-text {
   position: absolute; z-index: 2;
   left: 32px; right: 32px; bottom: 26px;
@@ -147,7 +158,7 @@ p { margin: 0 0 12px; }
 /* ---- About ---- */
 .about {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 470px);
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
   gap: 30px 48px;
   align-items: center;
   padding-top: 44px;
@@ -168,7 +179,7 @@ p { margin: 0 0 12px; }
 }
 .question {
   margin: 0 0 24px;
-  font: italic 400 30px/1.32 "Fraunces", serif;
+  font: italic 400 28px/1.32 "Fraunces", serif;
   letter-spacing: -.01em;
 }
 .hyp { display: grid; grid-template-columns: 48px 1fr; gap: 14px 10px; margin: 0; }
@@ -287,6 +298,7 @@ footer p { margin: 0; }
   .cover { border-radius: 14px; }
   .cover img { object-position: 16% 40%; }
   .cover-text { left: 18px; right: 18px; bottom: 18px; }
+  .cover-seal { width: 52px; height: 52px; top: 12px; right: 12px; }
   .cover-text h1 { font-size: 48px; }
   .cover-text .role { font-size: 14.5px; }
   .links { padding: 0 2px; margin-top: 16px; }
