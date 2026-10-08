@@ -176,6 +176,8 @@ p { margin: 0 0 12px; }
 .hyp dt sub { font-size: .6em; }
 .hyp dd { margin: 0; font-size: 18px; line-height: 1.55; padding-top: 2px; }
 .h-brain { color: var(--brain); }
+.term-brain { color: var(--brain); }
+.term-ai { color: var(--ai); }
 .h-ai { color: var(--ai); }
 
 .about-fig { margin: 0; }
