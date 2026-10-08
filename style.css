@@ -269,11 +269,16 @@ p { margin: 0 0 12px; }
 }
 .member:hover { text-decoration: none; border-color: var(--ai); transform: translateY(-2px); }
 .member img {
+  --ring: var(--brain);
   width: 92px; height: 92px; border-radius: 50%; object-fit: cover; margin-bottom: 12px;
-  box-shadow: 0 0 0 3px var(--paper), 0 0 0 4.5px color-mix(in srgb, var(--brain) 55%, var(--ai));
+  box-shadow: 0 0 0 3px var(--paper), 0 0 0 5px var(--ring), 0 0 16px color-mix(in srgb, var(--ring) 40%, transparent);
+  transition: box-shadow .6s ease;
 }
+:root[data-theme="dark"] .member img { --ring: var(--ai); }
+.member:hover img { box-shadow: 0 0 0 3px var(--paper), 0 0 0 5px var(--ring), 0 0 24px color-mix(in srgb, var(--ring) 65%, transparent); }
 .m-name { font: 500 17.5px/1.3 "Newsreader", Georgia, serif; }
-.m-role { font-size: 13.5px; color: var(--brain); }
+.m-role { font-size: 13.5px; color: var(--brain); transition: color .6s ease; }
+:root[data-theme="dark"] .m-role { color: var(--ai); }
 .m-aff { font-size: 13.5px; color: var(--muted); }
 
 /* ---- Publications ---- */
