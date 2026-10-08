@@ -85,7 +85,7 @@ img { display: block; max-width: 100%; }
 
 .portrait-box img {
   width: 100%;
-  aspect-ratio: 600 / 780;
+  aspect-ratio: 620 / 806;
   object-fit: cover;
   border: 1px solid var(--rule);
   padding: 5px;
