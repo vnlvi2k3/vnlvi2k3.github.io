@@ -15,8 +15,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=brainai48">
   <script>
-    // Every visit starts in brain mode (light); a short intro then plays (see main.js).
-    document.documentElement.dataset.theme = "light";
+    // A fresh visit or a reload starts in brain mode (light) and plays the intro (see main.js).
+    // Coming back with Back/Forward keeps the mode the visitor had and skips the intro.
+    (function () {
+      var nav = (performance.getEntriesByType && performance.getEntriesByType("navigation")[0]) || {};
+      var back = nav.type === "back_forward";
+      var t = null;
+      if (back) { try { t = sessionStorage.getItem("theme"); } catch (e) {} }
+      document.documentElement.dataset.theme = t === "dark" ? "dark" : "light";
+      if (back) document.documentElement.dataset.returning = "1";
+    })();
   </script>
 </head>
 <body>
@@ -448,9 +456,10 @@
       var next = root.dataset.theme === "dark" ? "light" : "dark";
       root.classList.add("theme-anim");
       root.dataset.theme = next;
+      try { sessionStorage.setItem("theme", next); } catch (e) {}
       setTimeout(function () { root.classList.remove("theme-anim"); }, 1100);
     });
   </script>
-  <script src="main.js?v=8" defer></script>
+  <script src="main.js?v=9" defer></script>
 </body>
 </html>

@@ -93,7 +93,7 @@
      A click on the toggle (or T) stops the mode changes. */
   var toggle = document.getElementById("theme-toggle");
   var topSig = document.querySelector("svg.signal:not(.small)");
-  if (!reduced) {
+  if (!reduced && !root.dataset.returning) {
     var timers = [];
     root.style.setProperty("--tdur", "2s");
     root.classList.add("theme-anim");
