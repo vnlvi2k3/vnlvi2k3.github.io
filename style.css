@@ -89,17 +89,23 @@ img { display: block; max-width: 100%; }
 /* ---- Hero ---- */
 .hero { max-width: var(--width); margin: 0 auto; padding: 6px 20px 0; }
 .cover {
-  height: clamp(220px, 34vw, 380px);
+  position: relative;
+  height: clamp(200px, 30vw, 330px);
   border-radius: 20px;
   overflow: hidden;
 }
-.cover img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
+.cover::after {          /* soft fade so the portrait sits on the photo, not on a hard edge */
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 55%, color-mix(in srgb, var(--paper) 55%, transparent) 100%);
+  pointer-events: none;
+}
+.cover img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 38%; }
 
 .identity {
   display: flex; justify-content: space-between; align-items: flex-start; gap: 28px;
   padding: 0 12px;
 }
-.name-block { padding-top: 30px; min-width: 0; }
+.name-block { padding-top: 28px; min-width: 0; }
 .kicker {
   margin: 0 0 6px;
   font: 500 13px/1 "IBM Plex Mono", monospace;
@@ -117,21 +123,23 @@ img { display: block; max-width: 100%; }
 .links { margin: 0; display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 15px; align-items: baseline; }
 .links .mono { font-size: 13.5px; color: var(--muted); }
 
-/* Portrait: two concentric rings — inner coral (brain), outer indigo (machine) */
+/* Portrait: one thin ring that runs from brain-red to AI-blue */
 .portrait {
   flex: none;
-  width: 210px; height: 210px;
-  margin-top: -105px; margin-right: 18px;
+  width: 176px; height: 176px;
+  margin-top: -88px; margin-right: 40px;
   border-radius: 50%;
-  box-shadow:
-    0 0 0 6px var(--paper),
-    0 0 0 7.5px var(--brain),
-    0 0 0 13px var(--paper),
-    0 0 0 14.5px var(--ai),
-    0 18px 40px rgba(20, 20, 40, .18);
+  padding: 3px;
+  background: linear-gradient(135deg, var(--brain), var(--ai));
+  box-shadow: 0 0 0 5px var(--paper), 0 16px 36px rgba(20, 20, 40, .16);
   position: relative; z-index: 1;
 }
-.portrait img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: 50% 32%; }
+.portrait img {
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  border: 4px solid var(--paper);
+  object-fit: cover; object-position: 50% 32%;
+}
 
 .signal { display: block; width: 100%; height: 56px; margin: 34px 0 0; }
 .signal path { stroke-width: 1.6; stroke-linejoin: round; stroke-linecap: round; }
@@ -268,7 +276,7 @@ footer p { margin: 0; }
 :root[data-theme="dark"] .net-nodes,
 :root[data-theme="dark"] .outline-ai { filter: drop-shadow(0 0 4px var(--ai)) drop-shadow(0 0 10px color-mix(in srgb, var(--ai) 60%, transparent)); }
 :root[data-theme="dark"] .net-edges line { stroke-opacity: .85; }
-:root[data-theme="dark"] .portrait { box-shadow: 0 0 0 6px var(--paper), 0 0 0 7.5px color-mix(in srgb, var(--brain) 30%, transparent), 0 0 0 13px var(--paper), 0 0 0 14.5px var(--ai), 0 0 26px color-mix(in srgb, var(--ai) 55%, transparent); }
+:root[data-theme="dark"] .portrait { box-shadow: 0 0 0 5px var(--paper), 0 0 30px color-mix(in srgb, var(--ai) 45%, transparent); }
 
 /* ---- Narrow screens ---- */
 @media (max-width: 860px) {
@@ -283,8 +291,8 @@ footer p { margin: 0; }
   .cover { border-radius: 14px; }
   .identity { padding: 0 2px; gap: 12px; }
   .name-block { padding-top: 18px; }
-  .portrait { width: 118px; height: 118px; margin-top: -59px; margin-right: 10px;
-    box-shadow: 0 0 0 4px var(--paper), 0 0 0 5.5px var(--brain), 0 0 0 9px var(--paper), 0 0 0 10.5px var(--ai), 0 10px 24px rgba(20,20,40,.18); }
+  .portrait { width: 112px; height: 112px; margin-top: -56px; margin-right: 12px; padding: 2px; }
+  .portrait img { border-width: 3px; }
   .role { font-size: 15.5px; }
   .sec { padding: 44px 0 4px; }
   .content { padding-left: 0; }
