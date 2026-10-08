@@ -86,4 +86,37 @@
     }
   }
 
+
+  /* Auto-switch between brain mode (light) and AI mode (dark) every 15 s,
+     until the visitor picks a mode with the toggle. */
+  var PERIOD = 15000;
+  var toggle = document.getElementById("theme-toggle");
+  if (toggle && !reduced) {
+    var timer = null;
+    root.classList.add("auto-theme");
+    function restartRing() {
+      root.classList.remove("ticking");
+      void root.offsetWidth;
+      root.classList.add("ticking");
+    }
+    function schedule() {
+      clearTimeout(timer);
+      restartRing();
+      timer = setTimeout(function () {
+        if (!document.hidden) {
+          root.classList.add("theme-anim");
+          root.dataset.theme = isAI() ? "light" : "dark";
+          setTimeout(function () { root.classList.remove("theme-anim"); }, 1100);
+        }
+        schedule();
+      }, PERIOD);
+    }
+    toggle.addEventListener("click", function () {
+      clearTimeout(timer);
+      root.classList.remove("auto-theme", "ticking");
+      toggle.title = "Switch between brain mode (light) and AI mode (dark)";
+    });
+    document.addEventListener("visibilitychange", function () { if (!document.hidden && root.classList.contains("auto-theme")) schedule(); });
+    schedule();
+  }
 })();
