@@ -136,6 +136,15 @@ main { max-width: var(--width); margin: 0 auto; padding: 0 16px; }
 p { margin: 0 0 14px; }
 .lede { font-size: 22px; line-height: 1.5; }
 
+.question {
+  margin: 0 0 22px;
+  font-size: 26px; line-height: 1.4;
+  font-style: italic;
+}
+.hypotheses { display: grid; grid-template-columns: 44px 1fr; gap: 12px 8px; margin: 0; }
+.hypotheses dt { color: var(--gold); font-size: 21px; font-variant-numeric: lining-nums; }
+.hypotheses dt sub { font-size: .62em; }
+.hypotheses dd { margin: 0; font-size: 20px; padding-top: 2px; }
 .interests { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 18px; font-style: italic; color: var(--muted); }
 .interests span::before { content: "— "; color: var(--gold); font-style: normal; }
 
@@ -190,5 +199,6 @@ footer p { margin: 0; font-variant: small-caps; letter-spacing: .08em; }
   .block { grid-template-columns: 1fr; gap: 10px; padding: 30px 0 26px; }
   .block h2 { position: static; }
   .lede { font-size: 20px; }
+  .question { font-size: 22px; }
   .item-head { flex-direction: column; gap: 0; }
 }
