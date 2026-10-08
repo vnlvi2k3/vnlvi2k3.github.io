@@ -87,37 +87,21 @@
   }
 
 
-  /* Auto-switch between brain mode (light) and AI mode (dark) every 15 s,
-     until the visitor picks a mode with the toggle. */
-  var PERIOD = 15000;
+  /* Intro "trailer": on every load, glide light -> dark -> light -> dark -> light,
+     then stay in light mode. A click on the toggle (or T) stops it right away. */
   var toggle = document.getElementById("theme-toggle");
   if (toggle && !reduced) {
-    var timer = null;
-    root.classList.add("auto-theme");
-    function restartRing() {
-      root.classList.remove("ticking");
-      void root.offsetWidth;
-      root.classList.add("ticking");
-    }
-    function schedule() {
-      clearTimeout(timer);
-      restartRing();
-      timer = setTimeout(function () {
-        if (!document.hidden) {
-          root.classList.add("theme-anim");
-          root.dataset.theme = isAI() ? "light" : "dark";
-          setTimeout(function () { root.classList.remove("theme-anim"); }, 1100);
-        }
-        schedule();
-      }, PERIOD);
-    }
-    toggle.addEventListener("click", function () {
-      clearTimeout(timer);
-      root.classList.remove("auto-theme", "ticking");
-      toggle.title = "Switch between brain mode (light) and AI mode (dark)";
+    var STEPS = [[450, "dark"], [1650, "light"], [2850, "dark"], [4050, "light"]];
+    var timers = [];
+    root.classList.add("theme-anim");
+    STEPS.forEach(function (step) {
+      timers.push(setTimeout(function () { root.dataset.theme = step[1]; }, step[0]));
     });
-    document.addEventListener("visibilitychange", function () { if (!document.hidden && root.classList.contains("auto-theme")) schedule(); });
-    schedule();
+    timers.push(setTimeout(function () { root.classList.remove("theme-anim"); }, 5200));
+    toggle.addEventListener("click", function () {
+      timers.forEach(clearTimeout);
+      timers = [];
+    }, true);
   }
 
   /* Keyboard: press T to switch modes */

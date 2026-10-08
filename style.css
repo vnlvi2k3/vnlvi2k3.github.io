@@ -86,21 +86,10 @@ img { display: block; max-width: 100%; }
 :root[data-theme="dark"] .theme-toggle .ico-brain { display: none; }
 :root[data-theme="dark"] .theme-toggle .ico-ai { display: block; }
 
-/* ---- Auto theme: smooth colour change + progress ring on the toggle ---- */
+/* ---- Smooth colour change when the mode switches ---- */
 .theme-anim, .theme-anim *, .theme-anim *::before, .theme-anim *::after {
   transition: background-color 1s ease, color 1s ease, border-color 1s ease, fill 1s ease, stroke 1s ease, box-shadow 1s ease, opacity 1s ease, filter 1s ease !important;
 }
-@property --tp { syntax: "<number>"; inherits: false; initial-value: 0; }
-.theme-toggle { position: relative; }
-.auto-theme.ticking .theme-toggle::after {
-  content: ""; position: absolute; inset: -4px; border-radius: 50%; pointer-events: none;
-  background: conic-gradient(var(--ai) calc(var(--tp) * 1turn), transparent 0);
-  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 2px));
-          mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 2px));
-  animation: theme-tick 15s linear forwards;
-}
-:root[data-theme="dark"].auto-theme.ticking .theme-toggle::after { background: conic-gradient(var(--brain) calc(var(--tp) * 1turn), transparent 0); }
-@keyframes theme-tick { from { --tp: 0; } to { --tp: 1; } }
 
 /* ---- Hero: full-width cover with the name set on it ---- */
 .hero { max-width: var(--width); margin: 0 auto; padding: 18px 20px 0; }
