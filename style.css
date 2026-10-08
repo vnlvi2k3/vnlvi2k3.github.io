@@ -368,6 +368,11 @@ footer { max-width: var(--width); margin: 64px auto 0; padding: 0 20px 44px; tex
 footer p { margin: 0; }
 
 /* ---- Brain mode (light) lights up the brain; AI mode (dark) lights up the machine ---- */
+.question .term-brain, .question .term-ai { transition: opacity .6s ease, text-shadow .6s ease; }
+:root[data-theme="light"] .question .term-brain { text-shadow: 0 0 14px color-mix(in srgb, var(--brain) 45%, transparent); }
+:root[data-theme="light"] .question .term-ai { opacity: .4; }
+:root[data-theme="dark"] .question .term-ai { text-shadow: 0 0 14px color-mix(in srgb, var(--ai) 70%, transparent); }
+:root[data-theme="dark"] .question .term-brain { opacity: .4; }
 .sig-brain, .sig-ai, .neuron, .terminals, .edges, .nodes, .arc, .hlabel, .hyp dt, .hyp dd {
   transition: opacity .6s ease, filter .6s ease;
 }
