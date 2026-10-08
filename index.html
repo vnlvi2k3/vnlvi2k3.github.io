@@ -4,96 +4,210 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Vi Vu</title>
-  <meta name="description" content="Vi Vu — Ph.D. student in the Vision and Image Processing Laboratory at Duke University, advised by Prof. Sina Farsiu.">
+  <meta name="description" content="Vi Vu — Ph.D. student in the Vision and Image Processing Laboratory at Duke University, advised by Prof. Sina Farsiu. Learning from imperfect biomedical data.">
   <meta property="og:title" content="Vi Vu">
   <meta property="og:description" content="Ph.D. student, Vision and Image Processing Laboratory, Duke University">
   <meta property="og:image" content="assets/cover.jpg">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/font/Serif/cmun-serif.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/font/Typewriter/cmun-typewriter.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <link rel="stylesheet" href="style.css?v=journal1">
 </head>
 <body>
+  <article class="sheet">
 
-  <div class="letterhead">
-    <span class="sc">Duke University · Vision and Image Processing Laboratory</span>
-    <nav class="sc">
-      <a href="#research">Research</a>
-      <a href="#vita">Vita</a>
-      <a href="#publications">Publications</a>
-      <a href="#honors">Honors</a>
-      <a href="assets/Vi_Vu_CV.pdf">CV</a>
+    <div class="stamp" aria-hidden="true">vnlvi2k3:2610.07001v1&nbsp;&nbsp;[cs.CV]&nbsp;&nbsp;7&nbsp;Oct&nbsp;2026</div>
+
+    <header class="runninghead">
+      <span>Journal of Vi Vu · Vol. I, No. 1</span>
+      <span>Durham, October 2026</span>
+    </header>
+
+    <nav class="contents">
+      <span class="sc">Contents:</span>
+      <a href="#intro">I. Introduction</a>
+      <a href="#education">II. Education</a>
+      <a href="#experience">III. Research</a>
+      <a href="#references">References</a>
+      <a href="#appendix">Appendix</a>
+      <a href="assets/Vi_Vu_CV.pdf">CV (pdf)</a>
     </nav>
-  </div>
 
-  <main class="page">
+    <!-- Title block -->
+    <section class="titleblock">
+      <h1>Vi Vu</h1>
+      <p class="authors">Ph.D. Student<sup>*</sup></p>
+      <p class="affil">
+        <a href="https://people.duke.edu/~sf59/">Vision and Image Processing Laboratory</a>,
+        Duke University, Durham, North Carolina, USA
+      </p>
+      <p class="received">(Received August 2026; advisor: <a href="https://scholar.google.com/citations?user=mzcr92sAAAAJ&hl=en">Prof. Sina Farsiu</a>)</p>
 
-    <!-- Masthead -->
-    <div class="row masthead">
-      <div class="main">
-        <h1>Vi Vu</h1>
-        <p class="title">Ph.D. Student</p>
-        <p class="affil">
-          <a href="https://people.duke.edu/~sf59/">Vision and Image Processing Laboratory</a><br>
-          Duke University<br>
-          Advisor: <a href="https://scholar.google.com/citations?user=mzcr92sAAAAJ&hl=en">Professor Sina Farsiu</a>
+      <div class="abstract">
+        <p>
+          <span class="sc">Abstract.</span>
+          Medical images are expensive to label, noisy when labeled, and rarely look the same from one
+          hospital to the next. I study how to learn reliable models anyway. My work spans semi-supervised
+          and unsupervised learning, transfer learning, and multimodal learning under domain shift, with a
+          growing focus on foundation models such as the Segment Anything Model. I came to medical AI from
+          computer engineering, and to computer engineering from physics.
         </p>
-        <table class="contact">
-          <tr><td class="sc">Mail</td><td class="tt">vi.vu [at] duke [dot] edu</td></tr>
-          <tr><td class="sc">Office</td><td>Durham, North Carolina</td></tr>
-          <tr><td class="sc">Elsewhere</td><td>
-            <a href="https://scholar.google.com/citations?user=_2luKBQAAAAJ&hl=en">Google Scholar</a> ·
-            <a href="https://github.com/vnlvi2k3">GitHub</a> ·
-            <a href="https://www.linkedin.com/in/vivu-cse/">LinkedIn</a> ·
-            <a href="assets/Vi_Vu_CV.pdf">Curriculum Vitæ</a>
-          </td></tr>
-        </table>
+        <p class="codes">
+          <span class="sc">PACS:</span> 87.57.-s (medical imaging); 07.05.Mh (neural networks, artificial intelligence).<br>
+          <span class="sc">ACM CCS:</span> Computing methodologies → Image segmentation; Semi-supervised learning settings.<br>
+          <span class="sc">Contact:</span> <span class="tt">vi.vu [at] duke [dot] edu</span> ·
+          <a href="https://scholar.google.com/citations?user=_2luKBQAAAAJ&hl=en">Scholar</a> ·
+          <a href="https://github.com/vnlvi2k3">GitHub</a> ·
+          <a href="https://www.linkedin.com/in/vivu-cse/">LinkedIn</a> ·
+          <a href="assets/Vi_Vu_CV.pdf">CV</a>
+        </p>
       </div>
-      <aside class="margin portrait-box">
+    </section>
+
+    <!-- Body, two columns -->
+    <div class="twocol">
+
+      <figure class="fig portrait">
         <img src="assets/portrait-2026.jpg" alt="Portrait of Vi Vu">
-      </aside>
-    </div>
-
-    <div class="row">
-      <blockquote class="main epigraph">
-        “What I cannot create, I do not understand.”
-        <cite>— R. P. Feynman, on his blackboard at Caltech, 1988</cite>
-      </blockquote>
-    </div>
-
-    <!-- Plate -->
-    <div class="row">
-      <figure class="main plate">
-        <img src="assets/cover.jpg" alt="Vi Vu at work in a library reading room">
+        <figcaption><span class="sc">Fig. 1.</span> The author, 2026.</figcaption>
       </figure>
-      <aside class="margin">
-        <p class="caption"><span class="sc">Plate I.</span> In the reading room.</p>
-      </aside>
+
+      <h2 id="intro">I. Introduction</h2>
+      <p>
+        I am a first-year Ph.D. student in the Vision and Image Processing Laboratory at Duke University,
+        working with Professor Sina Farsiu. Before Duke I studied computer engineering at Ho Chi Minh City
+        University of Technology, where I graduated as valedictorian, and before that I studied
+        physics.<sup class="fn">†</sup>
+      </p>
+      <p>
+        Much of my research can be read as variations on a single objective. Given a small labeled set
+        <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">L</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> and a large unlabeled set <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">U</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, one trains a model <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">θ</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> by minimizing
+      </p>
+      <div class="equation">
+        <div class="eqbody"><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal">L</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.5393em;vertical-align:-1.6893em;"></span><span class="mord munder"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.85em;"><span style="top:-1.3107em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">few labels</span></span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord munder"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.85em;"><span class="svg-align" style="top:-1.9968em;"><span class="pstrut" style="height:3em;"></span><span class="stretchy" style="height:0.548em;min-width:1.6em;"><span class="brace-left" style="height:0.548em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="0.548em" viewBox="0 0 400000 548" preserveAspectRatio="xMinYMin slice"><path d="M0 6l6-6h17c12.688 0 19.313.3 20 1 4 4 7.313 8.3 10 13
+ 35.313 51.3 80.813 93.8 136.5 127.5 55.688 33.7 117.188 55.8 184.5 66.5.688
+ 0 2 .3 4 1 18.688 2.7 76 4.3 172 5h399450v120H429l-6-1c-124.688-8-235-61.7
+-331-161C60.687 138.7 32.312 99.3 7 54L0 41V6z"/></svg></span><span class="brace-center" style="height:0.548em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="0.548em" viewBox="0 0 400000 548" preserveAspectRatio="xMidYMin slice"><path d="M199572 214
+c100.7 8.3 195.3 44 280 108 55.3 42 101.7 93 139 153l9 14c2.7-4 5.7-8.7 9-14
+ 53.3-86.7 123.7-153 211-199 66.7-36 137.3-56.3 212-62h199568v120H200432c-178.3
+ 11.7-311.7 78.3-403 201-6 8-9.7 12-11 12-.7.7-6.7 1-18 1s-17.3-.3-18-1c-1.3 0
+-5-4-11-12-44.7-59.3-101.3-106.3-170-141s-145.3-54.3-229-60H0V214z"/></svg></span><span class="brace-right" style="height:0.548em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="0.548em" viewBox="0 0 400000 548" preserveAspectRatio="xMaxYMin slice"><path d="M399994 0l6 6v35l-6 11c-56 104-135.3 181.3-238 232-57.3
+ 28.7-117 45-179 50H-300V214h399897c43.3-7 81-15 113-26 100.7-33 179.7-91 237
+-174 2.7-5 6-9 10-13 .7-1 7.3-1 20-1h17z"/></svg></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathbb">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.5198em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight">x</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span><span class="mclose mtight">)</span><span class="mrel mtight">∼</span><span class="mord mtight"><span class="mord mathcal mtight" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3567em;margin-left:-0.0278em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">L</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1433em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3552em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">ℓ</span><span class="mord"><span class="delimsizing size1">(</span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">θ</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mord"><span class="delimsizing size1">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.0032em;"><span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.6893em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.6516em;vertical-align:-1.8016em;"></span><span class="mord mathnormal">λ</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord munder"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.85em;"><span style="top:-1.3345em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">many images</span></span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord munder"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.85em;"><span class="svg-align" style="top:-2.002em;"><span class="pstrut" style="height:3em;"></span><span class="stretchy" style="height:0.548em;min-width:1.6em;"><span class="brace-left" style="height:0.548em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="0.548em" viewBox="0 0 400000 548" preserveAspectRatio="xMinYMin slice"><path d="M0 6l6-6h17c12.688 0 19.313.3 20 1 4 4 7.313 8.3 10 13
+ 35.313 51.3 80.813 93.8 136.5 127.5 55.688 33.7 117.188 55.8 184.5 66.5.688
+ 0 2 .3 4 1 18.688 2.7 76 4.3 172 5h399450v120H429l-6-1c-124.688-8-235-61.7
+-331-161C60.687 138.7 32.312 99.3 7 54L0 41V6z"/></svg></span><span class="brace-center" style="height:0.548em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="0.548em" viewBox="0 0 400000 548" preserveAspectRatio="xMidYMin slice"><path d="M199572 214
+c100.7 8.3 195.3 44 280 108 55.3 42 101.7 93 139 153l9 14c2.7-4 5.7-8.7 9-14
+ 53.3-86.7 123.7-153 211-199 66.7-36 137.3-56.3 212-62h199568v120H200432c-178.3
+ 11.7-311.7 78.3-403 201-6 8-9.7 12-11 12-.7.7-6.7 1-18 1s-17.3-.3-18-1c-1.3 0
+-5-4-11-12-44.7-59.3-101.3-106.3-170-141s-145.3-54.3-229-60H0V214z"/></svg></span><span class="brace-right" style="height:0.548em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="0.548em" viewBox="0 0 400000 548" preserveAspectRatio="xMaxYMin slice"><path d="M399994 0l6 6v35l-6 11c-56 104-135.3 181.3-238 232-57.3
+ 28.7-117 45-179 50H-300V214h399897c43.3-7 81-15 113-26 100.7-33 179.7-91 237
+-174 2.7-5 6-9 10-13 .7-1 7.3-1 20-1h17z"/></svg></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathbb">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="mrel mtight">∼</span><span class="mord mtight"><span class="mord mathcal mtight" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3567em;margin-left:-0.0278em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">U</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1433em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2503em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">Ω</span><span class="mord"><span class="delimsizing size1">(</span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">θ</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span><span class="mord"><span class="delimsizing size1">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.998em;"><span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.8016em;"><span></span></span></span></span></span></span></span></span></span></div>
+        <span class="eqno">(1)</span>
+      </div>
+      <p>
+        where the second term asks the model to be consistent on images nobody has annotated. The hard part
+        is that <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">U</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is rarely clean: stains vary, scanners differ, and the labels in <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">L</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> are noisy. My
+        papers propose ways to make (1) behave under these conditions, using mixture-of-experts
+        [<a href="#r7">7</a>], co-training with foundation models [<a href="#r2">2</a>], hierarchical
+        distillation [<a href="#r9">9</a>] and disentangled representations [<a href="#r10">10</a>].
+      </p>
+
+      <h2 id="education">II. Education</h2>
+      <dl class="cv">
+        <dt>2026–</dt>
+        <dd><b>Duke University.</b> Ph.D. in Biomedical Engineering; Vision and Image Processing Laboratory.</dd>
+        <dt>2021–25</dt>
+        <dd><b>Ho Chi Minh City University of Technology.</b> B.E. in Computer Engineering (High-Quality Program).
+          Valedictorian, first of 749 in Computer Science and Engineering; GPA 9.27/10
+          [<a href="https://drive.google.com/file/d/1hsqOAvxihVWhE4Rxz5Nv-7lYRPMEFORm/view?usp=sharing">transcript</a>].</dd>
+      </dl>
+
+      <h2 id="experience">III. Research Experience</h2>
+      <h3>A. Carnegie Mellon University, 2024–26</h3>
+      <p>Research Assistant, <a href="https://xulabs.github.io/news/">Xu Lab</a>. Mixture-of-experts for
+        semi-supervised segmentation (Semi-MoE); led SemiSAM, a bidirectional co-training framework aligning
+        foundation and conventional models on unlabeled data; mixed-domain segmentation.</p>
+      <h3>B. Northwestern University, 2025–26</h3>
+      <p>Research Assistant, <a href="https://bagcilab.com/">Machine &amp; Hybrid Intelligence Lab</a>.
+        A mean-teacher framework separating stain appearance from tissue structure in histopathology;
+        source-free domain adaptation; radiomics of laryngeal cancer.</p>
+      <h3>C. National Cheng Kung University, 2025</h3>
+      <p>Research Intern, <a href="https://en.ur.ncku.edu.tw/laboratory/Integrated+MechanoBioSystems+Lab/">Integrated MechanoBioSystems Lab</a>.
+        A Y-Net Siamese architecture for 3D single-cell tracking and segmentation in time-lapse imaging.</p>
+      <h3>D. FPT Software AI Center, 2024</h3>
+      <p>AI Researcher. Denoising diffusion implicit models for interactive point-cloud shape deformation (DragPC).</p>
+      <h3>E. AIVIETNAM, 2024–</h3>
+      <p>Research Associate and Teaching Assistant. Co-lead of the AI-in-Medicine Applications lab (four teams);
+        teaching support for more than 600 students.</p>
+
+      <h2 id="ack">Acknowledgments</h2>
+      <p class="ack">
+        The author thanks
+        <a href="https://scholar.google.com/citations?user=mzcr92sAAAAJ&hl=en">S. Farsiu</a>,
+        <a href="https://scholar.google.com/citations?user=Y3Cqt0cAAAAJ&hl=en">M. Xu</a>,
+        <a href="https://scholar.google.com/citations?user=f9V0NZkAAAAJ&hl=en">X. Li</a>,
+        <a href="https://scholar.google.com/citations?user=QbTV0r0AAAAJ&hl=en">T. Wang</a>,
+        <a href="https://scholar.google.com/citations?user=9LUdPM4AAAAJ&hl=en">U. Bagci</a>,
+        <a href="https://scholar.google.com/citations?user=_HLH5D4AAAAJ&hl=en">T.-Y. Tu</a>,
+        <a href="https://scholar.google.it/citations?user=gEbaF0sAAAAJ&hl=en">A. Nguyen</a> and
+        <a href="https://dblp.org/pid/142/0382.html">Q. V. Dinh</a>
+        for their advising, and many co-authors for their patience.
+      </p>
+
+      <div class="footnotes">
+        <p><sup>*</sup> Electronic address: <span class="tt">vi.vu [at] duke [dot] edu</span></p>
+        <p><sup>†</sup> First Prize, Ho Chi Minh City Excellent Physics Student Competition.</p>
+      </div>
     </div>
 
-    <!-- Research -->
-    <section id="research">
-      <div class="row">
-        <div class="main">
-          <h2><span class="sec">§1.</span> Research</h2>
-          <p class="dropcap">
-            I am a first-year Ph.D. student in the
-            <a href="https://people.duke.edu/~sf59/">Vision and Image Processing Laboratory</a>
-            at Duke University, working with Professor Sina Farsiu. I came to medical AI from computer
-            engineering, and to computer engineering from physics.<sup class="nref">1</sup>
-          </p>
-          <p>
-            My research develops AI methods for medicine that are mathematically grounded and built around
-            foundation models. Most of my work concerns <em>learning from imperfect biomedical data</em>:
-            semi- and unsupervised learning, transfer learning, and multimodal learning when domains shift
-            and labels are noisy or scarce. Recent work includes mixture-of-experts for semi-supervised
-            histopathology segmentation, co-training the Segment Anything Model with conventional networks
-            on unlabeled images, and source-free domain adaptation.
-          </p>
-        </div>
-        <aside class="margin">
-          <p class="note"><sup>1</sup> First Prize, Ho Chi Minh City Excellent Physics Student Competition.</p>
-          <figure class="feynman">
+    <figure class="fig plate">
+      <img src="assets/cover.jpg" alt="Vi Vu working on a laptop in a library reading room">
+      <figcaption><span class="sc">Fig. 2.</span> Experimental setup: a laptop, a reading room, and an unlabeled dataset.</figcaption>
+    </figure>
+
+    <!-- References -->
+    <section id="references">
+      <h2 class="center">References</h2>
+      <p class="refnote">The author’s name is set in bold; * denotes equal contribution. See also
+        <a href="https://scholar.google.com/citations?user=_2luKBQAAAAJ&hl=en">Google Scholar</a>.</p>
+      <ol class="refs twocol">
+        <li id="r1">V. M. K. Nguyen, K. N. V. Ngoc, <b>V. Vu</b>, T. Nguyen, T. H. Nguyen, and M. Xu, “Beyond visible boundaries: Benchmarking foundation models for overlapping cell segmentation in microscopic imaging,” in <i>CVPR Workshops (Precognition)</i> (2026). [<a href="https://openreview.net/pdf?id=sf2d1znfq8">pdf</a>]</li>
+        <li id="r2"><b>V. Vu*</b>, H. T. Nguyen*, T. T. Nguyen*, T. B. Lam, T. H. Nguyen, T. Wang, X. Li, and M. Xu, “From specialist to generalist: Unlocking SAM’s learning potential on unlabeled medical images,” in <i>Proc. IEEE ISBI</i> (2026). [<a href="https://drive.google.com/file/d/1trY-g0lc0pdfvo-Zpt26Xly7amCg_GSH/view?usp=sharing">pdf</a>]</li>
+        <li id="r3">T. Q. K. Bui, T. Nguyen, D. Ho, B. Lam, <b>V. Vu</b>, T. Nguyen, P. Huynh, and U. Bagci, “UP2D: Uncertainty-aware progressive pseudo-label denoising for source-free domain adaptive medical image segmentation,” <i>Neurocomputing</i> (2026). [<a href="https://drive.google.com/file/d/15gHmvcjdScQB4dR31hgzmQ3mvrKzgANN/view?usp=sharing">pdf</a>]</li>
+        <li id="r4">T. H. Nguyen, B. T. Lam, Thien Nguyen, T. Q. K. Bui, <b>V. Vu</b>, K. P. Huynh, U. Bagci, and M. Xu, “Domain-invariant mixed-domain semi-supervised medical image segmentation with clustered maximum mean discrepancy alignment,” in <i>Proc. ICASSP</i> (2026). [<a href="https://drive.google.com/file/d/1962tbzLZC2sDnHxWeMB2ZXx4qVCNjXYZ/view?usp=sharing">pdf</a>]</li>
+        <li id="r5">T. Nguyen, T. H. Nguyen, T. Q. K. Bui, B. T. Lam, <b>V. Vu</b>, K. P. Huynh, U. Bagci, and M. Xu, “Aligning what you separate: Denoised patch mixing for source-free domain adaptation in medical image segmentation,” in <i>Proc. ICASSP</i> (2026). [<a href="https://arxiv.org/pdf/2510.25227">pdf</a>]</li>
+        <li id="r6">D. T. Chung, B. T. Lam, T. H. Nguyen, T. Nguyen, <b>V. Vu</b>, H. L. Cao, P. K. Huynh, and M. Xu, “Modality-specific enhancement and complementary fusion for semi-supervised multi-modal brain tumor segmentation,” in <i>AAAI Bridge Program on AI for Medicine and Healthcare</i> (2026). [<a href="https://openreview.net/pdf?id=USD3AI7eK6">pdf</a>]</li>
+        <li id="r7"><b>V. Vu*</b>, T. H. Nguyen*, H. T. Nguyen, D. Kihara, T. Wang, X. Li, and M. Xu, “Semi-MoE: Mixture-of-experts meets semi-supervised histopathology segmentation,” in <i>Proc. BMVC</i> (2025). [<a href="https://bmva-archive.org.uk/bmvc/2025/assets/papers/Paper_940/paper.pdf">pdf</a>]</li>
+        <li id="r8"><b>V. Vu*</b>, T. H. Nguyen*, H. T. Nguyen, Q. V. Dinh, X. Li, and M. Xu, “Semi-supervised histopathology image segmentation with feature diversified collaborative learning,” in <i>AAAI Bridge Program on AI for Medicine and Healthcare</i> (2025). [<a href="https://raw.githubusercontent.com/mlresearch/v281/main/assets/nguyen25b/nguyen25b.pdf">pdf</a>]</li>
+        <li id="r9"><b>V. Vu*</b>, T. Q. K. Le*, H. H. Pham, X. L. Huynh, T. H. Nguyen, M. H. N. Le, Q. Nguyen, and H. D. Nguyen, “HDC: Hierarchical distillation for multi-level noisy consistency in semi-supervised fetal ultrasound segmentation,” in <i>CVPR Workshops (Precognition)</i> (2025). [<a href="https://openaccess.thecvf.com/content/CVPR2025W/Precognition/papers/Le_HDC_Hierarchical_Distillation_for_Multi-level_Noisy_Consistency_in_Semi-Supervised_Fetal_CVPRW_2025_paper.pdf">pdf</a>]</li>
+        <li id="r10"><b>V. Vu*</b>, H. H. Pham*, T. H. Nguyen, U. Bagci, M. Xu, T. N. Le, and H. H. Pham, “Learning disentangled stain and structural representations for semi-supervised histopathology segmentation,” in <i>MICCAI Workshop on Computational Pathology (COMPAYL)</i> (2025). [<a href="https://arxiv.org/pdf/2507.03923">pdf</a>]</li>
+        <li id="r11">T. H. Nguyen, H. T. Nguyen, <b>V. Vu</b>, B. T. Lam, B. X. Nguyen, J. Xing, T. Wang, X. Li, and M. Xu, “Adaptive knowledge transferring with switching dual-student framework for semi-supervised medical image segmentation,” <i>Pattern Recognition</i> (2025). [<a href="https://arxiv.org/pdf/2510.24366">pdf</a>]</li>
+        <li id="r12">T. H. Nguyen, H. T. Nguyen, <b>V. Vu</b>, B. T. Lam, P. Huynh, T. Wang, X. Li, U. Bagci, and M. Xu, “DuetMatch: Harmonizing semi-supervised brain MRI segmentation via decoupled branch optimization,” <i>Computerized Medical Imaging and Graphics</i> (2025). [<a href="https://arxiv.org/pdf/2510.16146">pdf</a>]</li>
+        <li id="r13">M. H. N. Le, T. H. Nguyen, M. T. Dinh, T. Q. K. Bui, <b>V. Vu</b>, H. Q. Kha, P. K. Nguyen, N. H. H. Le, T. M. Nguyen, H. H. Huynh, and K. Le, “Performance analysis of artificial intelligence–driven convolutional neural network architectures for liver tumor segmentation,” <i>Journal of Clinical Oncology</i> (2025). [<a href="https://ascopubs.org/doi/abs/10.1200/JCO.2025.43.16_suppl.e16307">link</a>]</li>
+        <li id="r14">T. H. Nguyen, T. Nguyen, X. B. Nguyen, <b>V. Vu</b>, V. Q. Dinh, and F. Meriaudeau, “Semi-supervised skin lesion segmentation under dual mask ensemble with feature discrepancy co-training,” in <i>Medical Imaging with Deep Learning (MIDL)</i> (2025). [<a href="https://openreview.net/pdf?id=cBfXsr6xWb">pdf</a>]</li>
+        <li id="r15">H. H. Pham, H. T. Nguyen, <b>V. Vu</b>, Q. V. Dinh, T. H. Nguyen, X. Li, and M. Xu, “Fetal-BCP: Addressing empirical distribution gap in semi-supervised fetal ultrasound segmentation,” in <i>Proc. IEEE ISBI</i> (2025). [<a href="https://ieeexplore.ieee.org/abstract/document/10980925/">link</a>]</li>
+        <li id="r16">T. Q. K. Bui, M. Dinh, <b>V. Vu</b>, Q. Nguyen, Q. Dinh, M. Le, and Q. Le, “Hepatic tumor segmentation under modified scalable and transferable nnU-Net framework,” in <i>Conference on Information Technology and its Applications (CITA)</i> (2025). [<a href="https://drive.google.com/file/d/1Sgsqsgdj1ZWBb3eNFcWEJ7Zz8GzzhRXq/view?usp=sharing">pdf</a>]</li>
+      </ol>
+    </section>
+
+    <!-- Appendix -->
+    <section id="appendix" class="twocol appendix">
+      <h2>Appendix A: Honors</h2>
+      <ul class="honors">
+        <li>Winner, Fetal Ultrasound Grand Challenge, ISBI [<a href="https://drive.google.com/file/d/1Jy6NujRNiQm3I8Pf6zZyrrXSrQb8s1DK/view?usp=sharing">cert.</a>]</li>
+        <li>NSTC Scholarship, International Internship Pilot Program, Taiwan [<a href="https://drive.google.com/file/d/1PQWnGH9uA9mX-UtC-6z6lCw70o5DJkx1/view?usp=sharing">cert.</a>]</li>
+        <li>Momentum Scholarship (top 10 university students)</li>
+        <li>Academic Incentive Scholarship, Type 1 (top 1.6%), four times</li>
+        <li>OISP Scholarship, Type 1, twice</li>
+        <li>Outstanding Academic Performance [<a href="https://drive.google.com/file/d/1yWg3C4Wv84tLVzzUEF7ca88PCJnRoXTw/view?usp=sharing">cert.</a>]</li>
+        <li>Outstanding All-around Student</li>
+        <li>First Prize, Ho Chi Minh City Excellent Physics Student Competition [<a href="https://drive.google.com/file/d/1LwUcXjAxb-5gDDJ9hEbzFJPne8_1B1u0/view?usp=sharing">cert.</a>]</li>
+      </ul>
+
+      <h2>Appendix B: On Physics</h2>
+      <figure class="fig feynman">
             <svg viewBox="0 0 200 110" role="img" aria-label="Feynman diagram of electron-positron annihilation into a muon pair">
               <defs>
                 <marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
@@ -112,173 +226,15 @@
               <text x="96" y="40">γ</text>
               <text x="200" y="10" text-anchor="end">μ⁻</text><text x="200" y="110" text-anchor="end">μ⁺</text>
             </svg>
-            <figcaption><span class="sc">Fig. 1.</span> e⁻e⁺ → μ⁻μ⁺ at lowest order. Old habits.</figcaption>
-          </figure>
-        </aside>
-      </div>
+        <figcaption><span class="sc">Fig. 3.</span> Lowest-order diagram for e<sup>−</sup>e<sup>+</sup> → μ<sup>−</sup>μ<sup>+</sup>,
+          kept as a reminder of where the author started.</figcaption>
+      </figure>
     </section>
 
-    <!-- Vita -->
-    <section id="vita">
-      <div class="row">
-        <div class="main">
-          <h2><span class="sec">§2.</span> Vita</h2>
-
-          <h3>Education</h3>
-          <dl class="cv">
-            <dt>2026 –</dt>
-            <dd><strong>Duke University</strong>, Ph.D. in Biomedical Engineering.<br>
-              Vision and Image Processing Laboratory; advisor Prof. Sina Farsiu.</dd>
-            <dt>2021 – 2025</dt>
-            <dd><strong>Ho Chi Minh City University of Technology</strong>, B.E. in Computer Engineering (High-Quality Program).<br>
-              Valedictorian, ranked first of 749 in Computer Science and Engineering. GPA 9.27/10
-              [<a href="https://drive.google.com/file/d/1hsqOAvxihVWhE4Rxz5Nv-7lYRPMEFORm/view?usp=sharing">transcript</a>].</dd>
-          </dl>
-
-          <h3>Research positions</h3>
-          <dl class="cv">
-            <dt>2024 – 2026</dt>
-            <dd><strong>Carnegie Mellon University</strong>, <a href="https://xulabs.github.io/news/">Xu Lab</a>. Research Assistant with
-              <a href="https://scholar.google.com/citations?user=Y3Cqt0cAAAAJ&hl=en">Prof. Min Xu</a>,
-              <a href="https://scholar.google.com/citations?user=f9V0NZkAAAAJ&hl=en">Dr. Xingjian Li</a> and
-              <a href="https://scholar.google.com/citations?user=QbTV0r0AAAAJ&hl=en">Prof. Tianyang Wang</a>.
-              Semi-MoE; SemiSAM; mixed-domain segmentation.</dd>
-            <dt>2025 – 2026</dt>
-            <dd><strong>Northwestern University</strong>, <a href="https://bagcilab.com/">Machine &amp; Hybrid Intelligence Lab</a>.
-              Research Assistant with <a href="https://scholar.google.com/citations?user=9LUdPM4AAAAJ&hl=en">Prof. Ulas Bagci</a>.
-              Stain–structure disentanglement in histopathology; source-free domain adaptation.</dd>
-            <dt>2025</dt>
-            <dd><strong>National Cheng Kung University</strong>, <a href="https://en.ur.ncku.edu.tw/laboratory/Integrated+MechanoBioSystems+Lab/">Integrated MechanoBioSystems Lab</a>.
-              Research Intern with <a href="https://scholar.google.com/citations?user=_HLH5D4AAAAJ&hl=en">Prof. Ting-Yuan Tu</a>.
-              3D single-cell tracking and segmentation.</dd>
-            <dt>2024 –</dt>
-            <dd><strong>AIVIETNAM</strong>. Research Associate and Teaching Assistant with
-              <a href="https://dblp.org/pid/142/0382.html">Dr. Quang Vinh Dinh</a>.
-              Co-lead of the AI-in-Medicine Applications lab; teaching for 600+ students.</dd>
-            <dt>2024</dt>
-            <dd><strong>FPT Software AI Center</strong>. AI Researcher with
-              <a href="https://scholar.google.it/citations?user=gEbaF0sAAAAJ&hl=en">Prof. Anh Nguyen</a>.
-              Diffusion models for point-cloud shape deformation.</dd>
-          </dl>
-        </div>
-      </div>
-    </section>
-
-    <!-- Publications -->
-    <section id="publications">
-      <div class="row">
-        <div class="main">
-          <h2><span class="sec">§3.</span> Publications</h2>
-        </div>
-        <aside class="margin">
-          <p class="note">* Equal contribution. [J] journal, [C] conference or workshop. A complete list is on
-            <a href="https://scholar.google.com/citations?user=_2luKBQAAAAJ&hl=en">Google Scholar</a>.</p>
-        </aside>
-      </div>
-
-      <div class="row">
-        <div class="main">
-          <h3 class="year">2026</h3>
-          <ol class="refs">
-            <li><span class="key">[C12]</span><div>V. M. K. Nguyen, K. N. V. Ngoc, <b>Vi Vu</b>, T. Nguyen, T. H. Nguyen, M. Xu.
-              Beyond visible boundaries: Benchmarking foundation models for overlapping cell segmentation in microscopic imaging.
-              <i>CVPR Workshops (Precognition)</i>.
-              [<a href="https://openreview.net/pdf?id=sf2d1znfq8">pdf</a>]</div></li>
-            <li><span class="key">[C11]</span><div><b>Vi Vu*</b>, H. T. Nguyen*, T. T. Nguyen*, T. B. Lam, T. H. Nguyen, T. Wang, X. Li, M. Xu.
-              From specialist to generalist: Unlocking SAM’s learning potential on unlabeled medical images.
-              <i>IEEE International Symposium on Biomedical Imaging (ISBI)</i>.
-              [<a href="https://drive.google.com/file/d/1trY-g0lc0pdfvo-Zpt26Xly7amCg_GSH/view?usp=sharing">pdf</a>]</div></li>
-            <li><span class="key">[J4]</span><div>T. Q. K. Bui, T. Nguyen, D. Ho, B. Lam, <b>Vi Vu</b>, T. Nguyen, P. Huynh, U. Bagci.
-              UP2D: Uncertainty-aware progressive pseudo-label denoising for source-free domain adaptive medical image segmentation.
-              <i>Neurocomputing</i>.
-              [<a href="https://drive.google.com/file/d/15gHmvcjdScQB4dR31hgzmQ3mvrKzgANN/view?usp=sharing">pdf</a>]</div></li>
-            <li><span class="key">[C10]</span><div>T. H. Nguyen, B. T. Lam, Thien Nguyen, T. Q. K. Bui, <b>Vi Vu</b>, K. P. Huynh, U. Bagci, M. Xu.
-              Domain-invariant mixed-domain semi-supervised medical image segmentation with clustered maximum mean discrepancy alignment.
-              <i>ICASSP</i>.
-              [<a href="https://drive.google.com/file/d/1962tbzLZC2sDnHxWeMB2ZXx4qVCNjXYZ/view?usp=sharing">pdf</a>]</div></li>
-            <li><span class="key">[C9]</span><div>T. Nguyen, T. H. Nguyen, T. Q. K. Bui, B. T. Lam, <b>Vi Vu</b>, K. P. Huynh, U. Bagci, M. Xu.
-              Aligning what you separate: Denoised patch mixing for source-free domain adaptation in medical image segmentation.
-              <i>ICASSP</i>.
-              [<a href="https://arxiv.org/pdf/2510.25227">pdf</a>]</div></li>
-            <li><span class="key">[C8]</span><div>D. T. Chung, B. T. Lam, T. H. Nguyen, T. Nguyen, <b>Vi Vu</b>, H. L. Cao, P. K. Huynh, M. Xu.
-              Modality-specific enhancement and complementary fusion for semi-supervised multi-modal brain tumor segmentation.
-              <i>AAAI Bridge Program on AI for Medicine and Healthcare</i>.
-              [<a href="https://openreview.net/pdf?id=USD3AI7eK6">pdf</a>]</div></li>
-          </ol>
-
-          <h3 class="year">2025</h3>
-          <ol class="refs">
-            <li><span class="key">[C7]</span><div><b>Vi Vu*</b>, T. H. Nguyen*, H. T. Nguyen, D. Kihara, T. Wang, X. Li, M. Xu.
-              Semi-MoE: Mixture-of-experts meets semi-supervised histopathology segmentation.
-              <i>British Machine Vision Conference (BMVC)</i>.
-              [<a href="https://bmva-archive.org.uk/bmvc/2025/assets/papers/Paper_940/paper.pdf">pdf</a>]</div></li>
-            <li><span class="key">[C6]</span><div><b>Vi Vu*</b>, T. H. Nguyen*, H. T. Nguyen, Q. V. Dinh, X. Li, M. Xu.
-              Semi-supervised histopathology image segmentation with feature diversified collaborative learning.
-              <i>AAAI Bridge Program on AI for Medicine and Healthcare</i>.
-              [<a href="https://raw.githubusercontent.com/mlresearch/v281/main/assets/nguyen25b/nguyen25b.pdf">pdf</a>]</div></li>
-            <li><span class="key">[C5]</span><div><b>Vi Vu*</b>, T. Q. K. Le*, H. H. Pham, X. L. Huynh, T. H. Nguyen, M. H. N. Le, Q. Nguyen, H. D. Nguyen.
-              HDC: Hierarchical distillation for multi-level noisy consistency in semi-supervised fetal ultrasound segmentation.
-              <i>CVPR Workshops (Precognition)</i>.
-              [<a href="https://openaccess.thecvf.com/content/CVPR2025W/Precognition/papers/Le_HDC_Hierarchical_Distillation_for_Multi-level_Noisy_Consistency_in_Semi-Supervised_Fetal_CVPRW_2025_paper.pdf">pdf</a>]</div></li>
-            <li><span class="key">[C4]</span><div><b>Vi Vu*</b>, H. H. Pham*, T. H. Nguyen, U. Bagci, M. Xu, T. N. Le, H. H. Pham.
-              Learning disentangled stain and structural representations for semi-supervised histopathology segmentation.
-              <i>MICCAI Workshop on Computational Pathology (COMPAYL)</i>.
-              [<a href="https://arxiv.org/pdf/2507.03923">pdf</a>]</div></li>
-            <li><span class="key">[J3]</span><div>T. H. Nguyen, H. T. Nguyen, <b>Vi Vu</b>, B. T. Lam, B. X. Nguyen, J. Xing, T. Wang, X. Li, M. Xu.
-              Adaptive knowledge transferring with switching dual-student framework for semi-supervised medical image segmentation.
-              <i>Pattern Recognition</i>.
-              [<a href="https://arxiv.org/pdf/2510.24366">pdf</a>]</div></li>
-            <li><span class="key">[J2]</span><div>T. H. Nguyen, H. T. Nguyen, <b>Vi Vu</b>, B. T. Lam, P. Huynh, T. Wang, X. Li, U. Bagci, M. Xu.
-              DuetMatch: Harmonizing semi-supervised brain MRI segmentation via decoupled branch optimization.
-              <i>Computerized Medical Imaging and Graphics</i>.
-              [<a href="https://arxiv.org/pdf/2510.16146">pdf</a>]</div></li>
-            <li><span class="key">[J1]</span><div>M. H. N. Le, T. H. Nguyen, M. T. Dinh, T. Q. K. Bui, <b>Vi Vu</b>, H. Q. Kha, P. K. Nguyen, N. H. H. Le, T. M. Nguyen, H. H. Huynh, K. Le.
-              Performance analysis of artificial intelligence–driven convolutional neural network architectures for liver tumor segmentation.
-              <i>Journal of Clinical Oncology</i>.
-              [<a href="https://ascopubs.org/doi/abs/10.1200/JCO.2025.43.16_suppl.e16307">link</a>]</div></li>
-            <li><span class="key">[C3]</span><div>T. H. Nguyen, T. Nguyen, X. B. Nguyen, <b>Vi Vu</b>, V. Q. Dinh, F. Meriaudeau.
-              Semi-supervised skin lesion segmentation under dual mask ensemble with feature discrepancy co-training.
-              <i>Medical Imaging with Deep Learning (MIDL)</i>.
-              [<a href="https://openreview.net/pdf?id=cBfXsr6xWb">pdf</a>]</div></li>
-            <li><span class="key">[C2]</span><div>H. H. Pham, H. T. Nguyen, <b>Vi Vu</b>, Q. V. Dinh, T. H. Nguyen, X. Li, M. Xu.
-              Fetal-BCP: Addressing empirical distribution gap in semi-supervised fetal ultrasound segmentation.
-              <i>IEEE International Symposium on Biomedical Imaging (ISBI)</i>.
-              [<a href="https://ieeexplore.ieee.org/abstract/document/10980925/">link</a>]</div></li>
-            <li><span class="key">[C1]</span><div>T. Q. K. Bui, M. Dinh, <b>Vi Vu</b>, Q. Nguyen, Q. Dinh, M. Le, Q. Le.
-              Hepatic tumor segmentation under modified scalable and transferable nnU-Net framework.
-              <i>Conference on Information Technology and its Applications (CITA)</i>.
-              [<a href="https://drive.google.com/file/d/1Sgsqsgdj1ZWBb3eNFcWEJ7Zz8GzzhRXq/view?usp=sharing">pdf</a>]</div></li>
-          </ol>
-        </div>
-      </div>
-    </section>
-
-    <!-- Honors -->
-    <section id="honors">
-      <div class="row">
-        <div class="main">
-          <h2><span class="sec">§4.</span> Honors</h2>
-          <ul class="honors">
-            <li>Winner, Fetal Ultrasound Grand Challenge, ISBI. [<a href="https://drive.google.com/file/d/1Jy6NujRNiQm3I8Pf6zZyrrXSrQb8s1DK/view?usp=sharing">certificate</a>]</li>
-            <li>NSTC Scholarship, International Internship Pilot Program, Taiwan. [<a href="https://drive.google.com/file/d/1PQWnGH9uA9mX-UtC-6z6lCw70o5DJkx1/view?usp=sharing">certificate</a>]</li>
-            <li>Momentum Scholarship (top 10 university students).</li>
-            <li>Academic Incentive Scholarship, Type 1 (top 1.6%), four times.</li>
-            <li>OISP Scholarship, Type 1, twice.</li>
-            <li>Outstanding Academic Performance. [<a href="https://drive.google.com/file/d/1yWg3C4Wv84tLVzzUEF7ca88PCJnRoXTw/view?usp=sharing">certificate</a>]</li>
-            <li>Outstanding All-around Student.</li>
-            <li>First Prize, Ho Chi Minh City Excellent Physics Student Competition. [<a href="https://drive.google.com/file/d/1LwUcXjAxb-5gDDJ9hEbzFJPne8_1B1u0/view?usp=sharing">certificate</a>]</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <footer class="row">
-      <div class="main">
-        <p>Vi Vu · Durham, North Carolina · Last revised October 2026.</p>
-        <p class="colophon">Set in Computer Modern. This page uses no JavaScript and no cookies.</p>
-      </div>
+    <footer class="pagefoot">
+      <span>— 1 —</span>
+      <span class="colophon">© 2026 Vi Vu. Typeset in Computer Modern; equations by KaTeX.</span>
     </footer>
-
-  </main>
+  </article>
 </body>
 </html>
