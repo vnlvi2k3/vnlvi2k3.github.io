@@ -119,4 +119,36 @@
     document.addEventListener("visibilitychange", function () { if (!document.hidden && root.classList.contains("auto-theme")) schedule(); });
     schedule();
   }
+
+  /* Keyboard: press T to switch modes */
+  document.addEventListener("keydown", function (e) {
+    if (e.key !== "t" && e.key !== "T") return;
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    var tag = (e.target && e.target.tagName) || "";
+    if (/INPUT|TEXTAREA|SELECT/.test(tag) || e.target.isContentEditable) return;
+    var t = document.getElementById("theme-toggle");
+    if (t) t.click();
+  });
+
+  /* Footer: latest commit, live from GitHub */
+  var commitEl = document.querySelector(".colophon .commit");
+  if (commitEl && window.fetch) {
+    fetch("https://api.github.com/repos/vnlvi2k3/vnlvi2k3.github.io/commits/main")
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) {
+        if (!d || !d.sha) return;
+        var day = (d.commit && d.commit.committer && d.commit.committer.date || "").slice(0, 10);
+        commitEl.innerHTML = ' · commit <a href="' + d.html_url + '">' + d.sha.slice(0, 7) + "</a>" + (day ? " (" + day + ")" : "");
+      })
+      .catch(function () {});
+  }
+
+  /* A note for whoever opens the console */
+  try {
+    console.log(
+      "%c  ⌁ hello, curious mind  %c\n\nYou opened the console, which is exactly what a good scientist would do.\nThis page is hand-written: no frameworks, one CSS file, ~150 lines of JS.\nThe neuron fires on hover. Press T to switch between brain and AI mode.\n\n— Vi Vu · vi.vu [at] duke [dot] edu",
+      "font: 600 14px/2 Georgia, serif; color: #fff; background: linear-gradient(90deg, #c8553d, #3b4ec2); padding: 4px 10px; border-radius: 4px;",
+      "font: 12px/1.6 ui-monospace, monospace; color: inherit;"
+    );
+  } catch (e) {}
 })();

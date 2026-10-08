@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blind spot · Vi Vu</title>
+  <link rel="icon" href="/assets/favicon-vv.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css?v=brainai39">
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+  <style>
+    .blind { max-width: 620px; margin: 0 auto; padding: 14vh 24px 60px; text-align: center; }
+    .blind .code { font: 500 13px/1 "IBM Plex Mono", monospace; letter-spacing: .2em; color: var(--muted); }
+    .blind h1 { margin: 14px 0 18px; font: 500 52px/1.05 "Newsreader", Georgia, serif; letter-spacing: -.02em; }
+    .blind p { font-size: 17px; color: var(--muted); }
+    .test { display: flex; justify-content: space-between; align-items: center; max-width: 420px; margin: 34px auto 10px; }
+    .test .plus { font: 500 34px/1 "IBM Plex Mono", monospace; color: var(--ink); }
+    .test .dot { width: 26px; height: 26px; border-radius: 50%; background: var(--brain); }
+    :root[data-theme="dark"] .test .dot { background: var(--ai); }
+    .hint { font-size: 14px !important; }
+    .home { display: inline-block; margin-top: 26px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <main class="blind">
+    <p class="code">404 · NOT FOUND</p>
+    <h1>You found my blind spot.</h1>
+    <p>Every eye has one: the place where the optic nerve leaves the retina has no photoreceptors, and the brain quietly fills in the gap. This page is that gap.</p>
+    <div class="test" aria-hidden="true"><span class="plus">+</span><span class="dot"></span></div>
+    <p class="hint">Try it: close your left eye, look at the <b>+</b> with your right eye, and move slowly toward the screen. At some distance the dot disappears.</p>
+    <a class="home" href="/">← back to the homepage</a>
+  </main>
+</body>
+</html>
