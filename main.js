@@ -143,11 +143,4 @@
     );
   } catch (e) {}
 
-  /* AIMA: hovering a member card spotlights that person in the group photo */
-  Array.prototype.slice.call(document.querySelectorAll(".member[data-m]")).forEach(function (card) {
-    var spot = document.querySelector('.spot[data-m="' + card.dataset.m + '"]');
-    if (!spot) return;
-    card.addEventListener("mouseenter", function () { spot.classList.add("on"); });
-    card.addEventListener("mouseleave", function () { spot.classList.remove("on"); });
-  });
 })();
