@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=brainai2">
+  <link rel="stylesheet" href="style.css?v=brainai3">
   <script>
     // Apply the saved theme (or the device setting) before the page paints.
     (function () {
@@ -35,9 +35,9 @@
         <a href="#publications">Publications</a>
         <a href="#honors">Honors</a>
       </div>
-      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch between light and dark mode">
-        <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
-        <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1z"/></svg>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch between brain mode (light) and AI mode (dark)" title="Brain mode / AI mode">
+        <svg class="ico-brain" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5.2A2.6 2.6 0 0 0 6.3 6.6 2.8 2.8 0 0 0 4.4 10a2.9 2.9 0 0 0 .3 4.2 2.9 2.9 0 0 0 2.5 4.1A2.6 2.6 0 0 0 11 19.6z"/><path d="M13 5.2a2.6 2.6 0 0 1 4.7 1.4A2.8 2.8 0 0 1 19.6 10a2.9 2.9 0 0 1-.3 4.2 2.9 2.9 0 0 1-2.5 4.1A2.6 2.6 0 0 1 13 19.6z"/><path d="M7.4 10.2c1 .2 1.8.9 2 1.9M16.6 10.2c-1 .2-1.8.9-2 1.9M7.6 15.4c.8-.5 1.7-.5 2.4 0M16.4 15.4c-.8-.5-1.7-.5-2.4 0"/></svg>
+        <svg class="ico-ai" viewBox="0 0 24 24" aria-hidden="true"><rect x="6.5" y="6.5" width="11" height="11" rx="2"/><path d="M9.5 3.5v3M14.5 3.5v3M9.5 17.5v3M14.5 17.5v3M3.5 9.5h3M3.5 14.5h3M17.5 9.5h3M17.5 14.5h3"/><path d="M9.6 14.6l1.3-5.2h.8l1.3 5.2M10.2 12.8h2.4M14.6 9.4v5.2"/></svg>
       </button>
     </div>
   </nav>
@@ -61,9 +61,8 @@
       <div class="portrait"><img src="assets/portrait-2026.jpg" alt="Portrait of Vi Vu"></div>
     </div>
     <svg class="signal" viewBox="0 0 1000 60" preserveAspectRatio="none" aria-hidden="true">
-      <defs><linearGradient id="sig-top" x1="0" y1="0" x2="1000" y2="0" gradientUnits="userSpaceOnUse">
-        <stop offset=".42" class="s-brain"/><stop offset=".58" class="s-ai"/></linearGradient></defs>
-      <path d="M0 44 L28 44 Q33 40 35 36 L37 4 L40 53 Q45 49 52 44 L80 44 Q85 40 87 36 L89 4 L92 53 Q97 49 104 44 L96 44 Q101 40 103 36 L105 4 L108 53 Q113 49 120 44 L162 44 Q167 40 169 36 L171 4 L174 53 Q179 49 186 44 L224 44 Q229 40 231 36 L233 4 L236 53 Q241 49 248 44 L238 44 Q243 40 245 36 L247 4 L250 53 Q255 49 262 44 L304 44 Q309 40 311 36 L313 4 L316 53 Q321 49 328 44 L372 44 Q377 40 379 36 L381 4 L384 53 Q389 49 396 44 L386 44 Q391 40 393 36 L395 4 L398 53 Q403 49 410 44 L444 44 Q449 40 451 36 L453 4 L456 53 Q461 49 468 44 L520 44 L540 44 L540 14 L562 14 L562 44 L580 44 L580 14 L592 14 L592 44 L604 44 L604 14 L634 14 L634 44 L660 44 L660 14 L674 14 L674 44 L690 44 L690 14 L712 14 L712 44 L740 44 L740 14 L774 14 L774 44 L796 44 L796 14 L808 14 L808 44 L820 44 L820 14 L840 14 L840 44 L866 44 L866 14 L894 14 L894 44 L918 44 L918 14 L932 14 L932 44 L948 44 L948 14 L970 14 L970 44 L1000 44" stroke="url(#sig-top)" fill="none" vector-effect="non-scaling-stroke"/>
+      <path class="sig-brain" d="M0 44 L28 44 Q33 40 35 36 L37 4 L40 53 Q45 49 52 44 L80 44 Q85 40 87 36 L89 4 L92 53 Q97 49 104 44 L96 44 Q101 40 103 36 L105 4 L108 53 Q113 49 120 44 L162 44 Q167 40 169 36 L171 4 L174 53 Q179 49 186 44 L224 44 Q229 40 231 36 L233 4 L236 53 Q241 49 248 44 L238 44 Q243 40 245 36 L247 4 L250 53 Q255 49 262 44 L304 44 Q309 40 311 36 L313 4 L316 53 Q321 49 328 44 L372 44 Q377 40 379 36 L381 4 L384 53 Q389 49 396 44 L386 44 Q391 40 393 36 L395 4 L398 53 Q403 49 410 44 L444 44 Q449 40 451 36 L453 4 L456 53 Q461 49 468 44 L520 44" fill="none" vector-effect="non-scaling-stroke"/>
+      <path class="sig-ai" d="M520 44 L540 44 L540 14 L562 14 L562 44 L580 44 L580 14 L592 14 L592 44 L604 44 L604 14 L634 14 L634 44 L660 44 L660 14 L674 14 L674 44 L690 44 L690 14 L712 14 L712 44 L740 44 L740 14 L774 14 L774 44 L796 44 L796 14 L808 14 L808 44 L820 44 L820 14 L840 14 L840 44 L866 44 L866 14 L894 14 L894 44 L918 44 L918 14 L932 14 L932 44 L948 44 L948 14 L970 14 L970 44 L1000 44" fill="none" vector-effect="non-scaling-stroke"/>
     </svg>
   </header>
 
@@ -214,12 +213,12 @@
       <div class="content">
         <div class="item">
           <div class="item-head"><span class="org">Duke University</span><span class="when">2026 – present</span></div>
-          <p class="item-role">Ph.D., Vision and Image Processing Laboratory · advised by Sina Farsiu</p>
+          <p class="item-role">Ph.D., Vision and Image Processing Laboratory · advised by <a href="https://people.duke.edu/~sf59/">Prof. Sina Farsiu</a></p>
         </div>
         <div class="item">
           <div class="item-head"><span class="org">Ho Chi Minh City University of Technology</span><span class="when">2021 – 2025</span></div>
           <p class="item-role">B.E. in Computer Engineering (High-Quality Program)</p>
-          <p>Valedictorian, ranked first of 749 in Computer Science and Engineering Department. GPA 9.27 / 10
+          <p>Valedictorian, ranked first of 749 in Department of Computer Science and Engineering. GPA 9.27 / 10
             (<a href="https://drive.google.com/file/d/1hsqOAvxihVWhE4Rxz5Nv-7lYRPMEFORm/view?usp=sharing">transcript</a>).</p>
         </div>
       </div>
@@ -230,28 +229,28 @@
       <div class="content">
         <div class="item">
           <div class="item-head"><span class="org">Carnegie Mellon University</span><span class="when">2024 – 2026</span></div>
-          <p class="item-role">Research Assistant, <a href="https://xulabs.github.io/news/">Xu Lab</a> · with
+          <p class="item-role">Research Assistant, <a href="https://xulabs.github.io/news/">Xu Lab</a> · advised by
             <a href="https://scholar.google.com/citations?user=Y3Cqt0cAAAAJ&hl=en">Min Xu</a>,
             <a href="https://scholar.google.com/citations?user=f9V0NZkAAAAJ&hl=en">Xingjian Li</a> and
             <a href="https://scholar.google.com/citations?user=QbTV0r0AAAAJ&hl=en">Tianyang Wang</a></p>
         </div>
         <div class="item">
           <div class="item-head"><span class="org">Northwestern University</span><span class="when">2025 – 2026</span></div>
-          <p class="item-role">Research Assistant, <a href="https://bagcilab.com/">Machine &amp; Hybrid Intelligence Lab</a> · with
+          <p class="item-role">Research Assistant, <a href="https://bagcilab.com/">Machine &amp; Hybrid Intelligence Lab</a> · advised by
             <a href="https://scholar.google.com/citations?user=9LUdPM4AAAAJ&hl=en">Ulas Bagci</a></p>
         </div>
         <div class="item">
           <div class="item-head"><span class="org">National Cheng Kung University</span><span class="when">2025</span></div>
-          <p class="item-role">Research Intern, <a href="https://en.ur.ncku.edu.tw/laboratory/Integrated+MechanoBioSystems+Lab/">Integrated MechanoBioSystems Lab</a> · with
+          <p class="item-role">Research Intern, <a href="https://en.ur.ncku.edu.tw/laboratory/Integrated+MechanoBioSystems+Lab/">Integrated MechanoBioSystems Lab</a> · advised by
             <a href="https://scholar.google.com/citations?user=_HLH5D4AAAAJ&hl=en">Ting-Yuan Tu</a></p>
         </div>
         <div class="item">
           <div class="item-head"><span class="org">FPT Software AI Center</span><span class="when">2024</span></div>
-          <p class="item-role">AI Researcher · with <a href="https://scholar.google.it/citations?user=gEbaF0sAAAAJ&hl=en">Anh Nguyen</a></p>
+          <p class="item-role">AI Researcher · advised by <a href="https://scholar.google.it/citations?user=gEbaF0sAAAAJ&hl=en">Anh Nguyen</a></p>
         </div>
         <div class="item">
           <div class="item-head"><span class="org">AIVIETNAM</span><span class="when">2024 – present</span></div>
-          <p class="item-role">Research Associate &amp; Teaching Assistant · with <a href="https://dblp.org/pid/142/0382.html">Quang Vinh Dinh</a></p>
+          <p class="item-role">Research Associate &amp; Teaching Assistant · advised by <a href="https://dblp.org/pid/142/0382.html">Quang Vinh Dinh</a></p>
         </div>
       </div>
     </section>
@@ -371,9 +370,8 @@
 
   <footer>
     <svg class="signal small" viewBox="0 0 1000 60" preserveAspectRatio="none" aria-hidden="true">
-      <defs><linearGradient id="sig-foot" x1="0" y1="0" x2="1000" y2="0" gradientUnits="userSpaceOnUse">
-        <stop offset=".42" class="s-brain"/><stop offset=".58" class="s-ai"/></linearGradient></defs>
-      <path d="M0 44 L28 44 Q33 40 35 36 L37 4 L40 53 Q45 49 52 44 L80 44 Q85 40 87 36 L89 4 L92 53 Q97 49 104 44 L96 44 Q101 40 103 36 L105 4 L108 53 Q113 49 120 44 L162 44 Q167 40 169 36 L171 4 L174 53 Q179 49 186 44 L224 44 Q229 40 231 36 L233 4 L236 53 Q241 49 248 44 L238 44 Q243 40 245 36 L247 4 L250 53 Q255 49 262 44 L304 44 Q309 40 311 36 L313 4 L316 53 Q321 49 328 44 L372 44 Q377 40 379 36 L381 4 L384 53 Q389 49 396 44 L386 44 Q391 40 393 36 L395 4 L398 53 Q403 49 410 44 L444 44 Q449 40 451 36 L453 4 L456 53 Q461 49 468 44 L520 44 L540 44 L540 14 L562 14 L562 44 L580 44 L580 14 L592 14 L592 44 L604 44 L604 14 L634 14 L634 44 L660 44 L660 14 L674 14 L674 44 L690 44 L690 14 L712 14 L712 44 L740 44 L740 14 L774 14 L774 44 L796 44 L796 14 L808 14 L808 44 L820 44 L820 14 L840 14 L840 44 L866 44 L866 14 L894 14 L894 44 L918 44 L918 14 L932 14 L932 44 L948 44 L948 14 L970 14 L970 44 L1000 44" stroke="url(#sig-foot)" fill="none" vector-effect="non-scaling-stroke"/>
+      <path class="sig-brain" d="M0 44 L28 44 Q33 40 35 36 L37 4 L40 53 Q45 49 52 44 L80 44 Q85 40 87 36 L89 4 L92 53 Q97 49 104 44 L96 44 Q101 40 103 36 L105 4 L108 53 Q113 49 120 44 L162 44 Q167 40 169 36 L171 4 L174 53 Q179 49 186 44 L224 44 Q229 40 231 36 L233 4 L236 53 Q241 49 248 44 L238 44 Q243 40 245 36 L247 4 L250 53 Q255 49 262 44 L304 44 Q309 40 311 36 L313 4 L316 53 Q321 49 328 44 L372 44 Q377 40 379 36 L381 4 L384 53 Q389 49 396 44 L386 44 Q391 40 393 36 L395 4 L398 53 Q403 49 410 44 L444 44 Q449 40 451 36 L453 4 L456 53 Q461 49 468 44 L520 44" fill="none" vector-effect="non-scaling-stroke"/>
+      <path class="sig-ai" d="M520 44 L540 44 L540 14 L562 14 L562 44 L580 44 L580 14 L592 14 L592 44 L604 44 L604 14 L634 14 L634 44 L660 44 L660 14 L674 14 L674 44 L690 44 L690 14 L712 14 L712 44 L740 44 L740 14 L774 14 L774 44 L796 44 L796 14 L808 14 L808 44 L820 44 L820 14 L840 14 L840 44 L866 44 L866 14 L894 14 L894 44 L918 44 L918 14 L932 14 L932 44 L948 44 L948 14 L970 14 L970 44 L1000 44" fill="none" vector-effect="non-scaling-stroke"/>
     </svg>
     <p>© 2026 Vi Vu · Durham, North Carolina</p>
   </footer>
