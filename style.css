@@ -1,267 +1,194 @@
-/* A journal page on a desk. */
+/* Cream paper, ink, Duke navy, a thread of old gold. */
 :root {
-  --desk: #e7e1d3;
-  --paper: #fffdf8;
-  --ink: #161513;
-  --muted: #6a655a;
-  --rule: #cbc3b0;
-  --link: #1f3b8a;      /* hyperref blue */
-  --stamp: #9a9488;
+  --paper: #f8f5ee;
+  --ink: #23211d;
+  --muted: #6e685d;
+  --rule: #d9d1c0;
+  --navy: #0d2a6b;
+  --gold: #a8874a;
+  --width: 960px;
   color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --desk: #0f0e0c;
-    --paper: #1c1b18;
-    --ink: #e8e3d7;
-    --muted: #a39d8f;
-    --rule: #3f3b33;
-    --link: #a9bdf0;
-    --stamp: #6d685e;
+    --paper: #17161a;
+    --ink: #e9e4d8;
+    --muted: #a59f92;
+    --rule: #38352f;
+    --navy: #a9bcef;
+    --gold: #c9a868;
     color-scheme: dark;
   }
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 64px; }
 
 body {
   margin: 0;
-  background: var(--desk);
+  background: var(--paper);
   color: var(--ink);
-  font: 17px/1.5 "Computer Modern Serif", "Latin Modern Roman", Georgia, serif;
+  font: 19px/1.6 "EB Garamond", Garamond, Georgia, serif;
   -webkit-font-smoothing: antialiased;
   font-kerning: normal;
+  font-variant-numeric: oldstyle-nums;
 }
 
-a { color: var(--link); text-decoration: none; }
-a:hover { text-decoration: underline; text-underline-offset: 2px; }
+a { color: var(--navy); text-decoration: none; background-image: linear-gradient(currentColor, currentColor); background-size: 0 1px; background-position: 0 100%; background-repeat: no-repeat; transition: background-size .25s; }
+a:hover { background-size: 100% 1px; }
 img { display: block; max-width: 100%; }
+.mono { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: .78em; letter-spacing: -.01em; }
 
-.sc { font-variant: small-caps; letter-spacing: .04em; }
-.tt { font-family: "Computer Modern Typewriter", "Courier New", monospace; font-size: .94em; }
-.center { text-align: center; }
+/* ---- Top navigation ---- */
+.topnav {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
+  max-width: var(--width); margin: 0 auto; padding: 14px 16px 10px;
+  background: color-mix(in srgb, var(--paper) 92%, transparent);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--rule);
+}
+.brand { font-variant: small-caps; letter-spacing: .1em; font-size: 20px; color: var(--ink); }
+.navlinks { display: flex; gap: 22px; flex-wrap: wrap; }
+.navlinks a { font-variant: small-caps; letter-spacing: .08em; font-size: 17px; color: var(--muted); }
+.navlinks a:hover { color: var(--navy); }
 
-/* ---- The sheet ---- */
-.sheet {
+/* ---- Hero: cover + identity with portrait on the right ---- */
+.hero { max-width: var(--width); margin: 0 auto; padding: 22px 16px 0; }
+.cover {
   position: relative;
-  max-width: 940px;
-  margin: 40px auto 56px;
-  padding: 36px 72px 40px;
-  background: var(--paper);
-  box-shadow: 0 1px 2px rgba(0,0,0,.08), 0 12px 40px rgba(60,45,20,.14);
+  height: clamp(200px, 34vw, 340px);
+  overflow: hidden;
+  border: 1px solid var(--rule);
+}
+.cover img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: 50% 40%;
+  filter: sepia(.12) saturate(.92);
+}
+.cover::after {           /* thin inner frame, like a mounted print */
+  content: ""; position: absolute; inset: 10px;
+  border: 1px solid rgba(255, 255, 255, .55);
+  pointer-events: none;
 }
 
-/* Preprint-style stamp in the left margin */
-.stamp {
-  position: absolute;
-  left: 22px;
-  top: 220px;
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  font: 20px "Computer Modern Serif", serif;
-  letter-spacing: .02em;
-  color: var(--stamp);
-  white-space: nowrap;
-  user-select: none;
+.identity {
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 32px;
+  padding: 0 8px 26px 4px;
+  border-bottom: 1px solid var(--rule);
 }
-
-/* ---- Running head + contents ---- */
-.runninghead {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  font-size: 13.5px;
-  font-variant: small-caps;
-  letter-spacing: .06em;
-  color: var(--muted);
-  padding-bottom: 6px;
-  border-bottom: 1.5px solid var(--ink);
-  box-shadow: 0 3px 0 -2px var(--ink);   /* thick + thin rule */
-}
-.contents {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2px 16px;
-  margin-top: 12px;
-  font-size: 14px;
-  color: var(--muted);
-}
-
-/* ---- Title block ---- */
-.titleblock { text-align: center; padding: 34px 0 6px; }
-.titleblock h1 {
+.name-block { padding-top: 26px; min-width: 0; }
+.name-block h1 {
   margin: 0;
-  font-size: 46px;
-  font-weight: bold;
+  font-size: 56px; line-height: 1;
+  font-weight: 500;
   letter-spacing: .01em;
-  line-height: 1.1;
 }
-.authors { margin: 14px 0 2px; font-size: 18px; font-variant: small-caps; letter-spacing: .05em; }
-.affil { margin: 0; font-style: italic; font-size: 15.5px; }
-.affil a { font-style: italic; }
-.received { margin: 8px 0 0; font-size: 14.5px; color: var(--muted); }
-
-.abstract {
-  max-width: 640px;
-  margin: 26px auto 0;
-  text-align: justify;
-  hyphens: auto;
-  font-size: 15.5px;
+.role {
+  margin: 10px 0 4px;
+  font-variant: small-caps; letter-spacing: .12em;
+  font-size: 19px; color: var(--gold);
 }
-.abstract p { margin: 0 0 10px; }
-.abstract .codes { font-size: 14px; color: var(--muted); text-align: left; line-height: 1.6; }
-.abstract .codes .sc { color: var(--ink); }
+.lab { margin: 0 0 14px; font-size: 19px; }
+.links { margin: 0; font-size: 17px; color: var(--muted); }
+.links .sep { margin: 0 6px; color: var(--rule); }
 
-/* ---- Two-column body ---- */
-.twocol {
-  columns: 2;
-  column-gap: 36px;
-  text-align: justify;
-  hyphens: auto;
-  margin-top: 30px;
+.portrait {
+  flex: none;
+  width: 196px; height: 196px;
+  margin-top: -98px;            /* overlap the cover */
+  margin-right: 28px;
+  border-radius: 50%;
+  padding: 6px;
+  background: var(--paper);
+  box-shadow: 0 0 0 1px var(--gold), 0 8px 24px rgba(30, 20, 5, .18);
+  position: relative; z-index: 1;
 }
-.twocol p { margin: 0 0 10px; text-indent: 1.2em; }
-.twocol h2 + p, .twocol h3 + p, .twocol .equation + p { text-indent: 0; }
-
-h2 {
-  margin: 18px 0 8px;
-  font-size: 15px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: .06em;
-  text-align: center;
-  break-after: avoid;
-}
-h3 {
-  margin: 12px 0 4px;
-  font-size: 16px;
-  font-style: italic;
-  font-weight: normal;
-  text-align: left;
-  break-after: avoid;
-}
-
-/* ---- Figures ---- */
-.fig { margin: 0 0 16px; break-inside: avoid; }
-.fig figcaption { margin-top: 6px; font-size: 13.5px; line-height: 1.4; text-align: justify; }
-.fig .sc { font-weight: bold; font-variant: small-caps; }
-
 .portrait img {
-  width: 100%;
-  aspect-ratio: 5 / 5.2;
-  object-fit: cover;
-  object-position: 50% 30%;
-  filter: grayscale(.15) contrast(1.02);
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  object-fit: cover; object-position: 50% 32%;
 }
 
-.plate { margin: 26px 0 8px; }
-.plate img {
-  width: 100%;
-  aspect-ratio: 16 / 7;
-  object-fit: cover;
-  object-position: 50% 42%;
-  filter: sepia(.2) saturate(.85);
+/* ---- Sections: label on the left, content on the right ---- */
+main { max-width: var(--width); margin: 0 auto; padding: 0 16px; }
+.block {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 32px;
+  padding: 40px 4px 34px;
+  border-bottom: 1px solid var(--rule);
 }
-.plate figcaption { text-align: center; }
-
-/* ---- Equation ---- */
-.equation {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 10px 0 12px;
-  break-inside: avoid;
-}
-.eqbody { flex: 1; min-width: 0; overflow-x: auto; overflow-y: hidden; }
-.eqbody .katex-display { margin: 0; }
-.eqbody .katex { font-size: .96em; }
-.eqno { flex: none; }
-.katex { font-size: 1.05em; }
-
-/* ---- Vita ---- */
-.cv { display: grid; grid-template-columns: 62px 1fr; gap: 6px 10px; margin: 0 0 8px; text-align: left; }
-.cv dt { color: var(--muted); font-size: 14.5px; padding-top: 1px; }
-.cv dd { margin: 0; }
-
-.ack { text-indent: 0 !important; }
-
-.footnotes {
-  margin-top: 14px;
-  padding-top: 6px;
-  border-top: 1px solid var(--rule);
-  width: 45%;
-  font-size: 13px;
-  break-inside: avoid;
-}
-.footnotes p { text-indent: 0; margin: 0 0 3px; width: 220%; }
-sup.fn, .footnotes sup { font-size: .7em; }
-
-/* ---- References ---- */
-#references { margin-top: 26px; border-top: 1px solid var(--rule); padding-top: 4px; }
-.refnote { text-align: center; font-size: 13.5px; color: var(--muted); margin: 0; }
-.refs {
-  margin-top: 14px;
-  padding: 0;
-  list-style: none;
-  counter-reset: ref;
-  font-size: 13.8px;
-  line-height: 1.42;
-  text-align: left;
-}
-.refs li {
-  position: relative;
-  padding-left: 30px;
-  margin-bottom: 7px;
-  break-inside: avoid;
-  counter-increment: ref;
-}
-.refs li::before {
-  content: "[" counter(ref) "]";
-  position: absolute;
-  left: 0;
+.block h2 {
+  margin: 4px 0 0;
+  font-size: 18px; font-weight: 500;
+  font-variant: small-caps; letter-spacing: .14em;
   color: var(--muted);
+  position: sticky; top: 72px; align-self: start;
 }
-.refs li:target { background: color-mix(in srgb, var(--link) 10%, transparent); }
-
-/* ---- Appendix ---- */
-.appendix { margin-top: 18px; border-top: 1px solid var(--rule); padding-top: 4px; }
-.honors { margin: 0 0 12px; padding-left: 18px; text-align: left; font-size: 15px; }
-.honors li { margin-bottom: 4px; }
-.appendix h2:nth-of-type(2) { break-before: column; }
-.feynman svg { width: 100%; max-width: 300px; height: auto; margin: 6px auto 0; display: block; overflow: visible; }
-.feynman .ink { fill: none; stroke: var(--ink); stroke-width: 1.3; }
-.feynman .arrowhead, .feynman circle { fill: var(--ink); }
-.feynman text { fill: var(--ink); font: italic 14px "Computer Modern Serif", serif; }
-
-/* ---- Page foot ---- */
-.pagefoot {
-  margin-top: 28px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  font-size: 14px;
-  color: var(--muted);
+.block h2::before {
+  content: ""; display: block;
+  width: 28px; height: 1px; margin-bottom: 10px;
+  background: var(--gold);
 }
-.colophon { font-size: 12.5px; font-style: italic; }
+.content > :first-child { margin-top: 0; }
+p { margin: 0 0 14px; }
+.lede { font-size: 22px; line-height: 1.5; }
 
-/* ---- Narrow screens: one column, no desk ---- */
-@media (max-width: 820px) {
-  .sheet { margin: 0; padding: 24px 16px 32px; box-shadow: none; }
-  body { background: var(--paper); }
-  .stamp { display: none; }
-  .twocol { columns: 1; }
-  .titleblock h1 { font-size: 38px; }
-  .portrait { max-width: 260px; margin-inline: auto; }
-  .runninghead span:last-child { display: none; }
-  .footnotes { width: 60%; }
-  .footnotes p { width: 165%; }
+.interests { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 18px; font-style: italic; color: var(--muted); }
+.interests span::before { content: "— "; color: var(--gold); font-style: normal; }
+
+/* ---- Publications ---- */
+.note { font-size: 16px; color: var(--muted); font-style: italic; }
+.content h3 {
+  margin: 26px 0 10px;
+  font-size: 22px; font-weight: 500;
+  color: var(--gold);
+  font-variant-numeric: lining-nums;
 }
-@media (max-width: 480px) {
-  body { font-size: 16.5px; }
-  .twocol { text-align: left; }
-  .abstract { text-align: left; }
-  .eqbody .katex { font-size: .74em; }
+.pubs { list-style: none; margin: 0; padding: 0; }
+.pubs li { margin-bottom: 18px; }
+.pubs p { margin: 0; }
+.ptitle { font-weight: 500; font-size: 19.5px; line-height: 1.35; }
+.pauthors { font-size: 16.5px; color: var(--muted); }
+.pauthors u { color: var(--ink); text-decoration-color: var(--gold); text-underline-offset: 3px; }
+.pvenue { font-size: 16.5px; }
+.pvenue a { font-variant: small-caps; letter-spacing: .06em; }
+
+/* ---- Experience / Education ---- */
+.item { margin-bottom: 22px; }
+.item:last-child { margin-bottom: 0; }
+.item-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+.org { font-size: 21px; font-weight: 500; }
+.when { flex: none; font-size: 16px; color: var(--muted); font-variant-numeric: lining-nums; }
+.item-role { margin: 0 0 4px; font-style: italic; color: var(--muted); font-size: 17.5px; }
+.item p:last-child { margin-bottom: 0; }
+
+/* ---- Honors ---- */
+.honors { margin: 0; padding: 0; list-style: none; }
+.honors li { padding: 6px 0; border-bottom: 1px dotted var(--rule); }
+.honors li:last-child { border-bottom: 0; }
+
+/* ---- Footer with a small Feynman diagram ---- */
+footer { max-width: var(--width); margin: 0 auto; padding: 40px 16px 48px; text-align: center; color: var(--muted); font-size: 16px; }
+.ornament svg { width: 150px; height: auto; margin: 0 auto 12px; overflow: visible; }
+.ornament .ink { fill: none; stroke: var(--gold); stroke-width: 1.3; }
+.ornament .arrowhead, .ornament circle { fill: var(--gold); }
+.ornament text { display: none; }
+footer p { margin: 0; font-variant: small-caps; letter-spacing: .08em; }
+
+/* ---- Narrow screens ---- */
+@media (max-width: 760px) {
+  body { font-size: 18px; }
+  .navlinks { display: none; }
+  .hero { padding-top: 12px; }
+  .identity { gap: 12px; padding-right: 0; }
+  .name-block { padding-top: 16px; }
+  .name-block h1 { font-size: 40px; }
+  .portrait { width: 116px; height: 116px; margin-top: -58px; margin-right: 6px; padding: 4px; }
+  .block { grid-template-columns: 1fr; gap: 10px; padding: 30px 0 26px; }
+  .block h2 { position: static; }
+  .lede { font-size: 20px; }
+  .item-head { flex-direction: column; gap: 0; }
 }
