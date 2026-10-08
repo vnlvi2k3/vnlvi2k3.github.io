@@ -62,7 +62,7 @@ img { display: block; max-width: 100%; }
   background: color-mix(in srgb, var(--paper) 88%, transparent);
   backdrop-filter: blur(8px);
 }
-.brand { font: 500 22px/1 "Fraunces", serif; color: var(--ink); letter-spacing: -.01em; }
+.brand { font: 500 22px/1 "Newsreader", Georgia, serif; color: var(--ink); letter-spacing: -.01em; }
 .brand:hover { text-decoration: none; }
 .navlinks { display: flex; gap: 26px; flex-wrap: wrap; }
 .navlinks a { color: var(--muted); font-size: 15px; }
@@ -113,7 +113,7 @@ img { display: block; max-width: 100%; }
 }
 .cover-text h1 {
   margin: 0;
-  font: 500 clamp(48px, 6.2vw, 76px)/1 "Fraunces", serif;
+  font: 500 clamp(48px, 6.2vw, 76px)/1 "Newsreader", Georgia, serif;
   letter-spacing: -.025em;
   text-shadow: 0 2px 18px rgba(0, 0, 0, .35);
 }
@@ -133,7 +133,7 @@ img { display: block; max-width: 100%; }
 .affil:hover .affil-lab { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
 .affil-seal { width: 46px; height: 46px; flex: none; }
 .affil-text { display: flex; flex-direction: column; line-height: 1.3; }
-.affil-lab { font: 500 17px/1.3 "Fraunces", serif; }
+.affil-lab { font: 500 17px/1.3 "Newsreader", Georgia, serif; }
 .affil-uni { font-size: 13.5px; color: var(--muted); }
 .links { margin: 0; display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 15px; align-items: baseline; }
 .links .mono { font-size: 13.5px; color: var(--muted); }
@@ -148,7 +148,7 @@ img { display: block; max-width: 100%; }
 main { max-width: var(--width); margin: 0 auto; padding: 0 20px; }
 .sec { padding: 56px 12px 8px; }
 .sec-head { display: flex; align-items: center; gap: 12px; margin-bottom: 22px; }
-.sec-head h2 { margin: 0; font: 500 34px/1.1 "Fraunces", serif; letter-spacing: -.015em; }
+.sec-head h2 { margin: 0; font: 500 34px/1.1 "Newsreader", Georgia, serif; letter-spacing: -.015em; }
 .spike { width: 34px; height: 22px; flex: none; }
 .spike path { fill: none; stroke-width: 1.8; stroke-linejoin: round; stroke-linecap: round; }
 .tone-brain .spike path { stroke: var(--brain); }
@@ -249,7 +249,7 @@ p { margin: 0 0 12px; }
 .item:last-child { border-bottom: 1px solid var(--rule); }
 .item-head { display: contents; }
 .when { grid-column: 1; grid-row: 1 / span 3; font: 400 13.5px/1.9 "IBM Plex Mono", monospace; color: var(--muted); }
-.org { grid-column: 2; font: 500 21px/1.3 "Fraunces", serif; }
+.org { grid-column: 2; font: 500 21px/1.3 "Newsreader", Georgia, serif; }
 .item-role { grid-column: 2; margin: 2px 0 0; color: var(--muted); font-size: 16px; }
 .item p:not(.item-role) { grid-column: 2; margin: 6px 0 0; font-size: 16px; }
 
@@ -269,7 +269,7 @@ p { margin: 0 0 12px; }
   width: 92px; height: 92px; border-radius: 50%; object-fit: cover; margin-bottom: 12px;
   box-shadow: 0 0 0 3px var(--paper), 0 0 0 4.5px color-mix(in srgb, var(--brain) 55%, var(--ai));
 }
-.m-name { font: 500 17.5px/1.3 "Fraunces", serif; }
+.m-name { font: 500 17.5px/1.3 "Newsreader", Georgia, serif; }
 .m-role { font-size: 13.5px; color: var(--brain); }
 .m-aff { font-size: 13.5px; color: var(--muted); }
 
@@ -306,7 +306,7 @@ p { margin: 0 0 12px; }
 }
 .pub[data-key^="j"] .pbadge { background: var(--brain); }
 .pubs p { margin: 0; }
-.ptitle { font: 500 19px/1.35 "Fraunces", serif; letter-spacing: -.005em; }
+.ptitle { font: 500 19px/1.35 "Newsreader", Georgia, serif; letter-spacing: -.005em; }
 .pauthors { margin-top: 4px !important; font-size: 15px; color: var(--muted); }
 .pauthors u { color: var(--ink); font-weight: 500; text-decoration: underline; text-decoration-color: var(--brain); text-decoration-thickness: 2px; text-underline-offset: 3px; }
 .pvenue { font-size: 15px; }
