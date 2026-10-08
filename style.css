@@ -1,13 +1,13 @@
 /* AI & the Brain — coral for neurons, indigo for machines. */
 :root {
-  --paper: #f5f4f0;
-  --surface: #ffffff;
+  --paper: #f7f2e7;
+  --surface: #fffcf5;
   --ink: #1c1d22;
   --muted: #6a6d76;
-  --rule: #e2dfd7;
+  --rule: #e4ddcd;
   --brain: #c8553d;
   --ai: #3b4ec2;
-  --width: 960px;
+  --width: 880px;
   color-scheme: light;
 }
 
