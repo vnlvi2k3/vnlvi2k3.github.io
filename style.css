@@ -148,11 +148,11 @@ p { margin: 0 0 12px; }
 .about {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 470px);
-  gap: 48px;
+  gap: 30px 48px;
   align-items: center;
   padding-top: 44px;
 }
-.lede { font: 400 25px/1.45 "Fraunces", serif; letter-spacing: -.005em; margin-bottom: 30px; }
+.lede { grid-column: 1 / -1; font: 400 25px/1.45 "Fraunces", serif; letter-spacing: -.005em; margin: 0; }
 .lede a {
   color: inherit;
   text-decoration: underline;
