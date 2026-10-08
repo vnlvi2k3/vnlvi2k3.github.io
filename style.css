@@ -1,11 +1,12 @@
-/* Cream paper, ink, Duke navy, a thread of old gold. */
+/* Cream paper and ink; sepia for the brain, navy for the machine. */
 :root {
   --paper: #f8f5ee;
   --ink: #23211d;
   --muted: #6e685d;
   --rule: #d9d1c0;
   --navy: #0d2a6b;
-  --gold: #a8874a;
+  --gold: #8c4a2f;      /* brain: Golgi-stain sepia */
+  --machine: #0d2a6b;   /* machine: navy */
   --width: 960px;
   color-scheme: light;
 }
@@ -17,7 +18,8 @@
     --muted: #a59f92;
     --rule: #38352f;
     --navy: #a9bcef;
-    --gold: #c9a868;
+    --gold: #d49a7c;
+    --machine: #a9bcef;
     color-scheme: dark;
   }
 }
@@ -100,14 +102,15 @@ img { display: block; max-width: 100%; }
   margin-top: -98px;            /* overlap the cover */
   margin-right: 28px;
   border-radius: 50%;
-  padding: 6px;
-  background: var(--paper);
-  box-shadow: 0 0 0 1px var(--gold), 0 8px 24px rgba(30, 20, 5, .18);
+  padding: 2px;
+  background: linear-gradient(135deg, var(--gold), var(--machine));
+  box-shadow: 0 8px 24px rgba(30, 20, 5, .18);
   position: relative; z-index: 1;
 }
 .portrait img {
   width: 100%; height: 100%;
   border-radius: 50%;
+  border: 4px solid var(--paper);
   object-fit: cover; object-position: 50% 32%;
 }
 
@@ -130,7 +133,7 @@ main { max-width: var(--width); margin: 0 auto; padding: 0 16px; }
 .block h2::before {
   content: ""; display: block;
   width: 28px; height: 1px; margin-bottom: 10px;
-  background: var(--gold);
+  background: linear-gradient(90deg, var(--gold), var(--machine));
 }
 .content > :first-child { margin-top: 0; }
 p { margin: 0 0 14px; }
@@ -150,6 +153,7 @@ p { margin: 0 0 14px; }
 .hypotheses { display: grid; grid-template-columns: 44px 1fr; gap: 12px 8px; margin: 0; }
 .hypotheses dt { color: var(--gold); font-size: 21px; font-variant-numeric: lining-nums; }
 .hypotheses dt sub { font-size: .62em; }
+.hypotheses dt:nth-of-type(2) { color: var(--machine); }
 .hypotheses dd { margin: 0; font-size: 20px; padding-top: 2px; }
 .interests { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 18px; font-style: italic; color: var(--muted); }
 .interests span::before { content: "— "; color: var(--gold); font-style: normal; }
@@ -187,11 +191,31 @@ p { margin: 0 0 14px; }
 
 /* ---- Footer with a small Feynman diagram ---- */
 footer { max-width: var(--width); margin: 0 auto; padding: 40px 16px 48px; text-align: center; color: var(--muted); font-size: 16px; }
-.ornament svg { width: 150px; height: auto; margin: 0 auto 12px; overflow: visible; }
-.ornament .ink { fill: none; stroke: var(--gold); stroke-width: 1.3; }
-.ornament .arrowhead, .ornament circle { fill: var(--gold); }
-.ornament text { display: none; }
+.footrule { width: 120px; height: 1px; margin: 0 auto 16px; background: linear-gradient(90deg, var(--gold), var(--machine)); }
 footer p { margin: 0; font-variant: small-caps; letter-spacing: .08em; }
+
+/* ---- Convergence figure ---- */
+.convergence { margin: 34px 0 6px; }
+.convergence svg { width: 100%; height: auto; display: block; overflow: visible; }
+.neuron path { fill: none; stroke: var(--gold); stroke-linecap: round; }
+.neuron .soma { fill: var(--gold); }
+.myelin rect { fill: var(--paper); stroke: color-mix(in srgb, var(--gold) 55%, var(--machine)); stroke-width: 1.1; }
+.terminals path { fill: none; stroke: var(--machine); stroke-width: 1.2; }
+.edges line { stroke: var(--machine); stroke-opacity: .38; stroke-width: .9; }
+.nodes circle { fill: var(--paper); stroke: var(--machine); stroke-width: 1.5; }
+.stop-brain { stop-color: var(--gold); }
+.stop-machine { stop-color: var(--machine); }
+.fill-brain { fill: var(--gold); }
+.fill-machine { fill: var(--machine); }
+.arc { fill: none; stroke-width: 1.2; stroke-dasharray: 5 4; }
+.arc-1 { stroke: var(--gold); }
+.arc-2 { stroke: var(--machine); }
+.hlabel { font: italic 22px "EB Garamond", serif; }
+.hlabel.h1 { fill: var(--gold); }
+.hlabel.h2 { fill: var(--machine); }
+.tag { font: italic 17px "EB Garamond", serif; fill: var(--muted); letter-spacing: .04em; }
+.convergence figcaption { margin-top: 12px; font-size: 16px; line-height: 1.5; color: var(--muted); }
+.figno { font-variant: small-caps; letter-spacing: .08em; color: var(--ink); }
 
 /* ---- Narrow screens ---- */
 @media (max-width: 760px) {

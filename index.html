@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=home4">
+  <link rel="stylesheet" href="style.css?v=mind1">
 </head>
 <body>
 
@@ -21,8 +21,8 @@
     <div class="navlinks">
       <a href="#about">About</a>
       <a href="#education">Education</a>
-      <a href="#publications">Publications</a>
       <a href="#experience">Experience</a>
+      <a href="#publications">Publications</a>
       <a href="#honors">Honors</a>
     </div>
   </nav>
@@ -75,6 +75,107 @@
           <dt>H<sub>2</sub></dt>
           <dd>Improving AI algorithms can help us discover better models of how the brain works.</dd>
         </dl>
+        <figure class="convergence">
+          <svg viewBox="0 -48 760 330" role="img" aria-labelledby="figcap">
+            <defs>
+              <linearGradient id="axon" gradientUnits="userSpaceOnUse" x1="154" y1="0" x2="512" y2="0">
+                <stop offset="0" class="stop-brain"/><stop offset="1" class="stop-machine"/>
+              </linearGradient>
+              <marker id="tip-brain" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 1 L9 5 L0 9 z" class="fill-brain"/></marker>
+              <marker id="tip-machine" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 1 L9 5 L0 9 z" class="fill-machine"/></marker>
+            </defs>
+
+            <!-- neuron (after Cajal) -->
+            <g class="neuron">
+          <path d="M130 106 C110 90 95 70 80 52" stroke-width="2.6"/>
+          <path d="M95 72 C85 70 72 72 60 66" stroke-width="1.4"/>
+          <path d="M80 52 C78 40 82 30 76 18" stroke-width="1.2"/>
+          <path d="M80 52 C70 46 60 44 50 36" stroke-width="1.1"/>
+          <path d="M66 69 C60 60 56 56 48 54" stroke-width="0.8"/>
+          <path d="M128 115 C105 116 85 112 62 118" stroke-width="2.6"/>
+          <path d="M85 113 C75 102 64 98 52 92" stroke-width="1.3"/>
+          <path d="M62 118 C50 116 40 122 28 120" stroke-width="1.1"/>
+          <path d="M62 118 C54 128 46 132 36 140" stroke-width="1.0"/>
+          <path d="M52 92 C44 90 38 84 30 82" stroke-width="0.8"/>
+          <path d="M132 125 C118 145 104 160 92 182" stroke-width="2.4"/>
+          <path d="M104 160 C92 162 80 170 70 168" stroke-width="1.2"/>
+          <path d="M92 182 C90 194 94 204 88 214" stroke-width="1.0"/>
+          <path d="M92 182 C82 188 72 196 62 200" stroke-width="1.0"/>
+          <path d="M142 104 C144 80 150 60 148 36" stroke-width="2.4"/>
+          <path d="M148 60 C160 52 170 46 178 34" stroke-width="1.2"/>
+          <path d="M148 36 C142 26 140 18 134 8" stroke-width="1.0"/>
+          <path d="M148 36 C156 26 160 18 166 10" stroke-width="1.0"/>
+          <path d="M150 125 C156 145 160 165 170 186" stroke-width="2.0"/>
+          <path d="M160 165 C172 166 182 172 192 170" stroke-width="1.1"/>
+          <path d="M170 186 C168 198 172 206 168 216" stroke-width="1.0"/>
+              <ellipse cx="140" cy="115" rx="15" ry="12" class="soma"/>
+            </g>
+
+            <!-- myelinated axon -->
+            <path d="M154 115 L440 115" stroke="url(#axon)" stroke-width="1.8" fill="none"/>
+            <g class="myelin">
+              <rect x="186" y="110" width="44" height="10" rx="5"/>
+              <rect x="244" y="110" width="44" height="10" rx="5"/>
+              <rect x="302" y="110" width="44" height="10" rx="5"/>
+              <rect x="360" y="110" width="44" height="10" rx="5"/>
+            </g>
+
+            <!-- axon terminals become network inputs -->
+            <g class="terminals">
+          <path d="M440 115 C470 115 480 70 512 70"/>
+          <path d="M440 115 C470 115 480 115 512 115"/>
+          <path d="M440 115 C470 115 480 160 512 160"/>
+            </g>
+
+            <!-- artificial network -->
+            <g class="edges">
+          <line x1="520" y1="70" x2="610" y2="48"/>
+          <line x1="520" y1="70" x2="610" y2="92"/>
+          <line x1="520" y1="70" x2="610" y2="138"/>
+          <line x1="520" y1="70" x2="610" y2="182"/>
+          <line x1="520" y1="115" x2="610" y2="48"/>
+          <line x1="520" y1="115" x2="610" y2="92"/>
+          <line x1="520" y1="115" x2="610" y2="138"/>
+          <line x1="520" y1="115" x2="610" y2="182"/>
+          <line x1="520" y1="160" x2="610" y2="48"/>
+          <line x1="520" y1="160" x2="610" y2="92"/>
+          <line x1="520" y1="160" x2="610" y2="138"/>
+          <line x1="520" y1="160" x2="610" y2="182"/>
+          <line x1="610" y1="48" x2="700" y2="93"/>
+          <line x1="610" y1="48" x2="700" y2="137"/>
+          <line x1="610" y1="92" x2="700" y2="93"/>
+          <line x1="610" y1="92" x2="700" y2="137"/>
+          <line x1="610" y1="138" x2="700" y2="93"/>
+          <line x1="610" y1="138" x2="700" y2="137"/>
+          <line x1="610" y1="182" x2="700" y2="93"/>
+          <line x1="610" y1="182" x2="700" y2="137"/>
+            </g>
+            <g class="nodes">
+          <circle cx="520" cy="70" r="7"/>
+          <circle cx="520" cy="115" r="7"/>
+          <circle cx="520" cy="160" r="7"/>
+          <circle cx="610" cy="48" r="7"/>
+          <circle cx="610" cy="92" r="7"/>
+          <circle cx="610" cy="138" r="7"/>
+          <circle cx="610" cy="182" r="7"/>
+          <circle cx="700" cy="93" r="7"/>
+          <circle cx="700" cy="137" r="7"/>
+            </g>
+
+            <!-- hypotheses -->
+            <path class="arc arc-1" d="M180 -6 Q 440 -62 692 40" marker-end="url(#tip-brain)"/>
+            <text class="hlabel h1" x="440" y="-30" text-anchor="middle">H₁</text>
+            <path class="arc arc-2" d="M692 196 Q 440 300 176 226" marker-end="url(#tip-machine)"/>
+            <text class="hlabel h2" x="440" y="276" text-anchor="middle">H₂</text>
+
+            <text class="tag" x="110" y="252" text-anchor="middle">brain</text>
+            <text class="tag" x="660" y="244" text-anchor="middle">machine</text>
+          </svg>
+          <figcaption id="figcap">
+            <span class="figno">Fig. 1.</span> A neuron, after the drawings of Santiago Ramón y Cajal, whose axon becomes the
+            input of an artificial neural network. H<sub>1</sub> runs from left to right; H<sub>2</sub> from right to left.
+          </figcaption>
+        </figure>
       </div>
     </section>
 
@@ -90,6 +191,37 @@
           <p class="item-role">B.E. in Computer Engineering (High-Quality Program)</p>
           <p>Valedictorian, ranked first of 749 in Computer Science and Engineering. GPA 9.27 / 10
             (<a href="https://drive.google.com/file/d/1hsqOAvxihVWhE4Rxz5Nv-7lYRPMEFORm/view?usp=sharing">transcript</a>).</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="block">
+      <h2>Experience</h2>
+      <div class="content">
+        <div class="item">
+          <div class="item-head"><span class="org">Carnegie Mellon University</span><span class="when">2024 – 2026</span></div>
+          <p class="item-role">Research Assistant, <a href="https://xulabs.github.io/news/">Xu Lab</a> · with
+            <a href="https://scholar.google.com/citations?user=Y3Cqt0cAAAAJ&hl=en">Min Xu</a>,
+            <a href="https://scholar.google.com/citations?user=f9V0NZkAAAAJ&hl=en">Xingjian Li</a> and
+            <a href="https://scholar.google.com/citations?user=QbTV0r0AAAAJ&hl=en">Tianyang Wang</a></p>
+        </div>
+        <div class="item">
+          <div class="item-head"><span class="org">Northwestern University</span><span class="when">2025 – 2026</span></div>
+          <p class="item-role">Research Assistant, <a href="https://bagcilab.com/">Machine &amp; Hybrid Intelligence Lab</a> · with
+            <a href="https://scholar.google.com/citations?user=9LUdPM4AAAAJ&hl=en">Ulas Bagci</a></p>
+        </div>
+        <div class="item">
+          <div class="item-head"><span class="org">National Cheng Kung University</span><span class="when">2025</span></div>
+          <p class="item-role">Research Intern, <a href="https://en.ur.ncku.edu.tw/laboratory/Integrated+MechanoBioSystems+Lab/">Integrated MechanoBioSystems Lab</a> · with
+            <a href="https://scholar.google.com/citations?user=_HLH5D4AAAAJ&hl=en">Ting-Yuan Tu</a></p>
+        </div>
+        <div class="item">
+          <div class="item-head"><span class="org">FPT Software AI Center</span><span class="when">2024</span></div>
+          <p class="item-role">AI Researcher · with <a href="https://scholar.google.it/citations?user=gEbaF0sAAAAJ&hl=en">Anh Nguyen</a></p>
+        </div>
+        <div class="item">
+          <div class="item-head"><span class="org">AIVIETNAM</span><span class="when">2024 – present</span></div>
+          <p class="item-role">Research Associate &amp; Teaching Assistant · with <a href="https://dblp.org/pid/142/0382.html">Quang Vinh Dinh</a></p>
         </div>
       </div>
     </section>
@@ -190,36 +322,6 @@
       </div>
     </section>
 
-    <section id="experience" class="block">
-      <h2>Experience</h2>
-      <div class="content">
-        <div class="item">
-          <div class="item-head"><span class="org">Carnegie Mellon University</span><span class="when">2024 – 2026</span></div>
-          <p class="item-role">Research Assistant, <a href="https://xulabs.github.io/news/">Xu Lab</a> · with
-            <a href="https://scholar.google.com/citations?user=Y3Cqt0cAAAAJ&hl=en">Min Xu</a>,
-            <a href="https://scholar.google.com/citations?user=f9V0NZkAAAAJ&hl=en">Xingjian Li</a> and
-            <a href="https://scholar.google.com/citations?user=QbTV0r0AAAAJ&hl=en">Tianyang Wang</a></p>
-        </div>
-        <div class="item">
-          <div class="item-head"><span class="org">Northwestern University</span><span class="when">2025 – 2026</span></div>
-          <p class="item-role">Research Assistant, <a href="https://bagcilab.com/">Machine &amp; Hybrid Intelligence Lab</a> · with
-            <a href="https://scholar.google.com/citations?user=9LUdPM4AAAAJ&hl=en">Ulas Bagci</a></p>
-        </div>
-        <div class="item">
-          <div class="item-head"><span class="org">National Cheng Kung University</span><span class="when">2025</span></div>
-          <p class="item-role">Research Intern, <a href="https://en.ur.ncku.edu.tw/laboratory/Integrated+MechanoBioSystems+Lab/">Integrated MechanoBioSystems Lab</a> · with
-            <a href="https://scholar.google.com/citations?user=_HLH5D4AAAAJ&hl=en">Ting-Yuan Tu</a></p>
-        </div>
-        <div class="item">
-          <div class="item-head"><span class="org">FPT Software AI Center</span><span class="when">2024</span></div>
-          <p class="item-role">AI Researcher · with <a href="https://scholar.google.it/citations?user=gEbaF0sAAAAJ&hl=en">Anh Nguyen</a></p>
-        </div>
-        <div class="item">
-          <div class="item-head"><span class="org">AIVIETNAM</span><span class="when">2024 – present</span></div>
-          <p class="item-role">Research Associate &amp; Teaching Assistant · with <a href="https://dblp.org/pid/142/0382.html">Quang Vinh Dinh</a></p>
-        </div>
-      </div>
-    </section>
 
 
     <section id="honors" class="block">
@@ -241,26 +343,7 @@
   </main>
 
   <footer>
-    <div class="ornament" aria-hidden="true">
-            <svg viewBox="0 0 200 110" role="img" aria-label="Feynman diagram of electron-positron annihilation into a muon pair">
-              <defs>
-                <marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
-                  <path d="M0 1 L9 5 L0 9 z" class="arrowhead"/>
-                </marker>
-              </defs>
-              <g class="ink">
-                <polyline points="14,12 38,33.5 62,55" marker-mid="url(#arr)"/>
-                <polyline points="62,55 38,76.5 14,98" marker-mid="url(#arr)"/>
-                <path d="M62 55 q5 -9 10 0 t10 0 t10 0 t10 0 t10 0 t10 0 t10 0 t6 0"/>
-                <polyline points="138,55 162,33.5 186,12" marker-mid="url(#arr)"/>
-                <polyline points="186,98 162,76.5 138,55" marker-mid="url(#arr)"/>
-              </g>
-              <circle cx="62" cy="55" r="2.5"/><circle cx="138" cy="55" r="2.5"/>
-              <text x="0" y="10">e⁻</text><text x="0" y="110">e⁺</text>
-              <text x="96" y="40">γ</text>
-              <text x="200" y="10" text-anchor="end">μ⁻</text><text x="200" y="110" text-anchor="end">μ⁺</text>
-            </svg>
-    </div>
+    <div class="footrule" aria-hidden="true"></div>
     <p>© 2026 Vi Vu · Durham, North Carolina</p>
   </footer>
 
