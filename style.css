@@ -299,6 +299,10 @@ p { margin: 0 0 12px; }
 .m-role { font-size: 13.5px; color: var(--ring); transition: color .6s ease; }
 .m-aff { font-size: 13.5px; color: var(--muted); }
 
+/* ---- Visitor map ---- */
+.visitor-map { max-width: 560px; border-radius: 12px; overflow: hidden; border: 1px solid var(--rule); background: #0d1b2a; line-height: 0; }
+.visitor-map img, .visitor-map canvas, .visitor-map > div { max-width: 100% !important; height: auto; }
+
 /* ---- Publications ---- */
 .note { font-size: 14.5px; color: var(--muted); }
 .content h3 {
