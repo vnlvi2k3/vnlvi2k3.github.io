@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vi Vu</title>
+  <meta name="description" content="Vi Vu — Ph.D. student in Biomedical Engineering at Duke University. Medical AI, semi-supervised learning, foundation models.">
+  <meta property="og:title" content="Vi Vu">
+  <meta property="og:description" content="Ph.D. student in Biomedical Engineering at Duke University · Medical AI">
+  <meta property="og:image" content="assets/cover.jpg">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <canvas id="field" aria-hidden="true"></canvas>
+
+  <header class="nav">
+    <a class="logo mono" href="#top">vi<span class="accent">@</span>duke<span class="dim">:~$</span></a>
+    <nav class="nav-links" id="nav-links">
+      <a href="#about">about</a>
+      <a href="#education">education</a>
+      <a href="#experience">experience</a>
+      <a href="#publications">publications</a>
+      <a href="#awards">awards</a>
+      <a href="#contact">contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="theme-toggle" aria-label="Toggle light/dark theme"><i class="fa-solid fa-circle-half-stroke"></i></button>
+      <button class="icon-btn menu-btn" id="menu-toggle" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="cover">
+      <img src="assets/cover.jpg" alt="Vi Vu working in the library">
+      <div class="cover-grid"></div>
+      <span class="cover-eq mono">iℏ ∂ψ/∂t = Ĥψ</span>
+    </div>
+
+    <div class="container hero-body">
+      <div class="avatar-wrap">
+        <svg class="orbits" viewBox="0 0 200 200" aria-hidden="true">
+          <ellipse cx="100" cy="100" rx="98" ry="38" />
+          <ellipse cx="100" cy="100" rx="98" ry="38" transform="rotate(60 100 100)" />
+          <ellipse cx="100" cy="100" rx="98" ry="38" transform="rotate(120 100 100)" />
+          <circle r="3.5" class="electron"><animateMotion dur="5s" repeatCount="indefinite" path="M2,100 a98,38 0 1,0 196,0 a98,38 0 1,0 -196,0" /></circle>
+          <g transform="rotate(60 100 100)"><circle r="3.5" class="electron"><animateMotion dur="7s" repeatCount="indefinite" path="M198,100 a98,38 0 1,0 -196,0 a98,38 0 1,0 196,0" /></circle></g>
+          <g transform="rotate(120 100 100)"><circle r="3.5" class="electron"><animateMotion dur="6s" repeatCount="indefinite" path="M2,100 a98,38 0 1,0 196,0 a98,38 0 1,0 -196,0" /></circle></g>
+        </svg>
+        <img class="avatar" src="assets/avatar.jpg" alt="Portrait of Vi Vu">
+      </div>
+
+      <div class="hero-text">
+        <p class="mono prompt"><span class="accent">$</span> whoami</p>
+        <h1>Vi Vu</h1>
+        <p class="role">Ph.D. Student in Biomedical Engineering · <strong>Duke University</strong></p>
+        <p class="mono typed-line"><span class="dim">&gt;</span> <span id="typed"></span><span class="cursor">▍</span></p>
+        <div class="socials">
+          <a href="mailto:vulanvi22@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i><span>Email</span></a>
+          <a href="https://scholar.google.com/citations?user=_2luKBQAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fa-solid fa-graduation-cap"></i><span>Scholar</span></a>
+          <a href="https://github.com/vnlvi2k3" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i><span>GitHub</span></a>
+          <a href="https://www.linkedin.com/in/vivu-cse/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i><span>LinkedIn</span></a>
+          <a class="cv-btn" href="assets/Vi_Vu_CV.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-arrow-down"></i><span>CV</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section reveal">
+      <h2 class="section-title"><span class="idx mono">0x01</span> About <span class="eq mono">H(X) = −Σ p log p</span></h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a first-year Ph.D. student in <strong>Biomedical Engineering at Duke University</strong>, advised by
+            <a href="https://scholar.google.com/citations?user=mzcr92sAAAAJ&hl=en" target="_blank" rel="noopener">Prof. Sina Farsiu</a>.
+            I came to medical AI from computer engineering, and from physics before that.
+          </p>
+          <p>
+            My research focuses on <strong>AI-powered medical solutions</strong>, built on mathematically grounded modeling and
+            foundation-model-driven designs. Most of my work is on <strong>learning from imperfect biomedical data</strong>:
+            semi- and unsupervised learning, transfer learning, and deep multimodal learning under domain shift and noisy or scarce labels.
+          </p>
+          <div class="chips">
+            <span class="chip">semi-supervised learning</span>
+            <span class="chip">foundation models · SAM</span>
+            <span class="chip">domain adaptation</span>
+            <span class="chip">mixture-of-experts</span>
+            <span class="chip">histopathology</span>
+            <span class="chip">ultrasound · MRI</span>
+            <span class="chip">diffusion models</span>
+          </div>
+        </div>
+        <div class="stats">
+          <div class="stat"><span class="num" data-count="16">16</span><span class="lbl">publications<br><span class="dim">4 journal · 12 conference</span></span></div>
+          <div class="stat"><span class="num">1<span class="dim">/749</span></span><span class="lbl">valedictorian<br><span class="dim">HCMUT, CSE dept.</span></span></div>
+          <div class="stat"><span class="num">3.9</span><span class="lbl">GPA / 4.0<br><span class="dim">9.27 / 10</span></span></div>
+          <div class="stat"><span class="num">#1</span><span class="lbl">ISBI Fetal Ultrasound<br><span class="dim">Grand Challenge</span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section id="education" class="section reveal">
+      <h2 class="section-title"><span class="idx mono">0x02</span> Education <span class="eq mono">∇·E = ρ/ε₀</span></h2>
+      <div class="timeline">
+        <article class="t-item">
+          <div class="t-meta mono">Aug 2026 — Present<br><span class="dim">Durham, NC, USA</span></div>
+          <div class="t-card">
+            <h3>Duke University</h3>
+            <p class="t-role">Ph.D. in Biomedical Engineering</p>
+            <ul>
+              <li>Advisor: <a href="https://scholar.google.com/citations?user=mzcr92sAAAAJ&hl=en" target="_blank" rel="noopener">Prof. Sina Farsiu</a></li>
+            </ul>
+          </div>
+        </article>
+        <article class="t-item">
+          <div class="t-meta mono">Sep 2021 — Nov 2025<br><span class="dim">HCMC, Vietnam</span></div>
+          <div class="t-card">
+            <h3>Ho Chi Minh City University of Technology</h3>
+            <p class="t-role">B.E. in Computer Engineering (High-Quality Program)</p>
+            <ul>
+              <li><strong>GPA:</strong> 9.27/10.0 (3.9/4.0) · <a href="https://drive.google.com/file/d/1hsqOAvxihVWhE4Rxz5Nv-7lYRPMEFORm/view?usp=sharing" target="_blank" rel="noopener">Transcript</a></li>
+              <li><strong>Valedictorian, ranked 1st</strong> of 749 students in the Department of Computer Science and Engineering</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section id="experience" class="section reveal">
+      <h2 class="section-title"><span class="idx mono">0x03</span> Experience <span class="eq mono">∂L/∂θ → 0</span></h2>
+      <div class="timeline">
+        <article class="t-item">
+          <div class="t-meta mono">Aug 2024 — Jun 2026<br><span class="dim">Pennsylvania, USA</span></div>
+          <div class="t-card">
+            <h3>Xu Lab · Carnegie Mellon University <a class="ext" href="https://xulabs.github.io/news/" target="_blank" rel="noopener" aria-label="Lab website"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></h3>
+            <p class="t-role">Research Assistant</p>
+            <ul>
+              <li>Advisors: <a href="https://scholar.google.com/citations?user=Y3Cqt0cAAAAJ&hl=en" target="_blank" rel="noopener">Prof. Min Xu</a>, <a href="https://scholar.google.com/citations?user=f9V0NZkAAAAJ&hl=en" target="_blank" rel="noopener">Dr. Xingjian Li</a>, <a href="https://scholar.google.com/citations?user=QbTV0r0AAAAJ&hl=en" target="_blank" rel="noopener">Prof. Tianyang Wang</a></li>
+              <li>Brought Mixture-of-Experts into semi-supervised learning to address the homogeneity problem (<em>Semi-MoE</em>).</li>
+              <li>Led <em>SemiSAM</em>, a bidirectional co-training framework aligning foundation and conventional models to use unlabeled data.</li>
+              <li>Contributed to bridging multiple domain shifts in mixed-domain medical image segmentation.</li>
+              <li>Helped draft peer reviews for IJCAI and MICCAI.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="t-item">
+          <div class="t-meta mono">Jun 2025 — Jun 2026<br><span class="dim">Illinois, USA</span></div>
+          <div class="t-card">
+            <h3>Machine &amp; Hybrid Intelligence Lab · Northwestern University <a class="ext" href="https://bagcilab.com/" target="_blank" rel="noopener" aria-label="Lab website"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></h3>
+            <p class="t-role">Research Assistant</p>
+            <ul>
+              <li>Advisor: <a href="https://scholar.google.com/citations?user=9LUdPM4AAAAJ&hl=en" target="_blank" rel="noopener">Prof. Ulas Bagci</a></li>
+              <li>Built a mean-teacher framework that disentangles stain appearance from tissue structure in histopathology, under strong H&amp;E variability and scarce annotations.</li>
+              <li>Contributed to source-free domain adaptation for medical segmentation and radiomics analysis of laryngeal cancer.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="t-item">
+          <div class="t-meta mono">May 2024 — Present<br><span class="dim">HCMC, Vietnam</span></div>
+          <div class="t-card">
+            <h3>AIVIETNAM <a class="ext" href="https://aivietnam.edu.vn/" target="_blank" rel="noopener" aria-label="Website"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></h3>
+            <p class="t-role">Research Associate · Teaching Assistant</p>
+            <ul>
+              <li>Advisor: <a href="https://dblp.org/pid/142/0382.html" target="_blank" rel="noopener">Dr. Quang Vinh Dinh</a></li>
+              <li>Co-lead of AIMA (AI-in-Medicine Applications lab), leading 4 teams in medical AI.</li>
+              <li>Supported 600+ students in the All-in-One 2024 course; hosted seminars on semi-supervised learning and knowledge distillation.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="t-item">
+          <div class="t-meta mono">Jul 2025 — Sep 2025<br><span class="dim">Tainan, Taiwan</span></div>
+          <div class="t-card">
+            <h3>Integrated MechanoBioSystems Lab · National Cheng Kung University <a class="ext" href="https://en.ur.ncku.edu.tw/laboratory/Integrated+MechanoBioSystems+Lab/" target="_blank" rel="noopener" aria-label="Lab website"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></h3>
+            <p class="t-role">AI Research Intern</p>
+            <ul>
+              <li>Advisor: <a href="https://scholar.google.com/citations?user=_HLH5D4AAAAJ&hl=en" target="_blank" rel="noopener">Prof. Ting-Yuan Tu</a></li>
+              <li>Developed a Y-Net Siamese architecture for fast 3D single-cell tracking and segmentation in 3D time-lapse images.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="t-item">
+          <div class="t-meta mono">Jun 2024 — Sep 2024<br><span class="dim">Hanoi, Vietnam</span></div>
+          <div class="t-card">
+            <h3>FPT Software AI Center <a class="ext" href="https://fptsoftware.com/" target="_blank" rel="noopener" aria-label="Website"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></h3>
+            <p class="t-role">AI Researcher</p>
+            <ul>
+              <li>Advisor: <a href="https://scholar.google.it/citations?user=gEbaF0sAAAAJ&hl=en" target="_blank" rel="noopener">Prof. Anh Nguyen</a></li>
+              <li>Applied DDIM to interactive 3D editing in <em>DragPC</em>: point-cloud shape deformation via latent point diffusion models.</li>
+              <li>Hosted weekly seminars on diffusion, NeRF, 3D Gaussian splatting and large vision models.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ PUBLICATIONS ============ -->
+    <section id="publications" class="section reveal">
+      <h2 class="section-title"><span class="idx mono">0x04</span> Publications <span class="eq mono">p(θ|D) ∝ p(D|θ)p(θ)</span></h2>
+      <div class="pub-toolbar">
+        <div class="filters mono" role="tablist">
+          <button class="filter active" data-filter="all">all</button>
+          <button class="filter" data-filter="C">conference</button>
+          <button class="filter" data-filter="J">journal</button>
+          <button class="filter" data-filter="first">first-author</button>
+        </div>
+        <p class="pub-note dim">* equal contribution · <a href="https://scholar.google.com/citations?user=_2luKBQAAAAJ&hl=en" target="_blank" rel="noopener">full list on Google Scholar</a></p>
+      </div>
+      <ol class="pubs" id="pubs"></ol>
+    </section>
+
+    <!-- ============ AWARDS ============ -->
+    <section id="awards" class="section reveal">
+      <h2 class="section-title"><span class="idx mono">0x05</span> Honors &amp; Awards <span class="eq mono">E = mc²</span></h2>
+      <ul class="awards">
+        <li><i class="fa-solid fa-trophy"></i><div><strong>Winner, Fetal Ultrasound Grand Challenge at ISBI</strong><span class="dim">Texas, USA</span></div><a href="https://drive.google.com/file/d/1Jy6NujRNiQm3I8Pf6zZyrrXSrQb8s1DK/view?usp=sharing" target="_blank" rel="noopener" class="mono">[cert]</a></li>
+        <li><i class="fa-solid fa-plane"></i><div><strong>NSTC Scholarship, International Internship Pilot Program</strong><span class="dim">Tainan, Taiwan</span></div><a href="https://drive.google.com/file/d/1PQWnGH9uA9mX-UtC-6z6lCw70o5DJkx1/view?usp=sharing" target="_blank" rel="noopener" class="mono">[cert]</a></li>
+        <li><i class="fa-solid fa-medal"></i><div><strong>Outstanding Academic Performance certification</strong><span class="dim">HCMC, Vietnam</span></div><a href="https://drive.google.com/file/d/1yWg3C4Wv84tLVzzUEF7ca88PCJnRoXTw/view?usp=sharing" target="_blank" rel="noopener" class="mono">[cert]</a></li>
+        <li><i class="fa-solid fa-atom"></i><div><strong>1st Prize, City-level Excellent Physics Student</strong><span class="dim">HCMC, Vietnam</span></div><a href="https://drive.google.com/file/d/1LwUcXjAxb-5gDDJ9hEbzFJPne8_1B1u0/view?usp=sharing" target="_blank" rel="noopener" class="mono">[cert]</a></li>
+        <li><i class="fa-solid fa-bolt"></i><div><strong>Momentum Scholarship</strong> (top 10 university students)<span class="dim">HCMC, Vietnam</span></div></li>
+        <li><i class="fa-solid fa-star"></i><div><strong>4× Academic Incentive Scholarship, Type 1</strong> (top 1.6% of students)<span class="dim">HCMC, Vietnam</span></div></li>
+        <li><i class="fa-solid fa-language"></i><div><strong>2× OISP Scholarship, Type 1</strong> for high-quality English-taught programs<span class="dim">HCMC, Vietnam</span></div></li>
+        <li><i class="fa-solid fa-award"></i><div><strong>Outstanding All-around Student</strong><span class="dim">HCMC, Vietnam</span></div></li>
+      </ul>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section reveal">
+      <h2 class="section-title"><span class="idx mono">0x06</span> Contact <span class="eq mono">⟨vi|you⟩ ≠ 0</span></h2>
+      <div class="terminal">
+        <div class="term-bar"><span></span><span></span><span></span><em class="mono">contact.sh</em></div>
+        <pre class="mono"><span class="accent">$</span> cat contact.json
+{
+  <span class="key">"email"</span>:    <a href="mailto:vulanvi22@gmail.com">"vulanvi22@gmail.com"</a>,
+  <span class="key">"location"</span>: <span class="str">"Durham, NC, USA"</span>,
+  <span class="key">"github"</span>:   <a href="https://github.com/vnlvi2k3" target="_blank" rel="noopener">"github.com/vnlvi2k3"</a>,
+  <span class="key">"linkedin"</span>: <a href="https://www.linkedin.com/in/vivu-cse/" target="_blank" rel="noopener">"linkedin.com/in/vivu-cse"</a>,
+  <span class="key">"scholar"</span>:  <a href="https://scholar.google.com/citations?user=_2luKBQAAAAJ&hl=en" target="_blank" rel="noopener">"Google Scholar"</a>
+}
+<span class="accent">$</span> <span class="cursor">▍</span></pre>
+      </div>
+      <p class="contact-note">Open to research collaborations in medical AI. Email is the fastest way to reach me.</p>
+    </section>
+  </main>
+
+  <footer class="footer mono">
+    <span>© <span id="year"></span> Vi Vu</span>
+    <span class="dim">rendered at 60 fps · F = G·m₁m₂/r²</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
