@@ -1,234 +1,239 @@
-/* Cream paper and ink; sepia for the brain, navy for the machine. */
+/* AI & the Brain — coral for neurons, indigo for machines. */
 :root {
-  --paper: #f8f5ee;
-  --ink: #23211d;
-  --muted: #6e685d;
-  --rule: #d9d1c0;
-  --navy: #0d2a6b;
-  --gold: #8c4a2f;      /* brain: Golgi-stain sepia */
-  --machine: #0d2a6b;   /* machine: navy */
-  --width: 960px;
+  --paper: #f5f4f0;
+  --surface: #ffffff;
+  --ink: #1c1d22;
+  --muted: #6a6d76;
+  --rule: #e2dfd7;
+  --brain: #c8553d;
+  --ai: #3b4ec2;
+  --width: 1080px;
   color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper: #17161a;
-    --ink: #e9e4d8;
-    --muted: #a59f92;
-    --rule: #38352f;
-    --navy: #a9bcef;
-    --gold: #d49a7c;
-    --machine: #a9bcef;
+    --paper: #111216;
+    --surface: #181a20;
+    --ink: #ecebe6;
+    --muted: #9b9ea8;
+    --rule: #2a2c33;
+    --brain: #ef8a70;
+    --ai: #8e9cff;
     color-scheme: dark;
   }
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 64px; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
 
 body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font: 19px/1.6 "EB Garamond", Garamond, Georgia, serif;
+  font: 17px/1.65 "IBM Plex Sans", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
-  font-kerning: normal;
-  font-variant-numeric: oldstyle-nums;
 }
 
-a { color: var(--navy); text-decoration: none; background-image: linear-gradient(currentColor, currentColor); background-size: 0 1px; background-position: 0 100%; background-repeat: no-repeat; transition: background-size .25s; }
-a:hover { background-size: 100% 1px; }
+a { color: var(--ai); text-decoration: none; }
+a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 img { display: block; max-width: 100%; }
-.mono { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: .78em; letter-spacing: -.01em; }
+.mono { font-family: "IBM Plex Mono", ui-monospace, monospace; }
 
-/* ---- Top navigation ---- */
+/* gradient stops shared by the SVGs */
+.s-brain { stop-color: var(--brain); }
+.s-ai { stop-color: var(--ai); }
+
+/* ---- Nav ---- */
 .topnav {
-  position: sticky; top: 0; z-index: 10;
-  display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
-  max-width: var(--width); margin: 0 auto; padding: 14px 16px 10px;
-  background: color-mix(in srgb, var(--paper) 92%, transparent);
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid var(--rule);
+  position: sticky; top: 0; z-index: 20;
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  max-width: var(--width); margin: 0 auto; padding: 14px 20px;
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter: blur(8px);
 }
-.brand { font-variant: small-caps; letter-spacing: .1em; font-size: 20px; color: var(--ink); }
-.navlinks { display: flex; gap: 22px; flex-wrap: wrap; }
-.navlinks a { font-variant: small-caps; letter-spacing: .08em; font-size: 17px; color: var(--muted); }
-.navlinks a:hover { color: var(--navy); }
+.brand { font: 500 22px/1 "Fraunces", serif; color: var(--ink); letter-spacing: -.01em; }
+.brand:hover { text-decoration: none; }
+.navlinks { display: flex; gap: 26px; flex-wrap: wrap; }
+.navlinks a { color: var(--muted); font-size: 15px; }
+.navlinks a:hover { color: var(--ink); text-decoration: none; }
 
-/* ---- Hero: cover + identity with portrait on the right ---- */
-.hero { max-width: var(--width); margin: 0 auto; padding: 22px 16px 0; }
+/* ---- Hero ---- */
+.hero { max-width: var(--width); margin: 0 auto; padding: 6px 20px 0; }
 .cover {
-  position: relative;
-  height: clamp(200px, 34vw, 340px);
+  height: clamp(220px, 34vw, 380px);
+  border-radius: 20px;
   overflow: hidden;
-  border: 1px solid var(--rule);
 }
-.cover img {
-  width: 100%; height: 100%;
-  object-fit: cover; object-position: 50% 40%;
-  filter: sepia(.12) saturate(.92);
-}
-.cover::after {           /* thin inner frame, like a mounted print */
-  content: ""; position: absolute; inset: 10px;
-  border: 1px solid rgba(255, 255, 255, .55);
-  pointer-events: none;
-}
+.cover img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
 
 .identity {
-  display: flex; justify-content: space-between; align-items: flex-start; gap: 32px;
-  padding: 0 8px 26px 4px;
-  border-bottom: 1px solid var(--rule);
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 28px;
+  padding: 0 12px;
 }
-.name-block { padding-top: 26px; min-width: 0; }
+.name-block { padding-top: 30px; min-width: 0; }
+.kicker {
+  margin: 0 0 6px;
+  font: 500 13px/1 "IBM Plex Mono", monospace;
+  letter-spacing: .16em; text-transform: uppercase;
+  background: linear-gradient(90deg, var(--brain), var(--ai));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.kicker .amp { font-family: "Fraunces", serif; font-style: italic; text-transform: none; }
 .name-block h1 {
   margin: 0;
-  font-size: 56px; line-height: 1;
-  font-weight: 500;
-  letter-spacing: .01em;
+  font: 500 clamp(44px, 6vw, 68px)/1.02 "Fraunces", serif;
+  letter-spacing: -.02em;
 }
-.role {
-  margin: 10px 0 4px;
-  font-variant: small-caps; letter-spacing: .12em;
-  font-size: 19px; color: var(--gold);
-}
-.lab { margin: 0 0 14px; font-size: 19px; }
-.links { margin: 0; font-size: 17px; color: var(--muted); }
-.links .sep { margin: 0 6px; color: var(--rule); }
+.role { margin: 12px 0 14px; font-size: 17px; color: var(--muted); }
+.links { margin: 0; display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 15px; align-items: baseline; }
+.links .mono { font-size: 13.5px; color: var(--muted); }
 
+/* Portrait: two concentric rings — inner coral (brain), outer indigo (machine) */
 .portrait {
   flex: none;
-  width: 196px; height: 196px;
-  margin-top: -98px;            /* overlap the cover */
-  margin-right: 28px;
+  width: 210px; height: 210px;
+  margin-top: -105px; margin-right: 18px;
   border-radius: 50%;
-  padding: 2px;
-  background: linear-gradient(135deg, var(--gold), var(--machine));
-  box-shadow: 0 8px 24px rgba(30, 20, 5, .18);
+  box-shadow:
+    0 0 0 6px var(--paper),
+    0 0 0 7.5px var(--brain),
+    0 0 0 13px var(--paper),
+    0 0 0 14.5px var(--ai),
+    0 18px 40px rgba(20, 20, 40, .18);
   position: relative; z-index: 1;
 }
-.portrait img {
-  width: 100%; height: 100%;
-  border-radius: 50%;
-  border: 4px solid var(--paper);
-  object-fit: cover; object-position: 50% 32%;
-}
+.portrait img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: 50% 32%; }
 
-/* ---- Sections: label on the left, content on the right ---- */
-main { max-width: var(--width); margin: 0 auto; padding: 0 16px; }
-.block {
-  display: grid;
-  grid-template-columns: 180px minmax(0, 1fr);
-  gap: 32px;
-  padding: 40px 4px 34px;
-  border-bottom: 1px solid var(--rule);
-}
-.block h2 {
-  margin: 4px 0 0;
-  font-size: 18px; font-weight: 500;
-  font-variant: small-caps; letter-spacing: .14em;
-  color: var(--muted);
-  position: sticky; top: 72px; align-self: start;
-}
-.block h2::before {
-  content: ""; display: block;
-  width: 28px; height: 1px; margin-bottom: 10px;
-  background: linear-gradient(90deg, var(--gold), var(--machine));
-}
+.signal { display: block; width: 100%; height: 56px; margin: 34px 0 0; }
+.signal path { stroke-width: 1.6; stroke-linejoin: round; stroke-linecap: round; }
+.signal.small { height: 34px; margin: 0 0 14px; opacity: .8; }
+
+/* ---- Sections ---- */
+main { max-width: var(--width); margin: 0 auto; padding: 0 20px; }
+.sec { padding: 56px 12px 8px; }
+.sec-head { display: flex; align-items: center; gap: 12px; margin-bottom: 22px; }
+.sec-head h2 { margin: 0; font: 500 34px/1.1 "Fraunces", serif; letter-spacing: -.015em; }
+.spike { width: 34px; height: 22px; flex: none; }
+.spike path { fill: none; stroke-width: 1.8; stroke-linejoin: round; stroke-linecap: round; }
+.tone-brain .spike path { stroke: var(--brain); }
+.tone-ai .spike path { stroke: var(--ai); }
+.content { padding-left: 46px; }
 .content > :first-child { margin-top: 0; }
-p { margin: 0 0 14px; }
-.lede { font-size: 22px; line-height: 1.5; }
+p { margin: 0 0 12px; }
 
-.sublabel {
-  margin: 26px 0 8px;
-  font-size: 15px; font-weight: 500;
-  font-variant: small-caps; letter-spacing: .14em;
-  color: var(--gold);
+/* ---- About ---- */
+.about {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 56px;
+  align-items: center;
+  padding-top: 44px;
+}
+.lede { font: 400 25px/1.45 "Fraunces", serif; letter-spacing: -.005em; margin-bottom: 30px; }
+.eyebrow {
+  margin: 0 0 10px;
+  font: 500 12.5px/1 "IBM Plex Mono", monospace;
+  letter-spacing: .16em; text-transform: uppercase; color: var(--muted);
 }
 .question {
-  margin: 0 0 22px;
-  font-size: 26px; line-height: 1.4;
-  font-style: italic;
+  margin: 0 0 24px;
+  font: italic 400 30px/1.32 "Fraunces", serif;
+  letter-spacing: -.01em;
 }
-.hypotheses { display: grid; grid-template-columns: 44px 1fr; gap: 12px 8px; margin: 0; }
-.hypotheses dt { color: var(--gold); font-size: 21px; font-variant-numeric: lining-nums; }
-.hypotheses dt sub { font-size: .62em; }
-.hypotheses dt:nth-of-type(2) { color: var(--machine); }
-.hypotheses dd { margin: 0; font-size: 20px; padding-top: 2px; }
-.interests { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 18px; font-style: italic; color: var(--muted); }
-.interests span::before { content: "— "; color: var(--gold); font-style: normal; }
+.hyp { display: grid; grid-template-columns: 48px 1fr; gap: 14px 10px; margin: 0; }
+.hyp dt { font: italic 500 24px/1.2 "Fraunces", serif; }
+.hyp dt sub { font-size: .6em; }
+.hyp dd { margin: 0; font-size: 18px; line-height: 1.55; padding-top: 2px; }
+.h-brain { color: var(--brain); }
+.h-ai { color: var(--ai); }
+
+.about-fig { margin: 0; }
+.hemispheres { width: 100%; height: auto; display: block; overflow: visible; }
+.gyri path { fill: none; stroke: var(--brain); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; opacity: .85; }
+.outline-brain { fill: none; stroke: var(--brain); stroke-width: 2; }
+.outline-ai { fill: none; stroke: var(--ai); stroke-width: 2; }
+.net-edges line { stroke: var(--ai); stroke-width: 1; stroke-opacity: .5; }
+.net-nodes circle { fill: var(--paper); stroke: var(--ai); stroke-width: 1.5; }
+.callosum line { stroke-width: 1.6; stroke-linecap: round; }
+.fig-legend {
+  display: flex; justify-content: space-between;
+  margin-top: 10px; padding: 0 18%;
+  font: italic 15px "Fraunces", serif;
+}
+.lg-brain { color: var(--brain); }
+.lg-ai { color: var(--ai); }
+
+/* ---- Education / Experience: date column + details ---- */
+.item {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  column-gap: 24px;
+  padding: 16px 0;
+  border-top: 1px solid var(--rule);
+}
+.item:last-child { border-bottom: 1px solid var(--rule); }
+.item-head { display: contents; }
+.when { grid-column: 1; grid-row: 1 / span 3; font: 400 13.5px/1.9 "IBM Plex Mono", monospace; color: var(--muted); }
+.org { grid-column: 2; font: 500 21px/1.3 "Fraunces", serif; }
+.item-role { grid-column: 2; margin: 2px 0 0; color: var(--muted); font-size: 16px; }
+.item p:not(.item-role) { grid-column: 2; margin: 6px 0 0; font-size: 16px; }
 
 /* ---- Publications ---- */
-.note { font-size: 16px; color: var(--muted); font-style: italic; }
+.note { font-size: 14.5px; color: var(--muted); }
 .content h3 {
-  margin: 26px 0 10px;
-  font-size: 22px; font-weight: 500;
-  color: var(--gold);
-  font-variant-numeric: lining-nums;
+  margin: 30px 0 6px;
+  font: 500 14px/1 "IBM Plex Mono", monospace;
+  letter-spacing: .12em;
+  color: var(--muted);
 }
 .pubs { list-style: none; margin: 0; padding: 0; }
-.pubs li { margin-bottom: 18px; }
+.pubs li { padding: 14px 0; border-top: 1px solid var(--rule); }
 .pubs p { margin: 0; }
-.ptitle { font-weight: 500; font-size: 19.5px; line-height: 1.35; }
-.pauthors { font-size: 16.5px; color: var(--muted); }
-.pauthors u { color: var(--ink); text-decoration-color: var(--gold); text-underline-offset: 3px; }
-.pvenue { font-size: 16.5px; }
-.pvenue a { font-variant: small-caps; letter-spacing: .06em; }
-
-/* ---- Experience / Education ---- */
-.item { margin-bottom: 22px; }
-.item:last-child { margin-bottom: 0; }
-.item-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
-.org { font-size: 21px; font-weight: 500; }
-.when { flex: none; font-size: 16px; color: var(--muted); font-variant-numeric: lining-nums; }
-.item-role { margin: 0 0 4px; font-style: italic; color: var(--muted); font-size: 17.5px; }
-.item p:last-child { margin-bottom: 0; }
+.ptitle { font: 500 19px/1.35 "Fraunces", serif; letter-spacing: -.005em; }
+.pauthors { margin-top: 4px !important; font-size: 15px; color: var(--muted); }
+.pauthors u { color: var(--ink); font-weight: 500; text-decoration: underline; text-decoration-color: var(--brain); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.pvenue { font-size: 15px; }
+.pvenue i { font-style: italic; }
+.pvenue a { font: 500 12px "IBM Plex Mono", monospace; letter-spacing: .06em; text-transform: uppercase; padding: 1px 7px; border: 1px solid color-mix(in srgb, var(--ai) 40%, transparent); border-radius: 4px; }
+.pvenue a:hover { text-decoration: none; background: color-mix(in srgb, var(--ai) 10%, transparent); }
 
 /* ---- Honors ---- */
-.honors { margin: 0; padding: 0; list-style: none; }
-.honors li { padding: 6px 0; border-bottom: 1px dotted var(--rule); }
-.honors li:last-child { border-bottom: 0; }
+.honors { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; }
+.honors li { position: relative; padding: 10px 0 10px 22px; border-top: 1px solid var(--rule); font-size: 16px; }
+.honors li::before {
+  content: ""; position: absolute; left: 2px; top: 19px;
+  width: 7px; height: 7px; border-radius: 50%;
+  border: 1.5px solid var(--ai); background: var(--paper);
+}
 
-/* ---- Footer with a small Feynman diagram ---- */
-footer { max-width: var(--width); margin: 0 auto; padding: 40px 16px 48px; text-align: center; color: var(--muted); font-size: 16px; }
-.footrule { width: 120px; height: 1px; margin: 0 auto 16px; background: linear-gradient(90deg, var(--gold), var(--machine)); }
-footer p { margin: 0; font-variant: small-caps; letter-spacing: .08em; }
-
-/* ---- Convergence figure ---- */
-.convergence { margin: 34px 0 6px; }
-.convergence svg { width: 100%; height: auto; display: block; overflow: visible; }
-.neuron path { fill: none; stroke: var(--gold); stroke-linecap: round; }
-.neuron .soma { fill: var(--gold); }
-.myelin rect { fill: var(--paper); stroke: color-mix(in srgb, var(--gold) 55%, var(--machine)); stroke-width: 1.1; }
-.terminals path { fill: none; stroke: var(--machine); stroke-width: 1.2; }
-.edges line { stroke: var(--machine); stroke-opacity: .38; stroke-width: .9; }
-.nodes circle { fill: var(--paper); stroke: var(--machine); stroke-width: 1.5; }
-.stop-brain { stop-color: var(--gold); }
-.stop-machine { stop-color: var(--machine); }
-.fill-brain { fill: var(--gold); }
-.fill-machine { fill: var(--machine); }
-.arc { fill: none; stroke-width: 1.2; stroke-dasharray: 5 4; }
-.arc-1 { stroke: var(--gold); }
-.arc-2 { stroke: var(--machine); }
-.hlabel { font: italic 22px "EB Garamond", serif; }
-.hlabel.h1 { fill: var(--gold); }
-.hlabel.h2 { fill: var(--machine); }
-.tag { font: italic 17px "EB Garamond", serif; fill: var(--muted); letter-spacing: .04em; }
-.convergence figcaption { margin-top: 12px; font-size: 16px; line-height: 1.5; color: var(--muted); }
-.figno { font-variant: small-caps; letter-spacing: .08em; color: var(--ink); }
+/* ---- Footer ---- */
+footer { max-width: var(--width); margin: 64px auto 0; padding: 0 20px 44px; text-align: center; color: var(--muted); font-size: 14px; }
+footer p { margin: 0; }
 
 /* ---- Narrow screens ---- */
-@media (max-width: 760px) {
-  body { font-size: 18px; }
+@media (max-width: 860px) {
+  .about { grid-template-columns: 1fr; gap: 28px; }
+  .about-fig { max-width: 240px; margin: 0 auto; }
+  .honors { grid-template-columns: 1fr; }
+}
+@media (max-width: 680px) {
+  body { font-size: 16px; }
   .navlinks { display: none; }
-  .hero { padding-top: 12px; }
-  .identity { gap: 12px; padding-right: 0; }
-  .name-block { padding-top: 16px; }
-  .name-block h1 { font-size: 40px; }
-  .portrait { width: 116px; height: 116px; margin-top: -58px; margin-right: 6px; padding: 4px; }
-  .block { grid-template-columns: 1fr; gap: 10px; padding: 30px 0 26px; }
-  .block h2 { position: static; }
-  .lede { font-size: 20px; }
-  .question { font-size: 22px; }
-  .item-head { flex-direction: column; gap: 0; }
+  .hero { padding-top: 0; }
+  .cover { border-radius: 14px; }
+  .identity { padding: 0 2px; gap: 12px; }
+  .name-block { padding-top: 18px; }
+  .portrait { width: 118px; height: 118px; margin-top: -59px; margin-right: 10px;
+    box-shadow: 0 0 0 4px var(--paper), 0 0 0 5.5px var(--brain), 0 0 0 9px var(--paper), 0 0 0 10.5px var(--ai), 0 10px 24px rgba(20,20,40,.18); }
+  .role { font-size: 15.5px; }
+  .sec { padding: 44px 0 4px; }
+  .content { padding-left: 0; }
+  .sec-head h2 { font-size: 28px; }
+  .lede { font-size: 21px; }
+  .question { font-size: 24px; }
+  .item { grid-template-columns: 1fr; }
+  .when { grid-row: auto; }
+  .org, .item-role, .item p:not(.item-role) { grid-column: 1; }
+  .signal { height: 40px; margin-top: 24px; }
 }
