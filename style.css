@@ -106,16 +106,6 @@ img { display: block; max-width: 100%; }
   background: linear-gradient(180deg, rgba(8, 8, 18, 0) 40%, rgba(8, 8, 18, .7) 100%);
   pointer-events: none;
 }
-.cover-seal {
-  position: absolute; z-index: 2; top: 18px; right: 18px;
-  width: 72px; height: 72px; border-radius: 50%;
-  padding: 3px;
-  background: rgba(255, 255, 255, .82);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, .25);
-  transition: transform .25s ease;
-}
-.cover-seal:hover { transform: scale(1.06); text-decoration: none; }
-.cover-seal img { width: 100%; height: 100%; display: block; }
 .org-seal { display: inline-block; width: 26px; height: 26px; vertical-align: -5px; margin-right: 10px; }
 .cover-text {
   position: absolute; z-index: 2;
@@ -128,12 +118,25 @@ img { display: block; max-width: 100%; }
   letter-spacing: -.025em;
   text-shadow: 0 2px 18px rgba(0, 0, 0, .35);
 }
-.cover-text .role { margin: 10px 0 0; font-size: 16.5px; color: rgba(255, 255, 255, .88); }
+.cover-text .role { margin: 12px 0 0; font: 500 13px/1 "IBM Plex Mono", monospace; letter-spacing: .18em; text-transform: uppercase; color: rgba(255, 255, 255, .9); }
 .cover-text .role a { color: #fff; text-decoration: underline; text-decoration-color: rgba(255,255,255,.45); text-underline-offset: 3px; }
 
 :root[data-theme="dark"] .cover img { filter: saturate(.85) contrast(1.03) brightness(.92); }
 
-.links { margin: 22px 0 0; padding: 0 14px; display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 15px; align-items: baseline; }
+/* Affiliation bar: the seal sits with the affiliation it stands for */
+.affil-bar {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px 28px; flex-wrap: wrap;
+  margin: 16px 0 0; padding: 14px 14px;
+  border-bottom: 1px solid var(--rule);
+}
+.affil { display: flex; align-items: center; gap: 14px; color: var(--ink); }
+.affil:hover { text-decoration: none; }
+.affil:hover .affil-lab { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.affil-seal { width: 46px; height: 46px; flex: none; }
+.affil-text { display: flex; flex-direction: column; line-height: 1.3; }
+.affil-lab { font: 500 17px/1.3 "Fraunces", serif; }
+.affil-uni { font-size: 13.5px; color: var(--muted); }
+.links { margin: 0; display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 15px; align-items: baseline; }
 .links .mono { font-size: 13.5px; color: var(--muted); }
 
 .signal { display: block; width: 100%; height: 56px; margin: 30px 0 0; }
@@ -177,6 +180,7 @@ p { margin: 0 0 12px; }
   font: 500 12.5px/1 "IBM Plex Mono", monospace;
   letter-spacing: .16em; text-transform: uppercase; color: var(--muted);
 }
+.question-lead { margin: 0 0 6px; font-size: 17px; color: var(--muted); }
 .question {
   margin: 0 0 24px;
   font: italic 400 28px/1.32 "Fraunces", serif;
@@ -186,6 +190,11 @@ p { margin: 0 0 12px; }
 .hyp dt { font: italic 500 24px/1.2 "Fraunces", serif; }
 .hyp dt sub { font-size: .6em; }
 .hyp dd { margin: 0; font-size: 18px; line-height: 1.55; padding-top: 2px; }
+.aim {
+  margin: 22px 0 0; padding-top: 18px;
+  border-top: 1px solid var(--rule);
+  font-size: 17px; line-height: 1.65; color: var(--ink);
+}
 .h-brain { color: var(--brain); }
 .term-brain { color: var(--brain); }
 .term-ai { color: var(--ai); }
@@ -298,10 +307,11 @@ footer p { margin: 0; }
   .cover { border-radius: 14px; }
   .cover img { object-position: 16% 40%; }
   .cover-text { left: 18px; right: 18px; bottom: 18px; }
-  .cover-seal { width: 52px; height: 52px; top: 12px; right: 12px; }
   .cover-text h1 { font-size: 48px; }
   .cover-text .role { font-size: 14.5px; }
-  .links { padding: 0 2px; margin-top: 16px; }
+  .affil-bar { padding: 14px 2px; }
+  .affil-seal { width: 40px; height: 40px; }
+  .affil-lab { font-size: 16px; }
   .role { font-size: 15.5px; }
   .sec { padding: 44px 0 4px; }
   .content { padding-left: 0; }
