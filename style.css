@@ -86,25 +86,29 @@ img { display: block; max-width: 100%; }
 :root[data-theme="dark"] .theme-toggle .ico-brain { display: none; }
 :root[data-theme="dark"] .theme-toggle .ico-ai { display: block; }
 
-/* ---- Hero: layered collage — cover with the name on it, tall portrait overlapping ---- */
+/* ---- Hero: a diptych — cover and portrait side by side, same height, same corners ---- */
 .hero { max-width: var(--width); margin: 0 auto; padding: 18px 20px 0; }
 .stage {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 290px;
-  align-items: center;
+  display: flex;
+  gap: 14px;
+  height: clamp(300px, 34vw, 400px);
 }
 .cover {
-  grid-column: 1; grid-row: 1;
+  flex: 1; min-width: 0;
   position: relative;
-  height: clamp(260px, 32vw, 350px);
-  margin-right: -70px;               /* slides under the portrait */
-  border-radius: 20px;
+  height: 100%;
+  border-radius: 18px;
   overflow: hidden;
 }
-.cover img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 36%; }
+.cover img, .portrait img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: saturate(.88) contrast(1.03) sepia(.08);   /* one shared grade for both photos */
+}
+.cover img { object-position: 50% 36%; }
 .cover::after {
   content: ""; position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(8, 8, 18, 0) 38%, rgba(8, 8, 18, .72) 100%);
+  background: linear-gradient(180deg, rgba(8, 8, 18, 0) 40%, rgba(8, 8, 18, .7) 100%);
   pointer-events: none;
 }
 .coords {
@@ -117,34 +121,27 @@ img { display: block; max-width: 100%; }
 }
 .cover-text {
   position: absolute; z-index: 2;
-  left: 34px; right: 110px; bottom: 26px;
+  left: 32px; right: 32px; bottom: 26px;
   color: #fff;
 }
 .cover-text h1 {
   margin: 0;
-  font: 500 clamp(48px, 6.4vw, 78px)/1 "Fraunces", serif;
+  font: 500 clamp(48px, 6.2vw, 76px)/1 "Fraunces", serif;
   letter-spacing: -.025em;
   text-shadow: 0 2px 18px rgba(0, 0, 0, .35);
 }
 .cover-text .role { margin: 10px 0 0; font-size: 16.5px; color: rgba(255, 255, 255, .88); }
 .cover-text .role a { color: #fff; text-decoration: underline; text-decoration-color: rgba(255,255,255,.45); text-underline-offset: 3px; }
 
-/* Portrait: tall card, brain-red → AI-blue border, taller than the cover */
 .portrait {
-  grid-column: 2; grid-row: 1;
-  position: relative; z-index: 3;
+  flex: none;
+  height: 100%;
   aspect-ratio: 3 / 4;
   border-radius: 18px;
-  padding: 3px;
-  background: linear-gradient(160deg, var(--brain), var(--ai));
-  box-shadow: 0 0 0 6px var(--paper), 0 24px 50px rgba(20, 20, 40, .22);
+  overflow: hidden;
 }
-.portrait img {
-  width: 100%; height: 100%;
-  border-radius: 15px;
-  border: 4px solid var(--paper);
-  object-fit: cover; object-position: 50% 22%;
-}
+.portrait img { object-position: 50% 22%; }
+:root[data-theme="dark"] .cover img, :root[data-theme="dark"] .portrait img { filter: saturate(.85) contrast(1.03) brightness(.92); }
 
 .links { margin: 22px 0 0; padding: 0 14px; display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 15px; align-items: baseline; }
 .links .mono { font-size: 13.5px; color: var(--muted); }
@@ -284,7 +281,6 @@ footer p { margin: 0; }
 :root[data-theme="dark"] .net-nodes,
 :root[data-theme="dark"] .outline-ai { filter: drop-shadow(0 0 4px var(--ai)) drop-shadow(0 0 10px color-mix(in srgb, var(--ai) 60%, transparent)); }
 :root[data-theme="dark"] .net-edges line { stroke-opacity: .85; }
-:root[data-theme="dark"] .portrait { box-shadow: 0 0 0 6px var(--paper), 0 0 36px color-mix(in srgb, var(--ai) 45%, transparent); }
 
 /* ---- Narrow screens ---- */
 @media (max-width: 860px) {
@@ -296,15 +292,17 @@ footer p { margin: 0; }
   body { font-size: 16px; }
   .navlinks { display: none; }
   .hero { padding-top: 6px; }
-  .stage { display: flex; flex-direction: column; }
-  .cover { margin-right: 0; height: 300px; border-radius: 14px; }
-  .cover img { object-position: 14% 40%; }
-  .cover-text { left: 18px; right: 146px; bottom: 18px; }
-  .cover-text .role { font-size: 14px; }
-  .coords { top: 12px; left: 12px; font-size: 10.5px; }
-  .portrait { align-self: flex-end; width: 116px; margin: -118px 14px 0 0; padding: 2px; border-radius: 12px; box-shadow: 0 0 0 4px var(--paper), 0 14px 30px rgba(20,20,40,.22); }
-  .portrait img { border-width: 3px; border-radius: 10px; }
-  .links { padding: 0 2px; margin-top: 16px; }
+  .stage { position: relative; height: 230px; gap: 8px; margin-bottom: 124px; }
+  .cover { position: static; overflow: visible; border-radius: 0; }
+  .cover img { border-radius: 14px; object-position: 14% 40%; }
+  .portrait { border-radius: 14px; }
+  .cover::after { display: none; }
+  .coords { top: 10px; left: 10px; font-size: 10px; }
+  .cover-text { top: calc(100% + 16px); bottom: auto; left: 2px; right: 2px; color: var(--ink); }
+  .cover-text h1 { font-size: 46px; text-shadow: none; }
+  .cover-text .role { color: var(--muted); font-size: 14.5px; }
+  .cover-text .role a { color: var(--ai); text-decoration: none; }
+  .links { padding: 0 2px; margin-top: 0; }
   .role { font-size: 15.5px; }
   .sec { padding: 44px 0 4px; }
   .content { padding-left: 0; }
