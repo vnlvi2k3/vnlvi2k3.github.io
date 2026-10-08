@@ -162,11 +162,10 @@ img { display: block; max-width: 100%; }
 /* ---- Sections ---- */
 main { max-width: var(--width); margin: 0 auto; padding: 0 20px; }
 .sec { padding: 56px 12px 8px; }
-.sec-head { display: flex; align-items: center; gap: 12px; margin-bottom: 22px; }
+.sec-head { display: flex; align-items: center; gap: 8px; margin-bottom: 22px; }
 .sec-head h2 { margin: 0; font: 500 28px/1.1 "IBM Plex Mono", ui-monospace, monospace; letter-spacing: -.02em; }
-.sec-head h2::before { content: "~/"; color: var(--muted); font-weight: 400; margin-right: 2px; }
-.spike { width: 34px; height: 22px; flex: none; }
-.spike path { fill: none; stroke-width: 1.8; stroke-linejoin: round; stroke-linecap: round; }
+.spike { width: 46px; height: 28px; flex: none; overflow: visible; }
+.spike path { fill: none; stroke-width: 2.2; stroke-linejoin: round; stroke-linecap: round; }
 .tone-brain .spike path { stroke: var(--brain); }
 .tone-ai .spike path { stroke: var(--ai); }
 .content { padding-left: 46px; }
