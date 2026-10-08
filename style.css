@@ -50,10 +50,10 @@ img { max-width: 100%; display: block; }
   border-bottom: 3px double var(--rule);
 }
 .portrait {
-  width: 150px;
-  height: 180px;
+  width: 165px;
+  height: 215px;
   object-fit: cover;
-  object-position: 50% 28%;
+  object-position: 50% 50%;
   border: 1px solid var(--rule);
   padding: 4px;
   background: var(--paper);
@@ -135,7 +135,7 @@ footer {
   body { font-size: 17px; }
   .page { padding-top: 32px; }
   .masthead { flex-direction: column; align-items: flex-start; gap: 16px; }
-  .portrait { width: 120px; height: 144px; }
+  .portrait { width: 140px; height: 182px; }
   .entry-head { flex-direction: column; gap: 0; }
   .epigraph { margin-left: 0; text-align: left; }
 }
