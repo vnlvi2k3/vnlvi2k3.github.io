@@ -86,13 +86,9 @@ img { display: block; max-width: 100%; }
 :root[data-theme="dark"] .theme-toggle .ico-brain { display: none; }
 :root[data-theme="dark"] .theme-toggle .ico-ai { display: block; }
 
-/* ---- Hero: a diptych — cover and portrait side by side, same height, same corners ---- */
+/* ---- Hero: full-width cover with the name set on it ---- */
 .hero { max-width: var(--width); margin: 0 auto; padding: 18px 20px 0; }
-.stage {
-  display: flex;
-  gap: 14px;
-  height: clamp(300px, 34vw, 400px);
-}
+.stage { height: clamp(300px, 36vw, 420px); }
 .cover {
   flex: 1; min-width: 0;
   position: relative;
@@ -100,24 +96,16 @@ img { display: block; max-width: 100%; }
   border-radius: 18px;
   overflow: hidden;
 }
-.cover img, .portrait img {
+.cover img {
   width: 100%; height: 100%;
   object-fit: cover;
   filter: saturate(.88) contrast(1.03) sepia(.08);   /* one shared grade for both photos */
 }
-.cover img { object-position: 50% 36%; }
+.cover img { object-position: 50% 40%; }
 .cover::after {
   content: ""; position: absolute; inset: 0;
   background: linear-gradient(180deg, rgba(8, 8, 18, 0) 40%, rgba(8, 8, 18, .7) 100%);
   pointer-events: none;
-}
-.coords {
-  position: absolute; z-index: 2; top: 16px; left: 18px;
-  font-size: 11.5px; letter-spacing: .12em;
-  color: rgba(255, 255, 255, .85);
-  padding: 4px 9px; border-radius: 999px;
-  background: rgba(8, 8, 18, .35);
-  backdrop-filter: blur(4px);
 }
 .cover-text {
   position: absolute; z-index: 2;
@@ -133,15 +121,7 @@ img { display: block; max-width: 100%; }
 .cover-text .role { margin: 10px 0 0; font-size: 16.5px; color: rgba(255, 255, 255, .88); }
 .cover-text .role a { color: #fff; text-decoration: underline; text-decoration-color: rgba(255,255,255,.45); text-underline-offset: 3px; }
 
-.portrait {
-  flex: none;
-  height: 100%;
-  aspect-ratio: 3 / 4;
-  border-radius: 18px;
-  overflow: hidden;
-}
-.portrait img { object-position: 50% 22%; }
-:root[data-theme="dark"] .cover img, :root[data-theme="dark"] .portrait img { filter: saturate(.85) contrast(1.03) brightness(.92); }
+:root[data-theme="dark"] .cover img { filter: saturate(.85) contrast(1.03) brightness(.92); }
 
 .links { margin: 22px 0 0; padding: 0 14px; display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 15px; align-items: baseline; }
 .links .mono { font-size: 13.5px; color: var(--muted); }
@@ -166,13 +146,8 @@ main { max-width: var(--width); margin: 0 auto; padding: 0 20px; }
 p { margin: 0 0 12px; }
 
 /* ---- About ---- */
-.about {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 280px;
-  gap: 56px;
-  align-items: center;
-  padding-top: 44px;
-}
+.about { padding-top: 44px; }
+.about-text { max-width: 860px; }
 .lede { font: 400 25px/1.45 "Fraunces", serif; letter-spacing: -.005em; margin-bottom: 30px; }
 .lede a {
   color: inherit;
@@ -201,21 +176,27 @@ p { margin: 0 0 12px; }
 .term-ai { color: var(--ai); }
 .h-ai { color: var(--ai); }
 
-.about-fig { margin: 0; }
-.hemispheres { width: 100%; height: auto; display: block; overflow: visible; }
-.gyri path { fill: none; stroke: var(--brain); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; opacity: .85; }
-.outline-brain { fill: none; stroke: var(--brain); stroke-width: 2; }
-.outline-ai { fill: none; stroke: var(--ai); stroke-width: 2; }
-.net-edges line { stroke: var(--ai); stroke-width: 1; stroke-opacity: .5; }
-.net-nodes circle { fill: var(--paper); stroke: var(--ai); stroke-width: 1.5; }
-.callosum line { stroke-width: 1.6; stroke-linecap: round; }
-.fig-legend {
-  display: flex; justify-content: space-between;
-  margin-top: 10px; padding: 0 18%;
-  font: italic 15px "Fraunces", serif;
-}
-.lg-brain { color: var(--brain); }
-.lg-ai { color: var(--ai); }
+
+/* ---- Neuron (after Cajal) → artificial network ---- */
+.convergence { margin: 40px 0 0; }
+.convergence svg { width: 100%; height: auto; display: block; overflow: visible; }
+.neuron path { fill: none; stroke: var(--brain); stroke-linecap: round; }
+.neuron .soma { fill: var(--brain); }
+.myelin rect { fill: var(--paper); stroke: color-mix(in srgb, var(--brain) 50%, var(--ai)); stroke-width: 1.1; }
+.terminals path { fill: none; stroke: var(--ai); stroke-width: 1.2; }
+.edges line { stroke: var(--ai); stroke-opacity: .4; stroke-width: .9; }
+.nodes circle { fill: var(--paper); stroke: var(--ai); stroke-width: 1.5; }
+.stop-brain { stop-color: var(--brain); }
+.stop-machine { stop-color: var(--ai); }
+.fill-brain { fill: var(--brain); }
+.fill-machine { fill: var(--ai); }
+.arc { fill: none; stroke-width: 1.2; stroke-dasharray: 5 4; }
+.arc-1 { stroke: var(--brain); }
+.arc-2 { stroke: var(--ai); }
+.hlabel { font: italic 22px "Fraunces", serif; }
+.hlabel.h1 { fill: var(--brain); }
+.hlabel.h2 { fill: var(--ai); }
+.tag { font: italic 16px "Fraunces", serif; fill: var(--muted); }
 
 /* ---- Education / Experience: date column + details ---- */
 .item {
@@ -265,52 +246,45 @@ footer { max-width: var(--width); margin: 64px auto 0; padding: 0 20px 44px; tex
 footer p { margin: 0; }
 
 /* ---- Brain mode (light) lights up the brain; AI mode (dark) lights up the machine ---- */
-.sig-brain, .sig-ai, .gyri, .outline-brain, .outline-ai, .net-edges, .net-nodes, .callosum,
-.hyp dt, .hyp dd, .lg-brain, .lg-ai {
+.sig-brain, .sig-ai, .neuron, .terminals, .edges, .nodes, .arc, .hlabel, .hyp dt, .hyp dd {
   transition: opacity .6s ease, filter .6s ease;
 }
 :root[data-theme="light"] .sig-ai,
-:root[data-theme="light"] .net-edges,
-:root[data-theme="light"] .net-nodes,
-:root[data-theme="light"] .outline-ai,
-:root[data-theme="light"] .lg-ai { opacity: .28; }
+:root[data-theme="light"] .terminals,
+:root[data-theme="light"] .edges,
+:root[data-theme="light"] .nodes,
+:root[data-theme="light"] .arc-2,
+:root[data-theme="light"] .hlabel.h2 { opacity: .3; }
 :root[data-theme="light"] .h-ai, :root[data-theme="light"] .h-ai + dd { opacity: .45; }
 :root[data-theme="light"] .sig-brain,
-:root[data-theme="light"] .gyri,
-:root[data-theme="light"] .outline-brain { filter: drop-shadow(0 0 3px color-mix(in srgb, var(--brain) 55%, transparent)); }
+:root[data-theme="light"] .neuron { filter: drop-shadow(0 0 3px color-mix(in srgb, var(--brain) 55%, transparent)); }
 
 :root[data-theme="dark"] .sig-brain,
-:root[data-theme="dark"] .gyri,
-:root[data-theme="dark"] .outline-brain,
-:root[data-theme="dark"] .lg-brain { opacity: .25; }
+:root[data-theme="dark"] .neuron,
+:root[data-theme="dark"] .arc-1,
+:root[data-theme="dark"] .hlabel.h1 { opacity: .28; }
 :root[data-theme="dark"] .h-brain, :root[data-theme="dark"] .h-brain + dd { opacity: .45; }
 :root[data-theme="dark"] .sig-ai,
-:root[data-theme="dark"] .net-edges,
-:root[data-theme="dark"] .net-nodes,
-:root[data-theme="dark"] .outline-ai { filter: drop-shadow(0 0 4px var(--ai)) drop-shadow(0 0 10px color-mix(in srgb, var(--ai) 60%, transparent)); }
-:root[data-theme="dark"] .net-edges line { stroke-opacity: .85; }
+:root[data-theme="dark"] .terminals,
+:root[data-theme="dark"] .edges,
+:root[data-theme="dark"] .nodes { filter: drop-shadow(0 0 4px var(--ai)) drop-shadow(0 0 10px color-mix(in srgb, var(--ai) 60%, transparent)); }
+:root[data-theme="dark"] .edges line { stroke-opacity: .85; }
 
 /* ---- Narrow screens ---- */
 @media (max-width: 860px) {
-  .about { grid-template-columns: 1fr; gap: 28px; }
-  .about-fig { max-width: 240px; margin: 0 auto; }
   .honors { grid-template-columns: 1fr; }
 }
 @media (max-width: 680px) {
   body { font-size: 16px; }
   .navlinks { display: none; }
   .hero { padding-top: 6px; }
-  .stage { position: relative; height: 230px; gap: 8px; margin-bottom: 124px; }
-  .cover { position: static; overflow: visible; border-radius: 0; }
-  .cover img { border-radius: 14px; object-position: 14% 40%; }
-  .portrait { border-radius: 14px; }
-  .cover::after { display: none; }
-  .coords { top: 10px; left: 10px; font-size: 10px; }
-  .cover-text { top: calc(100% + 16px); bottom: auto; left: 2px; right: 2px; color: var(--ink); }
-  .cover-text h1 { font-size: 46px; text-shadow: none; }
-  .cover-text .role { color: var(--muted); font-size: 14.5px; }
-  .cover-text .role a { color: var(--ai); text-decoration: none; }
-  .links { padding: 0 2px; margin-top: 0; }
+  .stage { height: 320px; }
+  .cover { border-radius: 14px; }
+  .cover img { object-position: 16% 40%; }
+  .cover-text { left: 18px; right: 18px; bottom: 18px; }
+  .cover-text h1 { font-size: 48px; }
+  .cover-text .role { font-size: 14.5px; }
+  .links { padding: 0 2px; margin-top: 16px; }
   .role { font-size: 15.5px; }
   .sec { padding: 44px 0 4px; }
   .content { padding-left: 0; }
