@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=brainai40">
+  <link rel="stylesheet" href="style.css?v=brainai43">
   <script>
     // Every visit starts in brain mode (light); a short intro then plays (see main.js).
     document.documentElement.dataset.theme = "light";
@@ -22,7 +22,7 @@
 <body>
 
   <nav class="topnav">
-    <a class="brand" href="#top">Vi Vu<span class="caret" aria-hidden="true"></span></a>
+    <a class="brand" href="#top">Vi Vu<span class="prompt" aria-hidden="true">&gt;</span><span class="caret" aria-hidden="true"></span></a>
     <div class="nav-right">
       <div class="navlinks">
         <a href="#about">About</a>
@@ -435,22 +435,11 @@
   </main>
 
   <footer>
-    <figure class="marr">
-      <blockquote>“Trying to understand perception by studying only neurons is like trying to understand bird flight by studying only feathers: it just cannot be done.”</blockquote>
-      <figcaption>David Marr, <i>Vision</i> (1982)</figcaption>
-    </figure>
-    <svg class="necker" viewBox="0 0 80 72" role="img" aria-label="Necker cube: one drawing, two interpretations">
-      <title>Necker cube: one drawing, two ways to see it</title>
-      <path class="face face-front" d="M8 24 H48 V64 H8 Z"/>
-      <path class="face face-back" d="M28 6 H68 V46 H28 Z"/>
-      <path class="edges-cube" d="M8 24 H48 V64 H8 Z M28 6 H68 V46 H28 Z M8 24 L28 6 M48 24 L68 6 M48 64 L68 46 M8 64 L28 46"/>
-    </svg>
     <svg class="signal small" viewBox="0 0 1000 60" preserveAspectRatio="none" aria-hidden="true">
       <path class="sig-brain" d="M0 44 L28 44 Q33 40 35 36 L37 4 L40 53 Q45 49 52 44 L80 44 Q85 40 87 36 L89 4 L92 53 Q97 49 104 44 L96 44 Q101 40 103 36 L105 4 L108 53 Q113 49 120 44 L162 44 Q167 40 169 36 L171 4 L174 53 Q179 49 186 44 L224 44 Q229 40 231 36 L233 4 L236 53 Q241 49 248 44 L238 44 Q243 40 245 36 L247 4 L250 53 Q255 49 262 44 L304 44 Q309 40 311 36 L313 4 L316 53 Q321 49 328 44 L372 44 Q377 40 379 36 L381 4 L384 53 Q389 49 396 44 L386 44 Q391 40 393 36 L395 4 L398 53 Q403 49 410 44 L444 44 Q449 40 451 36 L453 4 L456 53 Q461 49 468 44 L520 44" fill="none" vector-effect="non-scaling-stroke"/>
       <path class="sig-ai" d="M520 44 L540 44 L540 14 L562 14 L562 44 L580 44 L580 14 L592 14 L592 44 L604 44 L604 14 L634 14 L634 44 L660 44 L660 14 L674 14 L674 44 L690 44 L690 14 L712 14 L712 44 L740 44 L740 14 L774 14 L774 44 L796 44 L796 14 L808 14 L808 44 L820 44 L820 14 L840 14 L840 44 L866 44 L866 14 L894 14 L894 44 L918 44 L918 14 L932 14 L932 44 L948 44 L948 14 L970 14 L970 44 L1000 44" fill="none" vector-effect="non-scaling-stroke"/>
     </svg>
     <p>© 2026 Vi Vu · Durham, North Carolina</p>
-    <p class="colophon mono">hand-written HTML, CSS &amp; vanilla JS<span class="commit"></span> · press <kbd>T</kbd> to switch modes</p>
   </footer>
 
   <script>
@@ -462,6 +451,6 @@
       setTimeout(function () { root.classList.remove("theme-anim"); }, 1100);
     });
   </script>
-  <script src="main.js?v=5" defer></script>
+  <script src="main.js?v=8" defer></script>
 </body>
 </html>

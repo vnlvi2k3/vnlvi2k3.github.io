@@ -87,21 +87,40 @@
   }
 
 
-  /* Intro "trailer": on every load, glide light -> dark -> light -> dark -> light,
-     then stay in light mode. A click on the toggle (or T) stops it right away. */
+  /* Intro on every load: light -> dark -> light (slow glide), while the signal
+     line at the top draws itself in and a spark of current runs along it
+     (CSS animations, see .intro in style.css). Ends in light mode.
+     A click on the toggle (or T) stops the mode changes. */
   var toggle = document.getElementById("theme-toggle");
-  if (toggle && !reduced) {
-    var STEPS = [[450, "dark"], [1650, "light"], [2850, "dark"], [4050, "light"]];
+  var topSig = document.querySelector("svg.signal:not(.small)");
+  if (!reduced) {
     var timers = [];
+    root.style.setProperty("--tdur", "2s");
     root.classList.add("theme-anim");
-    STEPS.forEach(function (step) {
-      timers.push(setTimeout(function () { root.dataset.theme = step[1]; }, step[0]));
-    });
-    timers.push(setTimeout(function () { root.classList.remove("theme-anim"); }, 5200));
-    toggle.addEventListener("click", function () {
-      timers.forEach(clearTimeout);
-      timers = [];
+    timers.push(setTimeout(function () { root.dataset.theme = "dark"; }, 600));
+    timers.push(setTimeout(function () { root.dataset.theme = "light"; }, 3800));
+    timers.push(setTimeout(function () { root.classList.remove("theme-anim"); root.style.removeProperty("--tdur"); }, 6000));
+    if (toggle) toggle.addEventListener("click", function () {
+      timers.forEach(clearTimeout); timers = [];
+      root.style.removeProperty("--tdur");
+      setTimeout(function () { root.classList.remove("theme-anim"); }, 1100);
     }, true);
+
+    if (topSig) {
+      var sparks = Array.prototype.slice.call(topSig.querySelectorAll(".sig-brain, .sig-ai")).map(function (p) {
+        var c = p.cloneNode(false);
+        c.removeAttribute("vector-effect");
+        c.setAttribute("pathLength", "100");
+        c.setAttribute("class", "spark " + (p.classList.contains("sig-brain") ? "spark-brain" : "spark-ai"));
+        topSig.appendChild(c);
+        return c;
+      });
+      root.classList.add("intro");
+      setTimeout(function () {
+        root.classList.remove("intro");
+        sparks.forEach(function (c) { c.remove(); });
+      }, 7600);
+    }
   }
 
   /* Keyboard: press T to switch modes */
@@ -114,18 +133,6 @@
     if (t) t.click();
   });
 
-  /* Footer: latest commit, live from GitHub */
-  var commitEl = document.querySelector(".colophon .commit");
-  if (commitEl && window.fetch) {
-    fetch("https://api.github.com/repos/vnlvi2k3/vnlvi2k3.github.io/commits/main")
-      .then(function (r) { return r.ok ? r.json() : null; })
-      .then(function (d) {
-        if (!d || !d.sha) return;
-        var day = (d.commit && d.commit.committer && d.commit.committer.date || "").slice(0, 10);
-        commitEl.innerHTML = ' · commit <a href="' + d.html_url + '">' + d.sha.slice(0, 7) + "</a>" + (day ? " (" + day + ")" : "");
-      })
-      .catch(function () {});
-  }
 
   /* A note for whoever opens the console */
   try {
