@@ -255,7 +255,7 @@ p { margin: 0 0 12px; }
 
 /* ---- AIMA ---- */
 .aima-intro { font-size: 17px; max-width: 720px; margin-bottom: 22px; }
-.team { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.team { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
 .member {
   display: flex; flex-direction: column; align-items: center; text-align: center; gap: 2px;
   padding: 22px 14px 18px; height: 100%;
@@ -355,6 +355,7 @@ footer p { margin: 0; }
 
 /* ---- Narrow screens ---- */
 @media (max-width: 860px) {
+  .team { grid-template-columns: 1fr 1fr; }
   .about { grid-template-columns: 1fr; gap: 0; }
   .about > .hyp, .about > .convergence { grid-column: 1; }
   .about > .convergence { margin-top: 26px; }
@@ -380,7 +381,7 @@ footer p { margin: 0; }
   .question { font-size: 24px; }
   .item { grid-template-columns: 1fr; }
   .pubs li.pub { grid-template-columns: 1fr; gap: 12px; }
-  .team { grid-template-columns: 1fr; }
+  .team { grid-template-columns: 1fr 1fr; }
   .pthumb { max-width: 340px; }
   .when { grid-row: auto; }
   .org, .item-role, .item p:not(.item-role) { grid-column: 1; }
