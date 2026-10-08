@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Vi Vu</title>
-  <meta name="description" content="Vi Vu — Ph.D. student in Biomedical Engineering at Duke University. Medical AI, semi-supervised learning, foundation models.">
+  <meta name="description" content="Vi Vu — Ph.D. student in the Vision and Image Processing Laboratory at Duke University, advised by Prof. Sina Farsiu.">
   <meta property="og:title" content="Vi Vu">
-  <meta property="og:description" content="Ph.D. student in Biomedical Engineering at Duke University">
+  <meta property="og:description" content="Ph.D. student, Vision and Image Processing Laboratory, Duke University">
   <meta property="og:image" content="assets/cover.jpg">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/font/Serif/cmun-serif.css">
@@ -14,174 +14,270 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <div class="letterhead">
+    <span class="sc">Duke University · Vision and Image Processing Laboratory</span>
+    <nav class="sc">
+      <a href="#research">Research</a>
+      <a href="#vita">Vita</a>
+      <a href="#publications">Publications</a>
+      <a href="#honors">Honors</a>
+      <a href="assets/Vi_Vu_CV.pdf">CV</a>
+    </nav>
+  </div>
+
   <main class="page">
 
-    <header class="masthead">
-      <img class="portrait" src="assets/avatar.jpg" alt="Portrait of Vi Vu">
-      <div>
+    <!-- Masthead -->
+    <div class="row masthead">
+      <div class="main">
         <h1>Vi Vu</h1>
-        <p>Ph.D. Student, Department of Biomedical Engineering<br>Duke University, Durham, NC</p>
-        <p class="links tt">
-          <a href="mailto:vulanvi22@gmail.com">email</a> ·
-          <a href="https://scholar.google.com/citations?user=_2luKBQAAAAJ&hl=en">scholar</a> ·
-          <a href="https://github.com/vnlvi2k3">github</a> ·
-          <a href="https://www.linkedin.com/in/vivu-cse/">linkedin</a> ·
-          <a href="assets/Vi_Vu_CV.pdf">cv.pdf</a>
+        <p class="title">Ph.D. Student</p>
+        <p class="affil">
+          <a href="https://people.duke.edu/~sf59/">Vision and Image Processing Laboratory</a><br>
+          Duke University<br>
+          Advisor: <a href="https://scholar.google.com/citations?user=mzcr92sAAAAJ&hl=en">Professor Sina Farsiu</a>
         </p>
+        <table class="contact">
+          <tr><td class="sc">Mail</td><td class="tt">vulanvi22 [at] gmail [dot] com</td></tr>
+          <tr><td class="sc">Office</td><td>Durham, North Carolina</td></tr>
+          <tr><td class="sc">Elsewhere</td><td>
+            <a href="https://scholar.google.com/citations?user=_2luKBQAAAAJ&hl=en">Google Scholar</a> ·
+            <a href="https://github.com/vnlvi2k3">GitHub</a> ·
+            <a href="https://www.linkedin.com/in/vivu-cse/">LinkedIn</a> ·
+            <a href="assets/Vi_Vu_CV.pdf">Curriculum Vitæ</a>
+          </td></tr>
+        </table>
       </div>
-    </header>
+      <aside class="margin portrait-box">
+        <img src="assets/avatar.jpg" alt="Portrait of Vi Vu with the valedictorian's gold medal">
+        <p class="caption">Commencement, Ho Chi Minh City University of Technology, 2025.</p>
+      </aside>
+    </div>
 
-    <blockquote class="epigraph">
-      What I cannot create, I do not understand.
-      <cite>— Richard P. Feynman</cite>
-    </blockquote>
+    <div class="row">
+      <blockquote class="main epigraph">
+        “What I cannot create, I do not understand.”
+        <cite>— R. P. Feynman, on his blackboard at Caltech, 1988</cite>
+      </blockquote>
+    </div>
 
-    <figure class="cover">
-      <img src="assets/cover.jpg" alt="Vi Vu working in the library">
-      <figcaption><span class="sc">Fig. 1.</span> At work in the library.</figcaption>
-    </figure>
+    <!-- Plate -->
+    <div class="row">
+      <figure class="main plate">
+        <img src="assets/cover.jpg" alt="Vi Vu at work in a library reading room">
+      </figure>
+      <aside class="margin">
+        <p class="caption"><span class="sc">Plate I.</span> In the reading room.</p>
+      </aside>
+    </div>
 
-    <section>
-      <h2><span class="num">§1</span> Research</h2>
-      <p>
-        I am a first-year Ph.D. student in Biomedical Engineering at Duke University, advised by
-        <a href="https://scholar.google.com/citations?user=mzcr92sAAAAJ&hl=en">Prof. Sina Farsiu</a>.
-        I came to medical AI from computer engineering, and to computer engineering from physics.
-      </p>
-      <p>
-        My research develops AI-powered medical solutions, built on mathematically grounded modeling and
-        foundation-model-driven designs. Most of my work concerns <em>learning from imperfect biomedical data</em>:
-        semi- and unsupervised learning, transfer learning, and deep multimodal learning under domain shift
-        and noisy or scarce labels.
-      </p>
-      <p class="keywords"><span class="sc">Keywords:</span> semi-supervised learning; foundation models; domain adaptation;
-        mixture-of-experts; histopathology; ultrasound and MRI segmentation.</p>
+    <!-- Research -->
+    <section id="research">
+      <div class="row">
+        <div class="main">
+          <h2><span class="sec">§1.</span> Research</h2>
+          <p class="dropcap">
+            I am a first-year Ph.D. student in the
+            <a href="https://people.duke.edu/~sf59/">Vision and Image Processing Laboratory</a>
+            at Duke University, working with Professor Sina Farsiu. I came to medical AI from computer
+            engineering, and to computer engineering from physics.<sup class="nref">1</sup>
+          </p>
+          <p>
+            My research develops AI methods for medicine that are mathematically grounded and built around
+            foundation models. Most of my work concerns <em>learning from imperfect biomedical data</em>:
+            semi- and unsupervised learning, transfer learning, and multimodal learning when domains shift
+            and labels are noisy or scarce. Recent work includes mixture-of-experts for semi-supervised
+            histopathology segmentation, co-training the Segment Anything Model with conventional networks
+            on unlabeled images, and source-free domain adaptation.
+          </p>
+        </div>
+        <aside class="margin">
+          <p class="note"><sup>1</sup> First Prize, Ho Chi Minh City Excellent Physics Student Competition.</p>
+          <figure class="feynman">
+            <svg viewBox="0 0 200 110" role="img" aria-label="Feynman diagram of electron-positron annihilation into a muon pair">
+              <defs>
+                <marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+                  <path d="M0 1 L9 5 L0 9 z" class="arrowhead"/>
+                </marker>
+              </defs>
+              <g class="ink">
+                <polyline points="14,12 38,33.5 62,55" marker-mid="url(#arr)"/>
+                <polyline points="62,55 38,76.5 14,98" marker-mid="url(#arr)"/>
+                <path d="M62 55 q5 -9 10 0 t10 0 t10 0 t10 0 t10 0 t10 0 t10 0 t6 0"/>
+                <polyline points="138,55 162,33.5 186,12" marker-mid="url(#arr)"/>
+                <polyline points="186,98 162,76.5 138,55" marker-mid="url(#arr)"/>
+              </g>
+              <circle cx="62" cy="55" r="2.5"/><circle cx="138" cy="55" r="2.5"/>
+              <text x="0" y="10">e⁻</text><text x="0" y="110">e⁺</text>
+              <text x="96" y="40">γ</text>
+              <text x="200" y="10" text-anchor="end">μ⁻</text><text x="200" y="110" text-anchor="end">μ⁺</text>
+            </svg>
+            <figcaption><span class="sc">Fig. 1.</span> e⁻e⁺ → μ⁻μ⁺ at lowest order. Old habits.</figcaption>
+          </figure>
+        </aside>
+      </div>
     </section>
 
-    <section>
-      <h2><span class="num">§2</span> Education</h2>
-      <div class="entry">
-        <div class="entry-head"><strong>Duke University</strong><span class="date">2026 – present</span></div>
-        <div>Ph.D. in Biomedical Engineering. Advisor: <a href="https://scholar.google.com/citations?user=mzcr92sAAAAJ&hl=en">Prof. Sina Farsiu</a>.</div>
-      </div>
-      <div class="entry">
-        <div class="entry-head"><strong>Ho Chi Minh City University of Technology</strong><span class="date">2021 – 2025</span></div>
-        <div>B.E. in Computer Engineering (High-Quality Program). GPA 9.27/10 (3.9/4.0)
-          [<a href="https://drive.google.com/file/d/1hsqOAvxihVWhE4Rxz5Nv-7lYRPMEFORm/view?usp=sharing">transcript</a>].<br>
-          Valedictorian, ranked 1st of 749 students in Computer Science and Engineering.</div>
+    <!-- Vita -->
+    <section id="vita">
+      <div class="row">
+        <div class="main">
+          <h2><span class="sec">§2.</span> Vita</h2>
+
+          <h3>Education</h3>
+          <dl class="cv">
+            <dt>2026 –</dt>
+            <dd><strong>Duke University</strong>, Ph.D. in Biomedical Engineering.<br>
+              Vision and Image Processing Laboratory; advisor Prof. Sina Farsiu.</dd>
+            <dt>2021 – 2025</dt>
+            <dd><strong>Ho Chi Minh City University of Technology</strong>, B.E. in Computer Engineering (High-Quality Program).<br>
+              Valedictorian, ranked first of 749 in Computer Science and Engineering. GPA 9.27/10
+              [<a href="https://drive.google.com/file/d/1hsqOAvxihVWhE4Rxz5Nv-7lYRPMEFORm/view?usp=sharing">transcript</a>].</dd>
+          </dl>
+
+          <h3>Research positions</h3>
+          <dl class="cv">
+            <dt>2024 – 2026</dt>
+            <dd><strong>Carnegie Mellon University</strong>, <a href="https://xulabs.github.io/news/">Xu Lab</a>. Research Assistant with
+              <a href="https://scholar.google.com/citations?user=Y3Cqt0cAAAAJ&hl=en">Prof. Min Xu</a>,
+              <a href="https://scholar.google.com/citations?user=f9V0NZkAAAAJ&hl=en">Dr. Xingjian Li</a> and
+              <a href="https://scholar.google.com/citations?user=QbTV0r0AAAAJ&hl=en">Prof. Tianyang Wang</a>.
+              Semi-MoE; SemiSAM; mixed-domain segmentation.</dd>
+            <dt>2025 – 2026</dt>
+            <dd><strong>Northwestern University</strong>, <a href="https://bagcilab.com/">Machine &amp; Hybrid Intelligence Lab</a>.
+              Research Assistant with <a href="https://scholar.google.com/citations?user=9LUdPM4AAAAJ&hl=en">Prof. Ulas Bagci</a>.
+              Stain–structure disentanglement in histopathology; source-free domain adaptation.</dd>
+            <dt>2025</dt>
+            <dd><strong>National Cheng Kung University</strong>, <a href="https://en.ur.ncku.edu.tw/laboratory/Integrated+MechanoBioSystems+Lab/">Integrated MechanoBioSystems Lab</a>.
+              Research Intern with <a href="https://scholar.google.com/citations?user=_HLH5D4AAAAJ&hl=en">Prof. Ting-Yuan Tu</a>.
+              3D single-cell tracking and segmentation.</dd>
+            <dt>2024 –</dt>
+            <dd><strong>AIVIETNAM</strong>. Research Associate and Teaching Assistant with
+              <a href="https://dblp.org/pid/142/0382.html">Dr. Quang Vinh Dinh</a>.
+              Co-lead of the AI-in-Medicine Applications lab; teaching for 600+ students.</dd>
+            <dt>2024</dt>
+            <dd><strong>FPT Software AI Center</strong>. AI Researcher with
+              <a href="https://scholar.google.it/citations?user=gEbaF0sAAAAJ&hl=en">Prof. Anh Nguyen</a>.
+              Diffusion models for point-cloud shape deformation.</dd>
+          </dl>
+        </div>
       </div>
     </section>
 
-    <section>
-      <h2><span class="num">§3</span> Experience</h2>
-      <div class="entry">
-        <div class="entry-head"><span><strong>Xu Lab, Carnegie Mellon University</strong> — Research Assistant</span><span class="date">2024 – 2026</span></div>
-        <div>With <a href="https://scholar.google.com/citations?user=Y3Cqt0cAAAAJ&hl=en">Prof. Min Xu</a>,
-          <a href="https://scholar.google.com/citations?user=f9V0NZkAAAAJ&hl=en">Dr. Xingjian Li</a> and
-          <a href="https://scholar.google.com/citations?user=QbTV0r0AAAAJ&hl=en">Prof. Tianyang Wang</a>.
-          Brought mixture-of-experts into semi-supervised segmentation (Semi-MoE); led SemiSAM, a bidirectional
-          co-training framework aligning foundation and conventional models on unlabeled data.</div>
+    <!-- Publications -->
+    <section id="publications">
+      <div class="row">
+        <div class="main">
+          <h2><span class="sec">§3.</span> Publications</h2>
+        </div>
+        <aside class="margin">
+          <p class="note">* Equal contribution. [J] journal, [C] conference or workshop. A complete list is on
+            <a href="https://scholar.google.com/citations?user=_2luKBQAAAAJ&hl=en">Google Scholar</a>.</p>
+        </aside>
       </div>
-      <div class="entry">
-        <div class="entry-head"><span><strong>Machine &amp; Hybrid Intelligence Lab, Northwestern University</strong> — Research Assistant</span><span class="date">2025 – 2026</span></div>
-        <div>With <a href="https://scholar.google.com/citations?user=9LUdPM4AAAAJ&hl=en">Prof. Ulas Bagci</a>.
-          A mean-teacher framework that disentangles stain appearance from tissue structure in histopathology;
-          source-free domain adaptation; radiomics of laryngeal cancer.</div>
-      </div>
-      <div class="entry">
-        <div class="entry-head"><span><strong>AIVIETNAM</strong> — Research Associate, Teaching Assistant</span><span class="date">2024 – present</span></div>
-        <div>With <a href="https://dblp.org/pid/142/0382.html">Dr. Quang Vinh Dinh</a>. Co-lead of the AI-in-Medicine
-          Applications lab (4 teams); teaching support for 600+ students.</div>
-      </div>
-      <div class="entry">
-        <div class="entry-head"><span><strong>Integrated MechanoBioSystems Lab, National Cheng Kung University</strong> — Research Intern</span><span class="date">2025</span></div>
-        <div>With <a href="https://scholar.google.com/citations?user=_HLH5D4AAAAJ&hl=en">Prof. Ting-Yuan Tu</a>.
-          A Y-Net Siamese architecture for 3D single-cell tracking and segmentation in time-lapse imaging.</div>
-      </div>
-      <div class="entry">
-        <div class="entry-head"><span><strong>FPT Software AI Center</strong> — AI Researcher</span><span class="date">2024</span></div>
-        <div>With <a href="https://scholar.google.it/citations?user=gEbaF0sAAAAJ&hl=en">Prof. Anh Nguyen</a>.
-          DDIM-based interactive editing for point-cloud shape deformation (DragPC).</div>
+
+      <div class="row">
+        <div class="main">
+          <h3 class="year">2026</h3>
+          <ol class="refs">
+            <li><span class="key">[C12]</span><div>V. M. K. Nguyen, K. N. V. Ngoc, <b>Vi Vu</b>, T. Nguyen, T. H. Nguyen, M. Xu.
+              Beyond visible boundaries: Benchmarking foundation models for overlapping cell segmentation in microscopic imaging.
+              <i>CVPR Workshops (Precognition)</i>.
+              [<a href="https://openreview.net/pdf?id=sf2d1znfq8">pdf</a>]</div></li>
+            <li><span class="key">[C11]</span><div><b>Vi Vu*</b>, H. T. Nguyen*, T. T. Nguyen*, T. B. Lam, T. H. Nguyen, T. Wang, X. Li, M. Xu.
+              From specialist to generalist: Unlocking SAM’s learning potential on unlabeled medical images.
+              <i>IEEE International Symposium on Biomedical Imaging (ISBI)</i>.
+              [<a href="https://drive.google.com/file/d/1trY-g0lc0pdfvo-Zpt26Xly7amCg_GSH/view?usp=sharing">pdf</a>]</div></li>
+            <li><span class="key">[J4]</span><div>T. Q. K. Bui, T. Nguyen, D. Ho, B. Lam, <b>Vi Vu</b>, T. Nguyen, P. Huynh, U. Bagci.
+              UP2D: Uncertainty-aware progressive pseudo-label denoising for source-free domain adaptive medical image segmentation.
+              <i>Neurocomputing</i>.
+              [<a href="https://drive.google.com/file/d/15gHmvcjdScQB4dR31hgzmQ3mvrKzgANN/view?usp=sharing">pdf</a>]</div></li>
+            <li><span class="key">[C10]</span><div>T. H. Nguyen, B. T. Lam, Thien Nguyen, T. Q. K. Bui, <b>Vi Vu</b>, K. P. Huynh, U. Bagci, M. Xu.
+              Domain-invariant mixed-domain semi-supervised medical image segmentation with clustered maximum mean discrepancy alignment.
+              <i>ICASSP</i>.
+              [<a href="https://drive.google.com/file/d/1962tbzLZC2sDnHxWeMB2ZXx4qVCNjXYZ/view?usp=sharing">pdf</a>]</div></li>
+            <li><span class="key">[C9]</span><div>T. Nguyen, T. H. Nguyen, T. Q. K. Bui, B. T. Lam, <b>Vi Vu</b>, K. P. Huynh, U. Bagci, M. Xu.
+              Aligning what you separate: Denoised patch mixing for source-free domain adaptation in medical image segmentation.
+              <i>ICASSP</i>.
+              [<a href="https://arxiv.org/pdf/2510.25227">pdf</a>]</div></li>
+            <li><span class="key">[C8]</span><div>D. T. Chung, B. T. Lam, T. H. Nguyen, T. Nguyen, <b>Vi Vu</b>, H. L. Cao, P. K. Huynh, M. Xu.
+              Modality-specific enhancement and complementary fusion for semi-supervised multi-modal brain tumor segmentation.
+              <i>AAAI Bridge Program on AI for Medicine and Healthcare</i>.
+              [<a href="https://openreview.net/pdf?id=USD3AI7eK6">pdf</a>]</div></li>
+          </ol>
+
+          <h3 class="year">2025</h3>
+          <ol class="refs">
+            <li><span class="key">[C7]</span><div><b>Vi Vu*</b>, T. H. Nguyen*, H. T. Nguyen, D. Kihara, T. Wang, X. Li, M. Xu.
+              Semi-MoE: Mixture-of-experts meets semi-supervised histopathology segmentation.
+              <i>British Machine Vision Conference (BMVC)</i>.
+              [<a href="https://bmva-archive.org.uk/bmvc/2025/assets/papers/Paper_940/paper.pdf">pdf</a>]</div></li>
+            <li><span class="key">[C6]</span><div><b>Vi Vu*</b>, T. H. Nguyen*, H. T. Nguyen, Q. V. Dinh, X. Li, M. Xu.
+              Semi-supervised histopathology image segmentation with feature diversified collaborative learning.
+              <i>AAAI Bridge Program on AI for Medicine and Healthcare</i>.
+              [<a href="https://raw.githubusercontent.com/mlresearch/v281/main/assets/nguyen25b/nguyen25b.pdf">pdf</a>]</div></li>
+            <li><span class="key">[C5]</span><div><b>Vi Vu*</b>, T. Q. K. Le*, H. H. Pham, X. L. Huynh, T. H. Nguyen, M. H. N. Le, Q. Nguyen, H. D. Nguyen.
+              HDC: Hierarchical distillation for multi-level noisy consistency in semi-supervised fetal ultrasound segmentation.
+              <i>CVPR Workshops (Precognition)</i>.
+              [<a href="https://openaccess.thecvf.com/content/CVPR2025W/Precognition/papers/Le_HDC_Hierarchical_Distillation_for_Multi-level_Noisy_Consistency_in_Semi-Supervised_Fetal_CVPRW_2025_paper.pdf">pdf</a>]</div></li>
+            <li><span class="key">[C4]</span><div><b>Vi Vu*</b>, H. H. Pham*, T. H. Nguyen, U. Bagci, M. Xu, T. N. Le, H. H. Pham.
+              Learning disentangled stain and structural representations for semi-supervised histopathology segmentation.
+              <i>MICCAI Workshop on Computational Pathology (COMPAYL)</i>.
+              [<a href="https://arxiv.org/pdf/2507.03923">pdf</a>]</div></li>
+            <li><span class="key">[J3]</span><div>T. H. Nguyen, H. T. Nguyen, <b>Vi Vu</b>, B. T. Lam, B. X. Nguyen, J. Xing, T. Wang, X. Li, M. Xu.
+              Adaptive knowledge transferring with switching dual-student framework for semi-supervised medical image segmentation.
+              <i>Pattern Recognition</i>.
+              [<a href="https://arxiv.org/pdf/2510.24366">pdf</a>]</div></li>
+            <li><span class="key">[J2]</span><div>T. H. Nguyen, H. T. Nguyen, <b>Vi Vu</b>, B. T. Lam, P. Huynh, T. Wang, X. Li, U. Bagci, M. Xu.
+              DuetMatch: Harmonizing semi-supervised brain MRI segmentation via decoupled branch optimization.
+              <i>Computerized Medical Imaging and Graphics</i>.
+              [<a href="https://arxiv.org/pdf/2510.16146">pdf</a>]</div></li>
+            <li><span class="key">[J1]</span><div>M. H. N. Le, T. H. Nguyen, M. T. Dinh, T. Q. K. Bui, <b>Vi Vu</b>, H. Q. Kha, P. K. Nguyen, N. H. H. Le, T. M. Nguyen, H. H. Huynh, K. Le.
+              Performance analysis of artificial intelligence–driven convolutional neural network architectures for liver tumor segmentation.
+              <i>Journal of Clinical Oncology</i>.
+              [<a href="https://ascopubs.org/doi/abs/10.1200/JCO.2025.43.16_suppl.e16307">link</a>]</div></li>
+            <li><span class="key">[C3]</span><div>T. H. Nguyen, T. Nguyen, X. B. Nguyen, <b>Vi Vu</b>, V. Q. Dinh, F. Meriaudeau.
+              Semi-supervised skin lesion segmentation under dual mask ensemble with feature discrepancy co-training.
+              <i>Medical Imaging with Deep Learning (MIDL)</i>.
+              [<a href="https://openreview.net/pdf?id=cBfXsr6xWb">pdf</a>]</div></li>
+            <li><span class="key">[C2]</span><div>H. H. Pham, H. T. Nguyen, <b>Vi Vu</b>, Q. V. Dinh, T. H. Nguyen, X. Li, M. Xu.
+              Fetal-BCP: Addressing empirical distribution gap in semi-supervised fetal ultrasound segmentation.
+              <i>IEEE International Symposium on Biomedical Imaging (ISBI)</i>.
+              [<a href="https://ieeexplore.ieee.org/abstract/document/10980925/">link</a>]</div></li>
+            <li><span class="key">[C1]</span><div>T. Q. K. Bui, M. Dinh, <b>Vi Vu</b>, Q. Nguyen, Q. Dinh, M. Le, Q. Le.
+              Hepatic tumor segmentation under modified scalable and transferable nnU-Net framework.
+              <i>Conference on Information Technology and its Applications (CITA)</i>.
+              [<a href="https://drive.google.com/file/d/1Sgsqsgdj1ZWBb3eNFcWEJ7Zz8GzzhRXq/view?usp=sharing">pdf</a>]</div></li>
+          </ol>
+        </div>
       </div>
     </section>
 
-    <section>
-      <h2><span class="num">§4</span> Publications</h2>
-      <p class="note">* equal contribution. See also <a href="https://scholar.google.com/citations?user=_2luKBQAAAAJ&hl=en">Google Scholar</a>.</p>
-
-      <h3>Journal articles</h3>
-      <ol class="refs">
-        <li><span class="key">[J4]</span><div>TQK Bui, T Nguyen, D Ho, B Lam, <b>Vi Vu</b>, T Nguyen, P Huynh, U Bagci.
-          UP2D: Uncertainty-aware progressive pseudo-label denoising for source-free domain adaptive medical image segmentation.
-          <i>Neurocomputing</i>, 2026. [<a href="https://drive.google.com/file/d/15gHmvcjdScQB4dR31hgzmQ3mvrKzgANN/view?usp=sharing">pdf</a>]</div></li>
-        <li><span class="key">[J3]</span><div>TH Nguyen, HT Nguyen, <b>Vi Vu</b>, BT Lam, BX Nguyen, J Xing, T Wang, X Li, M Xu.
-          Adaptive knowledge transferring with switching dual-student framework for semi-supervised medical image segmentation.
-          <i>Pattern Recognition</i>, 2025. [<a href="https://arxiv.org/pdf/2510.24366">pdf</a>]</div></li>
-        <li><span class="key">[J2]</span><div>TH Nguyen, HT Nguyen, <b>Vi Vu</b>, BT Lam, P Huynh, T Wang, X Li, U Bagci, M Xu.
-          DuetMatch: Harmonizing semi-supervised brain MRI segmentation via decoupled branch optimization.
-          <i>Computerized Medical Imaging and Graphics</i>, 2025. [<a href="https://arxiv.org/pdf/2510.16146">pdf</a>]</div></li>
-        <li><span class="key">[J1]</span><div>MHN Le, TH Nguyen, MT Dinh, TQK Bui, <b>Vi Vu</b>, HQ Kha, PK Nguyen, NHH Le, TM Nguyen, HH Huynh, K Le.
-          Performance analysis of artificial intelligence–driven convolutional neural network architectures for liver tumor segmentation.
-          <i>Journal of Clinical Oncology</i>, 2025. [<a href="https://ascopubs.org/doi/abs/10.1200/JCO.2025.43.16_suppl.e16307">link</a>]</div></li>
-      </ol>
-
-      <h3>Conference and workshop papers</h3>
-      <ol class="refs">
-        <li><span class="key">[C12]</span><div>VMK Nguyen, KNV Ngoc, <b>Vi Vu</b>, T Nguyen, TH Nguyen, M Xu.
-          Beyond visible boundaries: Benchmarking foundation models for overlapping cell segmentation in microscopic imaging.
-          <i>CVPR Workshops (Precognition)</i>, 2026. [<a href="https://openreview.net/pdf?id=sf2d1znfq8">pdf</a>]</div></li>
-        <li><span class="key">[C11]</span><div><b>Vi Vu*</b>, HT Nguyen*, TT Nguyen*, TB Lam, TH Nguyen, T Wang, X Li, M Xu.
-          From specialist to generalist: Unlocking SAM's learning potential on unlabeled medical images.
-          <i>IEEE International Symposium on Biomedical Imaging (ISBI)</i>, 2026. [<a href="https://drive.google.com/file/d/1trY-g0lc0pdfvo-Zpt26Xly7amCg_GSH/view?usp=sharing">pdf</a>]</div></li>
-        <li><span class="key">[C10]</span><div>TH Nguyen, BT Lam, Thien Nguyen, TQK Bui, <b>Vi Vu</b>, KP Huynh, U Bagci, M Xu.
-          Domain-invariant mixed-domain semi-supervised medical image segmentation with clustered maximum mean discrepancy alignment.
-          <i>ICASSP</i>, 2026. [<a href="https://drive.google.com/file/d/1962tbzLZC2sDnHxWeMB2ZXx4qVCNjXYZ/view?usp=sharing">pdf</a>]</div></li>
-        <li><span class="key">[C9]</span><div>T Nguyen, TH Nguyen, TQK Bui, BT Lam, <b>Vi Vu</b>, KP Huynh, U Bagci, M Xu.
-          Aligning what you separate: Denoised patch mixing for source-free domain adaptation in medical image segmentation.
-          <i>ICASSP</i>, 2026. [<a href="https://arxiv.org/pdf/2510.25227">pdf</a>]</div></li>
-        <li><span class="key">[C8]</span><div>DT Chung, BT Lam, TH Nguyen, T Nguyen, <b>Vi Vu</b>, HL Cao, PK Huynh, M Xu.
-          Modality-specific enhancement and complementary fusion for semi-supervised multi-modal brain tumor segmentation.
-          <i>AAAI Bridge Program on AI for Medicine and Healthcare</i>, 2026. [<a href="https://openreview.net/pdf?id=USD3AI7eK6">pdf</a>]</div></li>
-        <li><span class="key">[C7]</span><div><b>Vi Vu*</b>, TH Nguyen*, HT Nguyen, D Kihara, T Wang, X Li, M Xu.
-          Semi-MoE: Mixture-of-experts meets semi-supervised histopathology segmentation.
-          <i>British Machine Vision Conference (BMVC)</i>, 2025. [<a href="https://bmva-archive.org.uk/bmvc/2025/assets/papers/Paper_940/paper.pdf">pdf</a>]</div></li>
-        <li><span class="key">[C6]</span><div><b>Vi Vu*</b>, TH Nguyen*, HT Nguyen, QV Dinh, X Li, M Xu.
-          Semi-supervised histopathology image segmentation with feature diversified collaborative learning.
-          <i>AAAI Bridge Program on AI for Medicine and Healthcare</i>, 2025. [<a href="https://raw.githubusercontent.com/mlresearch/v281/main/assets/nguyen25b/nguyen25b.pdf">pdf</a>]</div></li>
-        <li><span class="key">[C5]</span><div><b>Vi Vu*</b>, TQK Le*, HH Pham, XL Huynh, TH Nguyen, MHN Le, Q Nguyen, HD Nguyen.
-          HDC: Hierarchical distillation for multi-level noisy consistency in semi-supervised fetal ultrasound segmentation.
-          <i>CVPR Workshops (Precognition)</i>, 2025. [<a href="https://openaccess.thecvf.com/content/CVPR2025W/Precognition/papers/Le_HDC_Hierarchical_Distillation_for_Multi-level_Noisy_Consistency_in_Semi-Supervised_Fetal_CVPRW_2025_paper.pdf">pdf</a>]</div></li>
-        <li><span class="key">[C4]</span><div><b>Vi Vu*</b>, HH Pham*, TH Nguyen, U Bagci, M Xu, TN Le, HH Pham.
-          Learning disentangled stain and structural representations for semi-supervised histopathology segmentation.
-          <i>MICCAI Workshop on Computational Pathology (COMPAYL)</i>, 2025. [<a href="https://arxiv.org/pdf/2507.03923">pdf</a>]</div></li>
-        <li><span class="key">[C3]</span><div>TH Nguyen, T Nguyen, XB Nguyen, <b>Vi Vu</b>, VQ Dinh, F Meriaudeau.
-          Semi-supervised skin lesion segmentation under dual mask ensemble with feature discrepancy co-training.
-          <i>Medical Imaging with Deep Learning (MIDL)</i>, 2025. [<a href="https://openreview.net/pdf?id=cBfXsr6xWb">pdf</a>]</div></li>
-        <li><span class="key">[C2]</span><div>HH Pham, HT Nguyen, <b>Vi Vu</b>, QV Dinh, TH Nguyen, X Li, M Xu.
-          Fetal-BCP: Addressing empirical distribution gap in semi-supervised fetal ultrasound segmentation.
-          <i>IEEE International Symposium on Biomedical Imaging (ISBI)</i>, 2025. [<a href="https://ieeexplore.ieee.org/abstract/document/10980925/">link</a>]</div></li>
-        <li><span class="key">[C1]</span><div>TQK Bui, M Dinh, <b>Vi Vu</b>, Q Nguyen, Q Dinh, M Le, Q Le.
-          Hepatic tumor segmentation under modified scalable and transferable nnU-Net framework.
-          <i>Conference on Information Technology and its Applications (CITA)</i>, 2025. [<a href="https://drive.google.com/file/d/1Sgsqsgdj1ZWBb3eNFcWEJ7Zz8GzzhRXq/view?usp=sharing">pdf</a>]</div></li>
-      </ol>
+    <!-- Honors -->
+    <section id="honors">
+      <div class="row">
+        <div class="main">
+          <h2><span class="sec">§4.</span> Honors</h2>
+          <ul class="honors">
+            <li>Winner, Fetal Ultrasound Grand Challenge, ISBI. [<a href="https://drive.google.com/file/d/1Jy6NujRNiQm3I8Pf6zZyrrXSrQb8s1DK/view?usp=sharing">certificate</a>]</li>
+            <li>NSTC Scholarship, International Internship Pilot Program, Taiwan. [<a href="https://drive.google.com/file/d/1PQWnGH9uA9mX-UtC-6z6lCw70o5DJkx1/view?usp=sharing">certificate</a>]</li>
+            <li>Momentum Scholarship (top 10 university students).</li>
+            <li>Academic Incentive Scholarship, Type 1 (top 1.6%), four times.</li>
+            <li>OISP Scholarship, Type 1, twice.</li>
+            <li>Outstanding Academic Performance. [<a href="https://drive.google.com/file/d/1yWg3C4Wv84tLVzzUEF7ca88PCJnRoXTw/view?usp=sharing">certificate</a>]</li>
+            <li>Outstanding All-around Student.</li>
+            <li>First Prize, Ho Chi Minh City Excellent Physics Student Competition. [<a href="https://drive.google.com/file/d/1LwUcXjAxb-5gDDJ9hEbzFJPne8_1B1u0/view?usp=sharing">certificate</a>]</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2><span class="num">§5</span> Honors</h2>
-      <ul class="honors">
-        <li>Winner, Fetal Ultrasound Grand Challenge, ISBI [<a href="https://drive.google.com/file/d/1Jy6NujRNiQm3I8Pf6zZyrrXSrQb8s1DK/view?usp=sharing">cert</a>]</li>
-        <li>NSTC Scholarship, International Internship Pilot Program, Taiwan [<a href="https://drive.google.com/file/d/1PQWnGH9uA9mX-UtC-6z6lCw70o5DJkx1/view?usp=sharing">cert</a>]</li>
-        <li>Momentum Scholarship (top 10 university students)</li>
-        <li>4 × Academic Incentive Scholarship, Type 1 (top 1.6%)</li>
-        <li>2 × OISP Scholarship, Type 1</li>
-        <li>Outstanding Academic Performance certification [<a href="https://drive.google.com/file/d/1yWg3C4Wv84tLVzzUEF7ca88PCJnRoXTw/view?usp=sharing">cert</a>]</li>
-        <li>Outstanding All-around Student</li>
-        <li>First Prize, Ho Chi Minh City Excellent Physics Student Competition [<a href="https://drive.google.com/file/d/1LwUcXjAxb-5gDDJ9hEbzFJPne8_1B1u0/view?usp=sharing">cert</a>]</li>
-      </ul>
-    </section>
-
-    <footer>
-      <p>Last updated October 2026. Typeset in Computer Modern.</p>
+    <footer class="row">
+      <div class="main">
+        <p>Vi Vu · Durham, North Carolina · Last revised October 2026.</p>
+        <p class="colophon">Set in Computer Modern. This page uses no JavaScript and no cookies.</p>
+      </div>
     </footer>
 
   </main>
